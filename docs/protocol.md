@@ -1,7 +1,6 @@
 # Run protocol
 
-Everything below is done in one session. Splitting a session across two days
-invalidates the calibration, because the light will not be the same.
+Everything below is done in one session. Splitting a session across two days invalidates the calibration, because the light will not be the same.
 
 Drawings: [RWL-001 column](drawings/column-section.svg) ·
 [RWL-002 rig](drawings/photometric-rig.svg)
@@ -17,27 +16,43 @@ Stock, 5 litres. Enough for a calibration series and three column charges.
 | Neutral liquid soap | 5 ml | surfactant load |
 | Blue food colouring | 20 drops | adsorption tracer |
 
-Mix, then stir again immediately before drawing every sample. Solids settle in
-minutes and a settled stock reads as clean water.
+Mix, then stir again immediately before drawing every sample. Solids settle in minutes and a settled stock reads as clean water.
 
-**Check before going further:** with the jar full of undiluted stock, the target
-card behind it must still be faintly visible. If the target disappears
-completely the contrast measurement saturates and the calibration is worthless.
-Too opaque, add water; too clear, add soil in 5 g steps.
+**Check before going further:** with the jar full of undiluted stock, the target card behind it must still be faintly visible. If the target disappears completely the contrast measurement saturates and the calibration is worthless. Too opaque, add water; too clear, add soil in 5 g steps.
 
-Write down whatever you end up with. The absolute values do not matter,
-repeatability across the session does.
+Write down whatever you end up with. The absolute values do not matter, repeatability across the session does.
 
 ## Before the first run
 
-1. Grade the tezontle through the sieve stack. Keep the 0.4–0.8 mm and the
-   4–8 mm fractions, weigh both, record the yield from the raw mass.
-2. Load the column bottom up per RWL-001. Level each layer, geotextile disc
-   between layers.
-3. Wash the bed with clean water until the effluent runs clear. New media sheds
-   fines and will otherwise read as if the column is making water dirtier.
-4. Build the rig per RWL-002. Take one frame, read the target and white ROIs off
-   it, write `setup.json`.
+1. Grade the tezontle. Keep a fine and a coarse fraction, weigh both, record the
+   yield from the raw mass. See [grading](#grading-the-tezontle) below.
+2. Load the column bottom up per RWL-001. Level each layer, geotextile disc between layers.
+3. Wash the bed with clean water until the effluent runs clear. New media sheds fines and will otherwise read as if the column is making water dirtier.
+4. Build the rig per RWL-002. Take one frame, read the target and white ROIs off it, write `setup.json`.
+
+## Grading the tezontle
+
+Laboratory sieves give the cleanest result, but they are not required. Whatever
+method is used, report it plainly and give the measured numbers rather than a
+nominal mesh size.
+
+**With laboratory sieves.** Standard stack, keep the 0.4–0.8 mm and 4–8 mm
+fractions, report D10 and the uniformity coefficient.
+
+**With kitchen sieves.** Use three sieves of different fineness. Measure the
+aperture of each by counting wires per centimetre under good light and dividing,
+then report the fractions by that measured aperture. Less precise, still
+traceable to a number you actually measured.
+
+**By sedimentation.** No equipment at all. Crush the tezontle, put it in a tall
+transparent bottle of water, shake, and let it settle. Coarse grains reach the
+bottom first and fines last, so decanting at timed intervals separates the
+fractions. This is settling-velocity separation, the same principle as the
+hydrometer analysis used in soil mechanics.
+
+Record the settling times and the mass recovered in each fraction. Two runs of
+the same procedure should give similar masses; if they do not, the crushing was
+inconsistent.
 
 ## Calibration series
 
@@ -76,8 +91,7 @@ rwl report --readings run.csv --calibration calibration.json \
     --before influent --after effluent
 ```
 
-Run at least three charges. The first will read best and then removal drops as
-the bed loads; that curve is the useful result, not the single first number.
+Run at least three charges. The first will read best and then removal drops as the bed loads; that curve is the useful result, not the single first number.
 
 ## What to record
 

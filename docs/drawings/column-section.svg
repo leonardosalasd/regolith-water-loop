@@ -132,7 +132,7 @@
 
   <g font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1a1a1a">
     <text x="424" y="86" font-weight="bold">COLUMN BODY</text>
-    <text x="424" y="101" font-size="11">transparent acrylic tube</text>
+    <text x="424" y="101" font-size="11">acrylic tube or stacked PET bottles</text>
     <text x="424" y="132" font-weight="bold">FREEBOARD</text>
     <text x="424" y="220">CHARGE VOLUME &#8212; 884 ml</text>
     <text x="424" y="320" font-weight="bold">4  COARSE TEZONTLE</text>
@@ -172,14 +172,14 @@
   <g font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a1a1a">
     <text x="620" y="388">1.  Place media from the bottom up. Level</text>
     <text x="638" y="404">each layer before adding the next.</text>
-    <text x="620" y="428">2.  Geotextile disc cut to bore between</text>
-    <text x="638" y="444">every pair of layers.</text>
+    <text x="620" y="428">2.  Geotextile or felt disc cut to bore</text>
+    <text x="638" y="444">between every pair of layers.</text>
     <text x="620" y="468">3.  Wash the bed with clean water until the</text>
     <text x="638" y="484">effluent runs clear before the first run.</text>
     <text x="620" y="508">4.  Gravity feed only, top to bottom. Do not</text>
     <text x="638" y="524">pressurise. Connect &#189;&#8221; hose at the valve.</text>
-    <text x="620" y="548">5.  Grade tezontle by sieve before placing.</text>
-    <text x="638" y="564">Record D10 and uniformity coefficient.</text>
+    <text x="620" y="548">5.  Grade tezontle before placing. Record</text>
+    <text x="638" y="564">the method and measured fractions.</text>
     <text x="620" y="588">6.  Allow 3 kg raw tezontle to yield the</text>
     <text x="638" y="604">graded fractions in the schedule.</text>
   </g>
