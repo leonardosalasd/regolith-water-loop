@@ -46,3 +46,8 @@ ENV/
 
 # Private Documents
 private/
+.venv/
+readings.csv
+calibration.json
+data/samples/*
+!data/samples/.gitkeep
