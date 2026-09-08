@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 800" width="960" height="800" role="img" aria-label="Section drawing of the filtration column showing four media layers with dimensions in millimetres">
+  <defs>
+    <marker id="dim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="dot" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="6" markerHeight="6">
+      <circle cx="3" cy="3" r="2.4" fill="#1a1a1a"/>
+    </marker>
+
+    <pattern id="pGravel" patternUnits="userSpaceOnUse" width="16" height="16">
+      <rect width="16" height="16" fill="#ffffff"/>
+      <circle cx="5" cy="5" r="3.6" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+      <circle cx="13" cy="12" r="3" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    </pattern>
+
+    <pattern id="pBiochar" patternUnits="userSpaceOnUse" width="8" height="8">
+      <rect width="8" height="8" fill="#3d3d3d"/>
+      <circle cx="2" cy="2" r="1" fill="#8a8a8a"/>
+      <circle cx="6" cy="5" r="1" fill="#8a8a8a"/>
+    </pattern>
+
+    <pattern id="pFine" patternUnits="userSpaceOnUse" width="7" height="7">
+      <rect width="7" height="7" fill="#ffffff"/>
+      <circle cx="2" cy="2" r="1.1" fill="#1a1a1a"/>
+      <circle cx="5.5" cy="5" r="1.1" fill="#1a1a1a"/>
+    </pattern>
+
+    <pattern id="pCoarse" patternUnits="userSpaceOnUse" width="12" height="12">
+      <rect width="12" height="12" fill="#ffffff"/>
+      <circle cx="4" cy="4" r="2.4" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
+      <circle cx="10" cy="9" r="2" fill="none" stroke="#1a1a1a" stroke-width="1.1"/>
+    </pattern>
+
+    <pattern id="pWater" patternUnits="userSpaceOnUse" width="20" height="14">
+      <rect width="20" height="14" fill="#eaf2f6"/>
+      <line x1="0" y1="7" x2="12" y2="7" stroke="#7fa8bd" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="800" fill="#ffffff"/>
+  <rect x="16" y="16" width="928" height="768" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+
+  <text x="44" y="52" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" fill="#1a1a1a" letter-spacing="1.5">FILTRATION COLUMN — VERTICAL SECTION</text>
+  <line x1="44" y1="60" x2="470" y2="60" stroke="#1a1a1a" stroke-width="1"/>
+
+  <g stroke="#1a1a1a" stroke-width="2" fill="none">
+    <rect x="284" y="76" width="6" height="568"/>
+    <rect x="350" y="76" width="6" height="568"/>
+  </g>
+
+  <rect x="290" y="144" width="60" height="160" fill="url(#pWater)"/>
+  <rect x="290" y="304" width="60" height="40" fill="url(#pCoarse)"/>
+  <rect x="290" y="344" width="60" height="160" fill="url(#pFine)"/>
+  <rect x="290" y="504" width="60" height="96" fill="url(#pBiochar)"/>
+  <rect x="290" y="600" width="60" height="40" fill="url(#pGravel)"/>
+
+  <g stroke="#1a1a1a" stroke-width="1.2" fill="none">
+    <line x1="290" y1="304" x2="350" y2="304"/>
+    <line x1="290" y1="344" x2="350" y2="344"/>
+    <line x1="290" y1="504" x2="350" y2="504"/>
+    <line x1="290" y1="600" x2="350" y2="600"/>
+  </g>
+
+  <line x1="290" y1="144" x2="350" y2="144" stroke="#4d7f99" stroke-width="1.6"/>
+  <text x="262" y="140" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#4d7f99" text-anchor="end">MAX WL</text>
+
+  <g stroke="#1a1a1a" stroke-width="2" fill="none">
+    <line x1="284" y1="644" x2="356" y2="644"/>
+    <path d="M284,644 L296,660 L344,660 L356,644"/>
+    <line x1="308" y1="660" x2="308" y2="686"/>
+    <line x1="332" y1="660" x2="332" y2="686"/>
+    <circle cx="320" cy="700" r="14"/>
+    <line x1="320" y1="686" x2="320" y2="714"/>
+    <line x1="306" y1="700" x2="334" y2="700"/>
+    <line x1="308" y1="714" x2="308" y2="736"/>
+    <line x1="332" y1="714" x2="332" y2="736"/>
+  </g>
+  <g stroke="#1a1a1a" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="288" y1="642" x2="352" y2="642"/>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="0.8" fill="none">
+    <line x1="284" y1="80" x2="212" y2="80"/>
+    <line x1="284" y1="144" x2="212" y2="144"/>
+    <line x1="284" y1="304" x2="212" y2="304"/>
+    <line x1="284" y1="344" x2="212" y2="344"/>
+    <line x1="284" y1="504" x2="212" y2="504"/>
+    <line x1="284" y1="600" x2="212" y2="600"/>
+    <line x1="284" y1="640" x2="150" y2="640"/>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1" marker-start="url(#dim)" marker-end="url(#dim)">
+    <line x1="228" y1="80" x2="228" y2="144"/>
+    <line x1="228" y1="144" x2="228" y2="304"/>
+    <line x1="228" y1="304" x2="228" y2="344"/>
+    <line x1="228" y1="344" x2="228" y2="504"/>
+    <line x1="228" y1="504" x2="228" y2="600"/>
+    <line x1="228" y1="600" x2="228" y2="640"/>
+    <line x1="166" y1="80" x2="166" y2="640"/>
+  </g>
+  <line x1="284" y1="80" x2="150" y2="80" stroke="#1a1a1a" stroke-width="0.8"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a1a1a" text-anchor="middle">
+    <rect x="212" y="104" width="32" height="15" fill="#ffffff"/><text x="228" y="116">80</text>
+    <rect x="210" y="216" width="36" height="15" fill="#ffffff"/><text x="228" y="228">200</text>
+    <rect x="212" y="317" width="32" height="15" fill="#ffffff"/><text x="228" y="329">50</text>
+    <rect x="210" y="416" width="36" height="15" fill="#ffffff"/><text x="228" y="428">200</text>
+    <rect x="210" y="545" width="36" height="15" fill="#ffffff"/><text x="228" y="557">120</text>
+    <rect x="212" y="613" width="32" height="15" fill="#ffffff"/><text x="228" y="625">50</text>
+    <rect x="146" y="352" width="40" height="15" fill="#ffffff"/><text x="166" y="364">700</text>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="0.8" fill="none">
+    <line x1="284" y1="756" x2="284" y2="700"/>
+    <line x1="356" y1="756" x2="356" y2="700"/>
+  </g>
+  <line x1="284" y1="748" x2="356" y2="748" stroke="#1a1a1a" stroke-width="1" marker-start="url(#dim)" marker-end="url(#dim)"/>
+  <rect x="292" y="734" width="56" height="15" fill="#ffffff"/>
+  <text x="320" y="746" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a1a1a" text-anchor="middle">&#216;75</text>
+
+  <g stroke="#1a1a1a" stroke-width="0.9" fill="none" marker-start="url(#dot)">
+    <path d="M340,120 L404,120 L418,128"/>
+    <path d="M340,224 L404,224 L418,216"/>
+    <path d="M340,324 L404,324 L418,316"/>
+    <path d="M340,424 L404,424 L418,416"/>
+    <path d="M340,552 L404,552 L418,544"/>
+    <path d="M340,620 L404,620 L418,612"/>
+    <path d="M330,660 L404,660 L418,652"/>
+    <path d="M334,700 L404,700 L418,692"/>
+    <path d="M356,90 L404,90 L418,82"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1a1a1a">
+    <text x="424" y="86" font-weight="bold">COLUMN BODY</text>
+    <text x="424" y="101" font-size="11">transparent acrylic tube</text>
+    <text x="424" y="132" font-weight="bold">FREEBOARD</text>
+    <text x="424" y="220">CHARGE VOLUME &#8212; 884 ml</text>
+    <text x="424" y="320" font-weight="bold">4  COARSE TEZONTLE</text>
+    <text x="424" y="420" font-weight="bold">3  FINE TEZONTLE</text>
+    <text x="424" y="548" font-weight="bold">2  BIOCHAR</text>
+    <text x="424" y="616" font-weight="bold">1  SUPPORT GRAVEL</text>
+    <text x="424" y="656">SCREEN &#8212; plastic mesh</text>
+    <text x="424" y="696">VALVE &#189;&#8221; &#8212; plastic stopcock</text>
+  </g>
+  <g stroke="#1a1a1a" stroke-width="1" fill="none">
+    <rect x="620" y="150" width="308" height="150"/>
+    <line x1="620" y1="176" x2="928" y2="176"/>
+    <line x1="620" y1="207" x2="928" y2="207"/>
+    <line x1="620" y1="238" x2="928" y2="238"/>
+    <line x1="620" y1="269" x2="928" y2="269"/>
+    <line x1="652" y1="150" x2="652" y2="300"/>
+    <line x1="784" y1="150" x2="784" y2="300"/>
+    <line x1="838" y1="150" x2="838" y2="300"/>
+    <line x1="884" y1="150" x2="884" y2="300"/>
+  </g>
+  <text x="620" y="142" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">MEDIA SCHEDULE</text>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#1a1a1a">
+    <text x="629" y="168" font-weight="bold">NO</text>
+    <text x="660" y="168" font-weight="bold">MATERIAL</text>
+    <text x="792" y="168" font-weight="bold">DEPTH</text>
+    <text x="846" y="168" font-weight="bold">VOL</text>
+    <text x="892" y="168" font-weight="bold">MASS</text>
+
+    <text x="632" y="196">1</text><text x="660" y="196">Support gravel 10 mm</text><text x="792" y="196">50</text><text x="846" y="196">221</text><text x="892" y="196">330 g</text>
+    <text x="632" y="227">2</text><text x="660" y="227">Biochar, granular</text><text x="792" y="227">120</text><text x="846" y="227">530</text><text x="892" y="227">240 g</text>
+    <text x="632" y="258">3</text><text x="660" y="258">Tezontle, 0.4&#8211;0.8 mm</text><text x="792" y="258">200</text><text x="846" y="258">883</text><text x="892" y="258">795 g</text>
+    <text x="632" y="289">4</text><text x="660" y="289">Tezontle, 4&#8211;8 mm</text><text x="792" y="289">50</text><text x="846" y="289">221</text><text x="892" y="289">200 g</text>
+  </g>
+  <text x="620" y="318" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#555555">Depth in mm &#183; volume in cm&#179; &#183; mass indicative</text>
+
+  <text x="620" y="366" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">NOTES</text>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a1a1a">
+    <text x="620" y="388">1.  Place media from the bottom up. Level</text>
+    <text x="638" y="404">each layer before adding the next.</text>
+    <text x="620" y="428">2.  Geotextile disc cut to bore between</text>
+    <text x="638" y="444">every pair of layers.</text>
+    <text x="620" y="468">3.  Wash the bed with clean water until the</text>
+    <text x="638" y="484">effluent runs clear before the first run.</text>
+    <text x="620" y="508">4.  Gravity feed only, top to bottom. Do not</text>
+    <text x="638" y="524">pressurise. Connect &#189;&#8221; hose at the valve.</text>
+    <text x="620" y="548">5.  Grade tezontle by sieve before placing.</text>
+    <text x="638" y="564">Record D10 and uniformity coefficient.</text>
+    <text x="620" y="588">6.  Allow 3 kg raw tezontle to yield the</text>
+    <text x="638" y="604">graded fractions in the schedule.</text>
+  </g>
+
+  <text x="44" y="664" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">SUPPORT ARRANGEMENT</text>
+  <text x="44" y="680" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#555555">Two clamps, weighted base.</text>
+  <g stroke="#1a1a1a" stroke-width="1.6" fill="none">
+    <rect x="90" y="692" width="40" height="76"/>
+    <rect x="196" y="698" width="9" height="70"/>
+    <rect x="130" y="708" width="66" height="8"/>
+    <rect x="130" y="744" width="66" height="8"/>
+    <rect x="56" y="768" width="160" height="8"/>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1" fill="none">
+    <rect x="620" y="640" width="308" height="128" stroke-width="1.6"/>
+    <line x1="620" y1="672" x2="928" y2="672"/>
+    <line x1="620" y1="704" x2="928" y2="704"/>
+    <line x1="620" y1="736" x2="928" y2="736"/>
+    <line x1="800" y1="704" x2="800" y2="768"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="630" y="662" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
+    <text x="630" y="693" font-size="12">Filtration column &#8212; section</text>
+    <text x="630" y="724" font-size="10.5">DIMENSIONS IN MM</text>
+    <text x="810" y="724" font-size="10.5">SCALE  NTS</text>
+    <text x="630" y="756" font-size="10.5">DWG  RWL-001   REV  A</text>
+    <text x="810" y="756" font-size="10.5">2026-09-08</text>
+  </g>
+</svg>
