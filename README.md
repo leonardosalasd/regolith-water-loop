@@ -12,11 +12,48 @@ Three-stage water pre-treatment column for a Mars habitat: bioremediated regolit
 
 ---
 
-## WIP
-
-Just setting up the repo. Code and documentation are on the way. Pardon the dust!
+> [!CAUTION]
+> **This is not a drinking water system.**
+> This column is a pre-treatment stage. It reduces turbidity, suspended solids and part of the chemical load. It does **not** remove bacteria, viruses or parasites, and it does **not** make water safe to drink. Water leaving this column still requires proper disinfection.
 
 ---
+
+## What this is
+
+A Mars habitat has to detoxify its own soil, handle the waste its crew produces every day, and recycle water. Solved separately those are three problems.
+Solved together they are one machine, where the furnace that processes waste also keeps the bioreactor warm and fed, and both of them produce the material the filter is made of.
+
+This repository holds the design, the bench build, and the code that measures whether it works.
+
+- [docs/system.md](docs/system.md) — the three stages and how they depend on each other
+- [docs/method.md](docs/method.md) — how turbidity is measured from photographs
+- [GLOSSARY.md](GLOSSARY.md) — terms used throughout
+
+## Status
+
+Bench build in progress. The measurement toolchain is working and tested; build documentation lands once the column is assembled and photographed.
+
+## Measuring turbidity
+
+Removal is measured from photographs rather than an electronic probe: a phone camera is available and free, a nephelometer is not. Results are relative to the influent, not traceable to a turbidity standard.
+
+```bash
+pip install -e .
+
+rwl measure photos/*.png --setup setup.json --out readings.csv
+rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
+rwl report --readings readings.csv --calibration calibration.json \
+    --before influent --after effluent
+```
+
+Read [docs/method.md](docs/method.md) before shooting a session. The rig has to stay fixed or the series is void.
+
+## Development
+
+```bash
+pip install -e '.[dev]'
+pytest
+```
 
 ## Share the repo
 
