@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="./public/logo.svg" width="100" alt="Logo de Markdown">
+<img src="./public/logo.svg" width="100" alt="Regolith Water Loop Logo">
 
 # **Regolith Water Loop**
 
-Three-stage water pre-treatment column for a Mars habitat: bioremediated regolith, pyrolysis biochar, and live sensor telemetry. Bench-built and measured
+Three-stage water pre-treatment column for a Mars habitat: bioremediated regolith, pyrolysis biochar, and live sensor telemetry. Bench-built and measured.
 
 [**Leonardo Salas**](mailto:leonardo.salas01@outlook.com)
 
@@ -15,6 +15,19 @@ Three-stage water pre-treatment column for a Mars habitat: bioremediated regolit
 ## WIP
 
 Just setting up the repo. Code and documentation are on the way. Pardon the dust!
+
+---
+
+## Share the repo
+
+Share directly via URL or scan the QR code: <br>
+[https://github.com/leonardosalasd/regolith-water-loop](https://github.com/leonardosalasd/regolith-water-loop)
+
+<div align="center">
+
+<img src="./public/qr/qr_bg_black.png" width="260" alt="QR Code">
+
+</div>
 
 ---
 
