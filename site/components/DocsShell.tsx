@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { authorEmail, authorName, ui, type Locale } from "@/lib/i18n";
 
 export function DocsShell({
@@ -5,7 +6,7 @@ export function DocsShell({
   children,
 }: {
   locale: Locale;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <div className="lg:pl-[268px]">

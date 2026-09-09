@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Link from "next/link";
 import { BookMark, GitHubMark, Logo } from "./Logo";
 import {
@@ -43,7 +44,7 @@ function Card({
 }: {
   href: string;
   external?: boolean;
-  icon: React.ReactNode;
+  icon: ReactNode;
   title: string;
   body: string;
 }) {

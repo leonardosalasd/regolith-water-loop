@@ -75,6 +75,8 @@ export function Sheet({
   return (
     <figure className="my-8">
       <div className="overflow-x-auto rounded-sm border border-line bg-white p-3">
+        {/* Vector drawings: next/image has nothing to optimise and would only
+            wrap them in extra markup. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src={src} alt={alt} className="block h-auto w-full min-w-[560px]" />
       </div>
