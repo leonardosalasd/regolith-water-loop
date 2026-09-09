@@ -1,0 +1,11 @@
+.git
+.venv
+site/node_modules
+site/.next
+site/out
+docs/private
+data/samples
+__pycache__
+*.pyc
+CLAUDE.md
+.claude

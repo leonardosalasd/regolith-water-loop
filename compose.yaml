@@ -1,0 +1,13 @@
+services:
+  site:
+    build: ./site
+    image: regolith-water-loop-site
+    ports:
+      - "8080:80"
+
+  rwl:
+    build: .
+    image: regolith-water-loop
+    volumes:
+      - ./data:/work/data
+    working_dir: /work
