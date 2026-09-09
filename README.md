@@ -8,6 +8,14 @@ Three-stage water pre-treatment column: bioremediated regolith, pyrolysis biocha
 
 [**Leonardo Salas**](mailto:leonardo.salas01@outlook.com) · [rwl.leonardosalas.dev](https://rwl.leonardosalas.dev)
 
+<br>
+
+<a href="https://github.com/sponsors/leonardosalasd">
+  <img src="https://img.shields.io/badge/Sponsor%20this%20project-%E2%9D%A4-F54927?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor Regolith Water Loop on GitHub Sponsors" height="34"/>
+</a>
+
+<sub>Built and documented in the open by one person. Sponsorship keeps it that way.</sub>
+
 </div>
 
 ---
@@ -92,6 +100,26 @@ doc-engine build doc-engine.md
 docker compose up site # site on http://localhost:8080
 docker compose run --rm rwl --help
 ```
+
+---
+
+## Share this project
+
+Share the link directly or scan the code:
+[rwl.leonardosalas.dev](https://rwl.leonardosalas.dev)
+
+<div align="center">
+
+<img src="./public/qr/qr2_bg_black.png" width="260" alt="QR code linking to the repository">
+
+</div>
+
+---
+
+## Support
+
+If this is useful to you, [sponsorship on GitHub](https://github.com/sponsors/leonardosalasd)
+funds the parts, the materials and the time that go into documenting it properly.
 
 ---
 
