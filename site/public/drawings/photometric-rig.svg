@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620" role="img" aria-label="Plan view of the photographic rig for turbidity measurement, with camera, sample jar, target card and white reference card, and a diagram of the resulting camera frame">
+  <defs>
+    <marker id="rdim" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="rdot" viewBox="0 0 6 6" refX="3" refY="3" markerWidth="6" markerHeight="6">
+      <circle cx="3" cy="3" r="2.4" fill="#1a1a1a"/>
+    </marker>
+    <pattern id="checker" patternUnits="userSpaceOnUse" width="30" height="30">
+      <rect width="30" height="30" fill="#ffffff"/>
+      <rect width="15" height="15" fill="#1a1a1a"/>
+      <rect x="15" y="15" width="15" height="15" fill="#1a1a1a"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="620" fill="#ffffff"/>
+  <rect x="16" y="16" width="928" height="588" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+
+  <text x="44" y="52" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" fill="#1a1a1a" letter-spacing="1.5">PHOTOMETRIC RIG &#8212; PLAN</text>
+  <line x1="44" y1="60" x2="386" y2="60" stroke="#1a1a1a" stroke-width="1"/>
+
+  <text x="44" y="96" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#555555" letter-spacing="1">VIEWED FROM ABOVE</text>
+
+  <line x1="150" y1="322" x2="470" y2="322" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="10 4 3 4"/>
+  <text x="196" y="316" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#555555">OPTICAL AXIS</text>
+
+  <g stroke="#1a1a1a" stroke-width="1.8" fill="none">
+    <rect x="70" y="300" width="62" height="44"/>
+    <path d="M132,310 L152,302 L152,342 L132,334 z"/>
+    <line x1="101" y1="344" x2="101" y2="366"/>
+    <path d="M85,382 L101,366 L117,382"/>
+  </g>
+  <text x="101" y="398" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">CAMERA</text>
+  <text x="101" y="412" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#555555" text-anchor="middle">on a fixed stand</text>
+
+  <g stroke="#1a1a1a" stroke-width="1.6" fill="none">
+    <circle cx="380" cy="322" r="32"/>
+    <circle cx="380" cy="322" r="28"/>
+  </g>
+  <text x="380" y="272" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1a1a1a" text-anchor="middle">SAMPLE JAR</text>
+  <line x1="380" y1="278" x2="380" y2="288" stroke="#1a1a1a" stroke-width="0.8"/>
+
+  <rect x="424" y="272" width="7" height="100" fill="#1a1a1a"/>
+  <rect x="424" y="176" width="7" height="72" fill="none" stroke="#1a1a1a" stroke-width="1.6"/>
+
+  <g stroke="#1a1a1a" stroke-width="0.9" fill="none" marker-start="url(#rdot)">
+    <path d="M431,322 L492,322 L506,314"/>
+    <path d="M431,212 L492,212 L506,204"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a1a1a">
+    <text x="512" y="310" font-weight="bold">TARGET CARD</text>
+    <text x="512" y="326" font-size="10.5" fill="#555555">100 &#215; 100 mm</text>
+    <text x="512" y="200" font-weight="bold">WHITE CARD</text>
+    <text x="512" y="216" font-size="10.5" fill="#555555">80 &#215; 80 mm</text>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1.6" fill="none">
+    <rect x="196" y="140" width="52" height="26" transform="rotate(30 222 153)"/>
+  </g>
+  <g stroke="#c07a3a" stroke-width="1.2" stroke-dasharray="6 5">
+    <line x1="244" y1="172" x2="356" y2="296"/>
+    <line x1="256" y1="162" x2="368" y2="286"/>
+  </g>
+  <text x="180" y="128" font-family="Helvetica, Arial, sans-serif" font-size="11.5" font-weight="bold" fill="#1a1a1a">LAMP &#8212; single source at 45&#176;</text>
+
+  <g stroke="#1a1a1a" stroke-width="0.8" fill="none">
+    <line x1="152" y1="352" x2="152" y2="444"/>
+    <line x1="380" y1="358" x2="380" y2="444"/>
+    <line x1="431" y1="376" x2="431" y2="444"/>
+  </g>
+  <g stroke="#1a1a1a" stroke-width="1" marker-start="url(#rdim)" marker-end="url(#rdim)">
+    <line x1="152" y1="436" x2="380" y2="436"/>
+    <line x1="380" y1="436" x2="431" y2="436"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1a1a1a" text-anchor="middle">
+    <rect x="246" y="424" width="40" height="15" fill="#ffffff"/><text x="266" y="436">400</text>
+    <rect x="470" y="424" width="34" height="15" fill="#ffffff"/><text x="487" y="436">60</text>
+  </g>
+  <line x1="431" y1="436" x2="470" y2="436" stroke="#1a1a1a" stroke-width="0.8"/>
+
+  <text x="600" y="96" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#555555" letter-spacing="1">RESULTING FRAME</text>
+  <rect x="600" y="110" width="320" height="200" fill="none" stroke="#1a1a1a" stroke-width="1.6"/>
+  <rect x="626" y="136" width="62" height="62" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
+  <text x="657" y="212" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="middle">white</text>
+  <rect x="734" y="140" width="120" height="120" fill="url(#checker)" stroke="#1a1a1a" stroke-width="1.2"/>
+  <circle cx="794" cy="212" r="52" fill="#ffffff" fill-opacity="0.55" stroke="#1a1a1a" stroke-width="1.8"/>
+  <text x="794" y="284" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#1a1a1a" text-anchor="middle">jar over target</text>
+  <text x="600" y="330" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#555555">Read both ROIs off one frame, reuse all session.</text>
+
+  <text x="44" y="486" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">NOTES</text>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11.5" fill="#1a1a1a">
+    <text x="44" y="508">1.  Nothing moves during a session. If the camera, jar or cards shift, the series is void.</text>
+    <text x="44" y="528">2.  Manual exposure and focus where the phone allows it. No flash, no HDR, no filters.</text>
+    <text x="44" y="548">3.  One constant light source. Close curtains; daylight drifts within minutes.</text>
+    <text x="44" y="568">4.  The white card must never fall in the jar&#8217;s shadow.</text>
+    <text x="44" y="588">5.  Same jar and same fill level for every sample. Underexpose rather than clip the white.</text>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1" fill="none">
+    <rect x="600" y="460" width="320" height="128" stroke-width="1.6"/>
+    <line x1="600" y1="492" x2="920" y2="492"/>
+    <line x1="600" y1="524" x2="920" y2="524"/>
+    <line x1="600" y1="556" x2="920" y2="556"/>
+    <line x1="790" y1="524" x2="790" y2="588"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="610" y="482" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
+    <text x="610" y="513" font-size="12">Photometric rig &#8212; plan</text>
+    <text x="610" y="544" font-size="10.5">DIMENSIONS IN MM &#183; SCALE NTS</text>
+    <text x="800" y="544" font-size="10.5">DWG  RWL-002  REV A</text>
+    <text x="610" y="576" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
+    <text x="800" y="576" font-size="10.5">2026-09-08</text>
+  </g>
+</svg>
