@@ -110,7 +110,7 @@ Share the link directly or scan the code:
 
 <div align="center">
 
-<img src="./public/qr/qr2_bg_black.png" width="260" alt="QR code linking to the repository">
+<img src="./public/qr/qr2_bg_black.png" width="260" alt="QR code linking to the project">
 
 </div>
 
