@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "preview": "npx serve out",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
   },
   "dependencies": {
     "next": "^15.5.4",
@@ -17,6 +18,8 @@
     "@types/node": "^22.15.0",
     "@types/react": "^19.1.9",
     "@types/react-dom": "^19.1.7",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.4",
     "tailwindcss": "^4.1.13",
     "typescript": "^5.9.2"
   },
