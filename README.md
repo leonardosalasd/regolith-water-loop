@@ -4,9 +4,9 @@
 
 # **Regolith Water Loop**
 
-Three-stage water pre-treatment column for a Mars habitat: bioremediated regolith, pyrolysis biochar, and live sensor telemetry. Bench-built and measured.
+Three-stage water pre-treatment column: bioremediated regolith, pyrolysis biochar, and a gravity feed. Bench-built and measured.
 
-[**Leonardo Salas**](mailto:leonardo.salas01@outlook.com)
+[**Leonardo Salas**](mailto:leonardo.salas01@outlook.com) · [rwl.leonardosalas.dev](https://rwl.leonardosalas.dev)
 
 </div>
 
@@ -20,27 +20,32 @@ Three-stage water pre-treatment column for a Mars habitat: bioremediated regolit
 
 ## What this is
 
-A Mars habitat has to detoxify its own soil, handle the waste its crew produces every day, and recycle water. Solved separately those are three problems.
-Solved together they are one machine, where the furnace that processes waste also keeps the bioreactor warm and fed, and both of them produce the material the filter is made of.
+A habitat has to detoxify its own soil, handle the waste it produces every day, and recycle water. Solved separately those are three problems. Solved together they are one machine, where the furnace that processes waste also keeps the bioreactor warm and fed, and both of them produce the material the filter is made of.
 
 This repository holds the design, the bench build, and the code that measures whether it works.
 
-- [docs/system.md](docs/system.md) — the three stages and how they depend on each other
-- [docs/method.md](docs/method.md) — how turbidity is measured from photographs
-- [GLOSSARY.md](GLOSSARY.md) — terms used throughout
+| | |
+| --- | --- |
+| [docs/system.md](docs/system.md) | The three stages and how they depend on each other |
+| [docs/method.md](docs/method.md) | How turbidity is measured from photographs |
+| [docs/protocol.md](docs/protocol.md) | Greywater recipe, grading, calibration and run procedure |
+| [docs/drawings/](docs/drawings/) | Dimensioned drawings, RWL-001 and RWL-002 |
+| [GLOSSARY.md](GLOSSARY.md) | Terms used throughout |
 
-## Status
+Stage 2, the filtration column, is built and measured. Stages 1 and 3 are supported by published work. Perchlorate salts are strong oxidisers and are not handled in this project.
 
-Bench build in progress. The measurement toolchain is working and tested; build documentation lands once the column is assembled and photographed.
+---
 
 ## Measuring turbidity
 
-Removal is measured from photographs rather than an electronic probe: a phone camera is available and free, a nephelometer is not. Results are relative to the influent, not traceable to a turbidity standard.
+Removal is measured from photographs rather than an electronic probe: a phone camera is available and free, a nephelometer is not. A printed target behind the sample loses contrast as suspended solids rise, and a white card in frame cancels exposure differences between shots.
+
+Results are relative to the influent, never reported in NTU.
 
 ```bash
 pip install -e .
 
-rwl measure photos/*.png --setup setup.json --out readings.csv
+rwl measure photos/*.jpg --setup setup.json --out readings.csv
 rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
 rwl report --readings readings.csv --calibration calibration.json \
     --before influent --after effluent
@@ -48,31 +53,51 @@ rwl report --readings readings.csv --calibration calibration.json \
 
 Read [docs/method.md](docs/method.md) before shooting a session. The rig has to stay fixed or the series is void.
 
-## Development
+### Development
 
 ```bash
 pip install -e '.[dev]'
 pytest
 ```
 
-## Share the repo
+---
 
-Share directly via URL or scan the QR code: <br>
-[https://github.com/leonardosalasd/regolith-water-loop](https://github.com/leonardosalasd/regolith-water-loop)
+## Documentation site
 
-<div align="center">
+A static site under [`site/`](site/), English at the root and Spanish under `/es/`.
 
-<img src="./public/qr/qr_bg_black.png" width="260" alt="QR Code">
+```bash
+pnpm install --dir site
+pnpm --dir site dev # development
+pnpm --dir site build # static export into site/out/
+```
 
-</div>
+---
+
+## Building the PDF
+
+The whole technical document is assembled from these Markdown files and the SVG drawings with [doc-engine-cli](https://github.comleonardosalasd/doc-engine-cli).
+[`doc-engine.md`](doc-engine.md) is the manifest.
+
+```bash
+pipx install doc-engine-cli
+doc-engine build doc-engine.md
+```
+
+---
+
+## Docker
+
+```bash
+docker compose up site # site on http://localhost:8080
+docker compose run --rm rwl --help
+```
 
 ---
 
 ## License
 
-I want this project to be open and accessible, so I'm splitting the licensing depending on what you're using:
+Licensing is split by what you are using:
 
-* **Source Code:** All software and code in this repository are licensed under the [**MIT License**](./LICENSE). Feel free to use, modify, and build upon it.
-* **Documentation, Guides & Media:** All documentation, build guides, diagrams, schematics, and photographs are licensed under the [**Creative Commons Attribution 4.0 International License (CC BY 4.0)**](./LICENSE-DOCS). 
-
-You are free to share and adapt this material as long as you give appropriate credit to the project.
+* **Source code** — [MIT](./LICENSE). Use, modify and build on it freely.
+* **Documentation, guides and media** — [CC BY 4.0](./LICENSE-DOCS). Share and adapt with credit.

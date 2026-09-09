@@ -1,4 +1,8 @@
+<div align="center">
+
 # The system
+
+</div>
 
 ## The problem
 
@@ -72,8 +76,8 @@ The bench build substitutes Earth materials for the Martian ones.
 
 | Mars | Bench | Simulated? |
 | --- | --- | --- |
-| Regolith | Tezontle, a basaltic volcanic scoria from Jalisco | Yes — analogous rock, not regolith |
-| Biochar from crew waste | Biochar from agave bagasse, a tequila industry residue | No — this is real biochar |
+| Regolith | Volcanic scoria, basaltic | Yes — analogous rock, not regolith |
+| Biochar from crew waste | Biochar from fibrous agricultural residue | No — this is real biochar |
 | Greywater | Synthetic mix to a written recipe | Yes |
 | Perchlorate reduction | Not reproduced | Modelled from literature |
 
@@ -89,6 +93,6 @@ Introducing terrestrial bacteria to Mars is a planetary protection question unde
 
 ## Return to Earth
 
-The same column, built from local volcanic rock and agricultural residue char, works as decentralised passive pre-treatment for household water storage. In the Guadalajara metropolitan area, water does not reach homes clean. This is not an analogy drawn after the fact — it is the same hardware.
+The same column, built from local volcanic rock and agricultural residue char, works as decentralised passive pre-treatment for household water storage. In many places piped water does not arrive clean and households store it before use. This is not an analogy drawn after the fact — it is the same hardware.
 
 Relevant Sustainable Development Goals: 6 (clean water and sanitation), 12 (responsible consumption and production), 9 (industry, innovation and infrastructure).

@@ -1,9 +1,13 @@
+<div align="center">
+
 # Run protocol
 
 Everything below is done in one session. Splitting a session across two days invalidates the calibration, because the light will not be the same.
 
 Drawings: [RWL-001 column](drawings/column-section.svg) ·
 [RWL-002 rig](drawings/photometric-rig.svg)
+
+</div>
 
 ## Synthetic greywater
 
@@ -24,35 +28,23 @@ Write down whatever you end up with. The absolute values do not matter, repeatab
 
 ## Before the first run
 
-1. Grade the tezontle. Keep a fine and a coarse fraction, weigh both, record the
-   yield from the raw mass. See [grading](#grading-the-tezontle) below.
+1. Grade the scoria. Keep a fine and a coarse fraction, weigh both, record the
+   yield from the raw mass. See [grading](#grading-the-scoria) below.
 2. Load the column bottom up per RWL-001. Level each layer, geotextile disc between layers.
 3. Wash the bed with clean water until the effluent runs clear. New media sheds fines and will otherwise read as if the column is making water dirtier.
 4. Build the rig per RWL-002. Take one frame, read the target and white ROIs off it, write `setup.json`.
 
-## Grading the tezontle
+## Grading the scoria
 
-Laboratory sieves give the cleanest result, but they are not required. Whatever
-method is used, report it plainly and give the measured numbers rather than a
-nominal mesh size.
+Laboratory sieves give the cleanest result, but they are not required. Whatever method is used, report it plainly and give the measured numbers rather than a nominal mesh size.
 
-**With laboratory sieves.** Standard stack, keep the 0.4–0.8 mm and 4–8 mm
-fractions, report D10 and the uniformity coefficient.
+**With laboratory sieves.** Standard stack, keep the 0.4–0.8 mm and 4–8 mm fractions, report D10 and the uniformity coefficient.
 
-**With kitchen sieves.** Use three sieves of different fineness. Measure the
-aperture of each by counting wires per centimetre under good light and dividing,
-then report the fractions by that measured aperture. Less precise, still
-traceable to a number you actually measured.
+**With kitchen sieves.** Use three sieves of different fineness. Measure the aperture of each by counting wires per centimetre under good light and dividing, then report the fractions by that measured aperture. Less precise, still traceable to a number you actually measured.
 
-**By sedimentation.** No equipment at all. Crush the tezontle, put it in a tall
-transparent bottle of water, shake, and let it settle. Coarse grains reach the
-bottom first and fines last, so decanting at timed intervals separates the
-fractions. This is settling-velocity separation, the same principle as the
-hydrometer analysis used in soil mechanics.
+**By sedimentation.** No equipment at all. Crush the scoria, put it in a tall transparent bottle of water, shake, and let it settle. Coarse grains reach the bottom first and fines last, so decanting at timed intervals separates the fractions. This is settling-velocity separation, the same principle as the hydrometer analysis used in soil mechanics.
 
-Record the settling times and the mass recovered in each fraction. Two runs of
-the same procedure should give similar masses; if they do not, the crushing was
-inconsistent.
+Record the settling times and the mass recovered in each fraction. Two runs of the same procedure should give similar masses; if they do not, the crushing was inconsistent.
 
 ## Calibration series
 
@@ -80,8 +72,7 @@ R² below 0.9 means the light drifted. Reshoot the series; do not continue.
 1. Stir the stock. Fill the jar, photograph it as `influent`.
 2. Close the valve. Pour 884 ml of stock into the column.
 3. Open the valve and start the timer.
-4. Collect the effluent in the graduated cylinder. Record the time to pass
-   500 ml — that is the flow rate.
+4. Collect the effluent in the graduated cylinder. Record the time to pass 500 ml — that is the flow rate.
 5. Fill the jar from the effluent, photograph as `effluent`.
 6. Process:
 
@@ -97,7 +88,7 @@ Run at least three charges. The first will read best and then removal drops as t
 
 Written down at the time, not reconstructed later.
 
-- Mass of each medium as placed, and the graded yield from the raw tezontle
+- Mass of each medium as placed, and the graded yield from the raw scoria
 - D10 and uniformity coefficient of the fine fraction
 - The greywater recipe actually used
 - Flow rate per charge

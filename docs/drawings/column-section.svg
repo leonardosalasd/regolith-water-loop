@@ -135,8 +135,8 @@
     <text x="424" y="101" font-size="11">acrylic tube or stacked PET bottles</text>
     <text x="424" y="132" font-weight="bold">FREEBOARD</text>
     <text x="424" y="220">CHARGE VOLUME &#8212; 884 ml</text>
-    <text x="424" y="320" font-weight="bold">4  COARSE TEZONTLE</text>
-    <text x="424" y="420" font-weight="bold">3  FINE TEZONTLE</text>
+    <text x="424" y="320" font-weight="bold">4  COARSE SCORIA</text>
+    <text x="424" y="420" font-weight="bold">3  FINE SCORIA</text>
     <text x="424" y="548" font-weight="bold">2  BIOCHAR</text>
     <text x="424" y="616" font-weight="bold">1  SUPPORT GRAVEL</text>
     <text x="424" y="656">SCREEN &#8212; plastic mesh</text>
@@ -163,8 +163,8 @@
 
     <text x="632" y="196">1</text><text x="660" y="196">Support gravel 10 mm</text><text x="792" y="196">50</text><text x="846" y="196">221</text><text x="892" y="196">330 g</text>
     <text x="632" y="227">2</text><text x="660" y="227">Biochar, granular</text><text x="792" y="227">120</text><text x="846" y="227">530</text><text x="892" y="227">240 g</text>
-    <text x="632" y="258">3</text><text x="660" y="258">Tezontle, 0.4&#8211;0.8 mm</text><text x="792" y="258">200</text><text x="846" y="258">883</text><text x="892" y="258">795 g</text>
-    <text x="632" y="289">4</text><text x="660" y="289">Tezontle, 4&#8211;8 mm</text><text x="792" y="289">50</text><text x="846" y="289">221</text><text x="892" y="289">200 g</text>
+    <text x="632" y="258">3</text><text x="660" y="258">Scoria, 0.4&#8211;0.8 mm</text><text x="792" y="258">200</text><text x="846" y="258">883</text><text x="892" y="258">795 g</text>
+    <text x="632" y="289">4</text><text x="660" y="289">Scoria, 4&#8211;8 mm</text><text x="792" y="289">50</text><text x="846" y="289">221</text><text x="892" y="289">200 g</text>
   </g>
   <text x="620" y="318" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#555555">Depth in mm &#183; volume in cm&#179; &#183; mass indicative</text>
 
@@ -178,9 +178,9 @@
     <text x="638" y="484">effluent runs clear before the first run.</text>
     <text x="620" y="508">4.  Gravity feed only, top to bottom. Do not</text>
     <text x="638" y="524">pressurise. Connect &#189;&#8221; hose at the valve.</text>
-    <text x="620" y="548">5.  Grade tezontle before placing. Record</text>
+    <text x="620" y="548">5.  Grade the scoria before placing. Record</text>
     <text x="638" y="564">the method and measured fractions.</text>
-    <text x="620" y="588">6.  Allow 3 kg raw tezontle to yield the</text>
+    <text x="620" y="588">6.  Allow 3 kg raw scoria to yield the</text>
     <text x="638" y="604">graded fractions in the schedule.</text>
   </g>
 
@@ -204,9 +204,9 @@
   <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
     <text x="630" y="662" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
     <text x="630" y="693" font-size="12">Filtration column &#8212; section</text>
-    <text x="630" y="724" font-size="10.5">DIMENSIONS IN MM</text>
-    <text x="810" y="724" font-size="10.5">SCALE  NTS</text>
-    <text x="630" y="756" font-size="10.5">DWG  RWL-001   REV  A</text>
+    <text x="630" y="724" font-size="10.5">DIMENSIONS IN MM &#183; SCALE NTS</text>
+    <text x="810" y="724" font-size="10.5">DWG  RWL-001  REV A</text>
+    <text x="630" y="756" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
     <text x="810" y="756" font-size="10.5">2026-09-08</text>
   </g>
 </svg>

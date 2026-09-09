@@ -1,8 +1,12 @@
+<div align="center">
+
 # Turbidity measurement
 
 The column is evaluated by how much suspended load it removes. This project measures that from photographs instead of an electronic probe: a phone camera is available, calibrated, and costs nothing, while a nephelometer is not.
 
 The reading is **relative**, not NTU. Every result is expressed as a percentage of the influent, which is the number that matters for a pre-treatment stage.
+
+</div>
 
 ## Principle
 
