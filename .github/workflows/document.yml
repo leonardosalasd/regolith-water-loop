@@ -1,0 +1,26 @@
+name: document
+
+on:
+  push:
+    branches: [main]
+    paths: ["docs/**", "doc-engine.md", ".github/workflows/document.yml"]
+  pull_request:
+    paths: ["docs/**", "doc-engine.md"]
+  workflow_dispatch:
+
+jobs:
+  pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install doc-engine-cli
+      - run: doc-engine build doc-engine.md -o regolith-water-loop.pdf --force
+      - uses: actions/upload-artifact@v4
+        with:
+          name: regolith-water-loop-pdf
+          path: regolith-water-loop.pdf
+          retention-days: 30
