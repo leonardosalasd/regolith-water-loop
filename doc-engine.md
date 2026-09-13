@@ -11,3 +11,4 @@ accent: "#F54927"
 - [Photometric rig](docs/drawings/photometric-rig.svg)
 - [Measurement method](docs/method.md)
 - [Run protocol](docs/protocol.md)
+- [Build log](docs/build.md)

@@ -37,6 +37,8 @@ This repository holds the design, the bench build, and the code that measures wh
 | [docs/system.md](docs/system.md) | The three stages and how they depend on each other |
 | [docs/method.md](docs/method.md) | How turbidity is measured from photographs |
 | [docs/protocol.md](docs/protocol.md) | Greywater recipe, grading, calibration and run procedure |
+| [docs/build.md](docs/build.md) | Build log with photographs and measured volumes |
+| [docs/print/target-sheet.pdf](docs/print/target-sheet.pdf) | Printable checker target and white card for the rig |
 | [docs/drawings/](docs/drawings/) | Dimensioned drawings, RWL-001 and RWL-002 |
 | [GLOSSARY.md](GLOSSARY.md) | Terms used throughout |
 
@@ -84,7 +86,7 @@ pnpm --dir site build # static export into site/out/
 
 ## Building the PDF
 
-The whole technical document is assembled from these Markdown files and the SVG drawings with [doc-engine-cli](https://github.comleonardosalasd/doc-engine-cli).
+The whole technical document is assembled from these Markdown files and the SVG drawings with [doc-engine-cli](https://github.com/leonardosalasd/doc-engine-cli).
 [`doc-engine.md`](doc-engine.md) is the manifest.
 
 ```bash

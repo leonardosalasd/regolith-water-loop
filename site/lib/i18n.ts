@@ -24,6 +24,7 @@ const groups: Record<Locale, NavGroup[]> = {
       items: [
         { slug: "drawings", label: "Drawings" },
         { slug: "materials", label: "Materials" },
+        { slug: "build", label: "Build log" },
       ],
     },
     {
@@ -48,6 +49,7 @@ const groups: Record<Locale, NavGroup[]> = {
       items: [
         { slug: "drawings", label: "Planos" },
         { slug: "materials", label: "Materiales" },
+        { slug: "build", label: "Bitácora de armado" },
       ],
     },
     {
