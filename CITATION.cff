@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+type: software
+title: "Regolith Water Loop"
+abstract: >-
+  An open-hardware, three-stage water pre-treatment column that layers
+  bioremediated regolith analogue and pyrolysis biochar into a gravity-fed
+  filter, with a photographic method for measuring turbidity removal.
+authors:
+  - given-names: Leonardo
+    family-names: Salas
+    email: leonardo.salas01@outlook.com
+repository-code: "https://github.com/leonardosalasd/regolith-water-loop"
+url: "https://rwl.leonardosalas.dev"
+license:
+  - MIT
+  - CC-BY-4.0
+version: 0.1.0
+keywords:
+  - water treatment
+  - filtration
+  - biochar
+  - regolith
+  - turbidity
+  - open hardware
