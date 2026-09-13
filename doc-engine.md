@@ -9,6 +9,8 @@ accent: "#F54927"
 - [The system](docs/system.md)
 - [Column section](docs/drawings/column-section.svg)
 - [Photometric rig](docs/drawings/photometric-rig.svg)
+- [Materials](docs/materials.md)
 - [Measurement method](docs/method.md)
 - [Run protocol](docs/protocol.md)
 - [Build log](docs/build.md)
+- [Glossary](GLOSSARY.md)

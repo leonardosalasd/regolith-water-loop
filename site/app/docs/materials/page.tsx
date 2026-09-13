@@ -18,18 +18,20 @@ export default function MaterialsPage() {
           rows={[
             ["PVC pipe, 3 in", "750 mm", "hardware store"],
             ["Volcanic scoria (lava rock), raw", "3 kg", "garden centre"],
+            ["Fine sand, passing the insect mesh", "~1 kg", "pool supply or hardware store"],
             ["Lump charcoal, not briquettes", "~0.65 L crushed", "any grocery store"],
             ["PVC end cap, 3 in", "1", "hardware store"],
             ["Transparent hose, ½ in", "1 m", "hardware store"],
             ["Plastic stopcock, ½ in", "1", "hardware store"],
             ["Plastic insect mesh", "30 × 30 cm", "hardware store"],
-            ["Transparent silicone", "1 tube", "hardware store"],
+            ["Two-part epoxy", "1", "hardware store"],
           ]}
         />
         <p>
-          Transparency is not cosmetic. The layers have to be visible for the
-          column to explain itself in a photograph, which is most of what the
-          build is for.
+          The pipe is opaque, so the layers cannot be seen once loaded. Each one
+          is photographed from above as it goes in, which records the build just
+          as well. Hot-melt glue does not hold on wet PVC; seal the outlet with
+          two-part epoxy.
         </p>
       </Section>
 
@@ -48,6 +50,18 @@ export default function MaterialsPage() {
             ["Constant lamp", "1", "any fixed light source"],
           ]}
         />
+        <p>
+          The checker target and the white card print together, at true size, on
+          one A4 sheet.
+        </p>
+        <p>
+          <a
+            href="/print/target-sheet.pdf"
+            className="inline-block border border-line px-4 py-2.5 font-mono text-[12px] uppercase tracking-[0.12em] text-accent transition-colors hover:border-accent"
+          >
+            Download target sheet (PDF)
+          </a>
+        </p>
         <Callout tone="note" title="Why the jars must be identical">
           <p>
             Every sample is photographed through glass. Different thickness or

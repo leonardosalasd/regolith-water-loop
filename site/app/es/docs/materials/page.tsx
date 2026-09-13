@@ -26,18 +26,20 @@ export default function Page() {
           rows={[
             ["Tubo de PVC, 3 pulg", "750 mm", "ferretería"],
             ["Escoria volcánica en bruto", "3 kg", "vivero"],
+            ["Arena fina, que pase la malla mosquitera", "~1 kg", "tienda de albercas o ferretería"],
             ["Carbón vegetal en trozos, no briquetas", "~0.65 L machacado", "cualquier tienda"],
             ["Tapa de PVC, 3 pulg", "1", "ferretería"],
             ["Manguera transparente, ½ pulg", "1 m", "ferretería"],
             ["Llave de paso de plástico, ½ pulg", "1", "ferretería"],
             ["Malla mosquitera de plástico", "30 × 30 cm", "ferretería"],
-            ["Silicón transparente", "1 tubo", "ferretería"],
+            ["Epóxico de dos componentes", "1", "ferretería"],
           ]}
         />
         <p>
-          La transparencia no es estética. Las capas tienen que verse para que la
-          columna se explique sola en una fotografía, que es para lo que sirve la
-          mayor parte del armado.
+          El tubo es opaco, así que las capas no se ven una vez cargadas. Cada una
+          se fotografía desde arriba conforme entra, y eso documenta el armado
+          igual de bien. El silicón caliente no aguanta sobre PVC mojado; la
+          salida se sella con epóxico de dos componentes.
         </p>
       </Section>
 
@@ -56,6 +58,18 @@ export default function Page() {
             ["Lámpara constante", "1", "cualquier fuente de luz fija"],
           ]}
         />
+        <p>
+          El patrón de ajedrez y la tarjeta blanca se imprimen juntos, a tamaño
+          real, en una hoja A4.
+        </p>
+        <p>
+          <a
+            href="/print/target-sheet.pdf"
+            className="inline-block border border-line px-4 py-2.5 font-mono text-[12px] uppercase tracking-[0.12em] text-accent transition-colors hover:border-accent"
+          >
+            Descargar hoja de objetivos (PDF)
+          </a>
+        </p>
         <Callout tone="note" title="Por qué los frascos deben ser idénticos">
           <p>
             Toda muestra se fotografía a través del vidrio. Un grosor o una

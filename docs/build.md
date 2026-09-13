@@ -8,7 +8,7 @@ volumes were measured with 200 ml jars.
 PVC pipe, 3 in nominal, cut to 750 mm. The pipe is opaque, so each layer is
 photographed from above as it goes in rather than through the wall.
 
-![PVC pipe with a tape measure reading 75 cm](../site/public/build/02-column-body.webp)
+![PVC pipe with a tape measure reading 75 cm](build/02-column-body.jpg)
 
 ## Outlet
 
@@ -16,7 +16,7 @@ A bore through a 3 in PVC end cap carries a length of clear ½ in hose into a
 ½ in ball valve. The cap slides onto the pipe over PTFE tape rather than being
 cemented, so the column can be taken apart.
 
-![End cap, hose and ball valve](../site/public/build/01-outlet.webp)
+![End cap, hose and ball valve](build/01-outlet.jpg)
 
 > [!WARNING]
 > Not yet leak-tested. The outlet joint is waiting on a full-height test with the
@@ -27,14 +27,14 @@ cemented, so the column can be taken apart.
 Five discs cut from plastic insect mesh: one under the support layer and one
 between each pair of layers above it.
 
-![Five mesh discs](../site/public/build/03-mesh-discs.webp)
+![Five mesh discs](build/03-mesh-discs.jpg)
 
 ## Charcoal
 
 Lump charcoal, crushed by hand inside nested bags. The fraction held on the
 insect mesh was kept and the powder discarded.
 
-![Crushed charcoal in jars, before washing](../site/public/build/04-charcoal-crushed.webp)
+![Crushed charcoal in jars, before washing](build/04-charcoal-crushed.jpg)
 
 | Stage | Volume |
 | --- | --- |
@@ -45,13 +45,13 @@ Rinsed and soaked overnight so it sinks instead of floating up through the layer
 above. Some pieces would not crush below gravel size, so it is loaded as a graded
 layer: coarse at the bottom, fine on top.
 
-![Washed and soaked charcoal](../site/public/build/05-charcoal-soaked.webp)
+![Washed and soaked charcoal](build/05-charcoal-soaked.jpg)
 
 ## Scoria
 
 Sorted with the insect mesh and by hand into two fractions.
 
-![Finer fraction on the left, coarser on the right](../site/public/build/06-scoria-fractions.webp)
+![Finer fraction on the left, coarser on the right](build/06-scoria-fractions.jpg)
 
 | Fraction | Volume | Destination |
 | --- | --- | --- |
