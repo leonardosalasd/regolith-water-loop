@@ -31,7 +31,7 @@ export default function Page() {
             ["Agua de la llave", "5 L", "—"],
             ["Tierra fina, cribada", "15 g", "sólidos en suspensión"],
             ["Jabón neutro líquido", "5 ml", "carga de surfactante"],
-            ["Colorante vegetal azul", "20 gotas", "trazador de adsorción"],
+            ["Colorante vegetal azul", "10 gotas", "trazador de adsorción"],
           ]}
         />
         <p>
@@ -70,6 +70,70 @@ export default function Page() {
           cronometrados separa las fracciones. Es separación por velocidad de
           sedimentación, el mismo principio del análisis con hidrómetro que se
           usa en mecánica de suelos.
+        </p>
+      </Section>
+
+      <Section title="Preparar el carbón">
+        <p>
+          Carbón vegetal en trozos, nunca briquetas: las briquetas traen
+          aglutinantes que se van al agua. Los pedazos deben verse como madera
+          negra quebrada, no como pastillas uniformes.
+        </p>
+        <Steps
+          items={[
+            {
+              title: "Machácalo con presión, no a golpes",
+              body: <p>Dentro de dos bolsas, párate sobre una tabla encima o rueda una botella de vidrio.</p>,
+            },
+            {
+              title: "Quédate con lo que no pasa la malla",
+              body: <p>El polvo que atraviesa se iría con el agua y pondría negro el efluente.</p>,
+            },
+            {
+              title: "Enjuaga hasta que el agua salga apenas gris",
+              body: <p>Cambia el agua de la cubeta las veces que haga falta.</p>,
+            },
+            {
+              title: "Remójalo toda la noche, hasta que se hunda",
+              body: (
+                <p>
+                  El carbón seco está lleno de aire y flota a través de la capa de
+                  arriba. Hervirlo 15 minutos en agua hace lo mismo más rápido.
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Callout tone="note" title="Si no se deja machacar parejo">
+          <p>
+            Cárgalo como capa graduada: pedazos grandes abajo y fino arriba, para
+            que el agua toque primero el material fino.
+          </p>
+        </Callout>
+        <Callout tone="warn" title="Nada con sedimento al drenaje">
+          <p>
+            Deja asentar el agua de lavado, tira la parte clara y el sedimento a la
+            basura. Los finos de escoria y el polvo de carbón tapan tuberías.
+          </p>
+        </Callout>
+      </Section>
+
+      <Section title="Hoja de objetivos">
+        <p>
+          El patrón de ajedrez y la tarjeta blanca de referencia para el montaje
+          fotométrico, a tamaño real en una hoja A4. Imprímela al 100 % y
+          comprueba la barra de 100 mm con una regla antes de recortar.
+        </p>
+        <p>
+          <a
+            href="/print/target-sheet.pdf"
+            className="inline-block border border-line px-4 py-2.5 font-mono text-[12px] uppercase tracking-[0.12em] text-accent transition-colors hover:border-accent"
+          >
+            Descargar hoja de objetivos (PDF)
+          </a>
+        </p>
+        <p className="text-muted">
+          O genérala con <code className="font-mono text-accent">rwl target</code>.
         </p>
       </Section>
 

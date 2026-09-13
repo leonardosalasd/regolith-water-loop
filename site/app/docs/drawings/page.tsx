@@ -20,8 +20,8 @@ export default function DrawingsPage() {
         <Sheet
           src="/drawings/column-section.svg"
           alt="Vertical section of the filtration column showing four media layers with dimensions"
-          drawing="RWL-001 REV A"
-          caption="Fill by depth, not by mass. If the body is stacked PET bottles rather than a 75 mm tube, the bore changes and the masses in the schedule no longer apply."
+          drawing="RWL-001 REV B"
+          caption="Fill by depth, not by mass. Layer depths are the specification; masses depend on the bore of the pipe actually used."
         />
       </Section>
 

@@ -28,9 +28,9 @@ export default function Page() {
         <Sheet
           src="/drawings/column-section.svg"
           alt="Corte vertical de la columna de filtración con cuatro capas y cotas"
-          drawing="RWL-001 REV A"
+          drawing="RWL-001 REV B"
           label="ver en grande"
-          caption="Llena por espesor, no por masa. Si el cuerpo son botellas PET apiladas en vez de un tubo de 75 mm, el diámetro cambia y las masas del cuadro dejan de aplicar."
+          caption="Llena por espesor, no por masa. Los espesores son la especificación; las masas dependen del diámetro del tubo que realmente se use."
         />
       </Section>
 

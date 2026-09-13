@@ -16,10 +16,10 @@ export default function MaterialsPage() {
           head={["Item", "Quantity", "Where"]}
           mono={[1]}
           rows={[
-            ["Transparent acrylic tube, 3 in bore", "700 mm", "acrylic supplier"],
+            ["PVC pipe, 3 in", "750 mm", "hardware store"],
             ["Volcanic scoria (lava rock), raw", "3 kg", "garden centre"],
-            ["Granular activated carbon", "500 g", "aquarium shop"],
-            ["Aquarium gravel", "1 kg", "aquarium shop"],
+            ["Lump charcoal, not briquettes", "~0.65 L crushed", "any grocery store"],
+            ["PVC end cap, 3 in", "1", "hardware store"],
             ["Transparent hose, ½ in", "1 m", "hardware store"],
             ["Plastic stopcock, ½ in", "1", "hardware store"],
             ["Plastic insect mesh", "30 × 30 cm", "hardware store"],

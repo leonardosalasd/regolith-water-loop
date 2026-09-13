@@ -24,10 +24,10 @@ export default function Page() {
           head={["Artículo", "Cantidad", "Dónde"]}
           mono={[1]}
           rows={[
-            ["Tubo de acrílico transparente, 3 pulg", "700 mm", "acrílicos"],
+            ["Tubo de PVC, 3 pulg", "750 mm", "ferretería"],
             ["Escoria volcánica en bruto", "3 kg", "vivero"],
-            ["Carbón activado granular", "500 g", "acuario"],
-            ["Grava de acuario", "1 kg", "acuario"],
+            ["Carbón vegetal en trozos, no briquetas", "~0.65 L machacado", "cualquier tienda"],
+            ["Tapa de PVC, 3 pulg", "1", "ferretería"],
             ["Manguera transparente, ½ pulg", "1 m", "ferretería"],
             ["Llave de paso de plástico, ½ pulg", "1", "ferretería"],
             ["Malla mosquitera de plástico", "30 × 30 cm", "ferretería"],

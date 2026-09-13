@@ -20,7 +20,7 @@ export default function ProtocolPage() {
             ["Tap water", "5 L", "—"],
             ["Fine soil, sieved", "15 g", "suspended solids"],
             ["Neutral liquid soap", "5 ml", "surfactant load"],
-            ["Blue food colouring", "20 drops", "adsorption tracer"],
+            ["Blue food colouring", "10 drops", "adsorption tracer"],
           ]}
         />
         <p>
@@ -57,6 +57,70 @@ export default function ProtocolPage() {
           bottom first and fines last, so decanting at timed intervals separates
           the fractions. It is settling-velocity separation, the same principle
           as the hydrometer analysis used in soil mechanics.
+        </p>
+      </Section>
+
+      <Section title="Preparing the charcoal">
+        <p>
+          Lump charcoal, never briquettes: briquettes carry binders that leach
+          into the water. Pieces should look like broken black wood, not uniform
+          pillows.
+        </p>
+        <Steps
+          items={[
+            {
+              title: "Crush it with pressure, not blows",
+              body: <p>Inside two nested bags, stand on a board laid over it or roll a glass bottle across it.</p>,
+            },
+            {
+              title: "Keep what stays on the mesh",
+              body: <p>The powder that falls through would wash out and turn the effluent black.</p>,
+            },
+            {
+              title: "Rinse until the water runs faintly grey",
+              body: <p>Change the water in the bucket as many times as it takes.</p>,
+            },
+            {
+              title: "Soak overnight until it sinks",
+              body: (
+                <p>
+                  Dry charcoal is full of air and floats up through the layer above
+                  it. Simmering it in water for 15 minutes does the same job faster.
+                </p>
+              ),
+            },
+          ]}
+        />
+        <Callout tone="note" title="If it will not crush evenly">
+          <p>
+            Load it as a graded layer: coarse pieces at the bottom, fine on top,
+            so the water meets the fine material first.
+          </p>
+        </Callout>
+        <Callout tone="warn" title="Nothing with sediment down the drain">
+          <p>
+            Let wash water settle, pour off the clear water and bin the sediment.
+            Scoria fines and charcoal dust block pipes.
+          </p>
+        </Callout>
+      </Section>
+
+      <Section title="Target sheet">
+        <p>
+          The checker target and white reference card for the photometric rig,
+          at true size on one A4 page. Print at 100% and check the 100 mm scale
+          bar with a ruler before cutting.
+        </p>
+        <p>
+          <a
+            href="/print/target-sheet.pdf"
+            className="inline-block border border-line px-4 py-2.5 font-mono text-[12px] uppercase tracking-[0.12em] text-accent transition-colors hover:border-accent"
+          >
+            Download target sheet (PDF)
+          </a>
+        </p>
+        <p className="text-muted">
+          Or generate it with <code className="font-mono text-accent">rwl target</code>.
         </p>
       </Section>
 
