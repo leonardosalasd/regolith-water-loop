@@ -8,6 +8,7 @@ import json
 import sys
 from pathlib import Path
 
+from . import target as target_sheet
 from .turbidity import ROI, Calibration, Reading, fit, measure, reduction
 
 
@@ -86,6 +87,13 @@ def cmd_report(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_target(args: argparse.Namespace) -> int:
+    path = target_sheet.write(args.out)
+    print(f"target sheet written to {path}")
+    print("print at 100% / actual size and check the 100 mm bar with a ruler")
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="rwl", description="Turbidity measurement from photographs")
     subcommands = parser.add_subparsers(dest="command", required=True)
@@ -108,6 +116,10 @@ def build_parser() -> argparse.ArgumentParser:
     report_cmd.add_argument("--before", required=True)
     report_cmd.add_argument("--after", required=True)
     report_cmd.set_defaults(func=cmd_report)
+
+    target_cmd = subcommands.add_parser("target", help="write the printable A4 target sheet")
+    target_cmd.add_argument("--out", type=Path, default=Path("target-sheet.pdf"))
+    target_cmd.set_defaults(func=cmd_target)
 
     return parser
 
