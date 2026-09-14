@@ -8,11 +8,13 @@
 
 A Mars habitat supporting six crew faces three linked problems:
 
-1. **The soil is toxic on arrival.** Martian regolith contains perchlorate before anyone lands. The Phoenix lander measured 0.4–0.6% by weight at Green Valley. Nothing grows in it and nothing can be built on it safely.
-2. **The mission produces waste every day.** Greywater, food residue, packaging and technical waste, all of it ending up in that same soil.
-3. **Water has to be recycled.** The habitat already extracts subsurface ice and purifies it by reverse osmosis. That part works. The question is how used water can reach that machine in better condition.
+1. **The soil is toxic on arrival.** Martian regolith contains perchlorate before anyone lands. The Phoenix lander measured 0.4–0.6% by mass in the northern plains (Hecht 2009). At those levels it is a chemical hazard to the crew (Davila 2013).
+2. **The mission produces waste every day.** Greywater, food residue, paper and packaging, every day, with nowhere to send it.
+3. **Water has to be recycled.** The habitat is assumed to mine subsurface ice and run a main water processor, such as reverse osmosis. The question is how used water can reach that machine in better condition.
 
 The three are not solved separately. They are solved by one system in which each stage supplies something the others need.
+
+Mission-scale sizing and habitat requirements are in [mars.md](mars.md). Sources are in [references.md](references.md).
 
 ## Three stages
 
@@ -26,11 +28,11 @@ Regolith enters a sealed, humid, anaerobic chamber inoculated with perchlorate-r
 ClO4- -> ClO3- -> ClO2- -> Cl- + O2
 ```
 
-via perchlorate reductase and chlorite dismutase.
+via perchlorate reductase and chlorite dismutase (Coates 2004).
 
-Strains: *Azospira suillum* (PS) and *Dechloromonas aromatica* (RCB). Neither is exotic or engineered; both occur in ordinary river sediment and soil.
+Strains: *Azospira suillum* PS (Mehta-Kolte 2017) and *Dechloromonas aromatica* RCB, a soil microbe (Salinero 2009). Neither is engineered.
 
-The oxygen released is an intermediate the same organisms consume. Net export to life support is near zero. The benefit of this stage is detoxification, not oxygen production.
+The oxygen released is respired by the same cells (Ettwig 2012). Recovering it has been proposed (Davila 2013), but even perfect capture covers little of a crew's need; see [mars.md](mars.md). The benefit of this stage is detoxification.
 
 ### Stage 2 — Filtration column
 
@@ -49,16 +51,16 @@ This is the stage built and measured on the bench. See [method.md](method.md).
 
 ### Stage 3 — Pyrolysis
 
-Organic waste and cellulosic packaging are heated to roughly 450 °C without oxygen. The material does not burn, it chars: pathogens are destroyed, volatile gases driven off, and what remains is biochar — porous, with high cation exchange capacity.
+Food waste and paper are heated to around 500 °C without oxygen. The material does not burn, it chars. Slow pyrolysis leaves about a quarter of the feed as char (Penn State), and that char is a sorbent for metals and organics in water (Ahmad 2014).
 
 ## What makes it one system
 
 Stage 3 supplies two things Stage 1 cannot operate without on Mars:
 
-- **Waste heat.** The furnace runs at 450 °C. The bacteria need roughly 20–35 °C and the Martian surface averages −63 °C. Placing the furnace at the bottom lets that heat rise through the column.
-- **Electron donor.** The bacteria need a carbon source to respire perchlorate at all. Volatile fatty acids from processing the same waste stream supply it.
+- **Waste heat.** The retort runs near 500 °C. The reference strain is grown at 37 °C (Mehta-Kolte 2017), and the Martian surface falls to about −153 °C (NASA Science). Retort heat keeps the bioreactor warm.
+- **Electron donor.** The bacteria need an organic donor such as acetate or lactate to respire perchlorate (Mehta-Kolte 2017). Supplying it from the pyrolysis liquid is the target; until that is shown, the donor is a consumable.
 
-Remove Stage 3 and Stage 1 freezes and starves. Remove Stage 1 and the regolith stays toxic and cannot serve as filter medium.
+Remove Stage 3 and Stage 1 loses its heat and, eventually, its donor. Remove Stage 1 and the regolith stays toxic and cannot serve as filter medium.
 
 ## Open design question
 
@@ -86,11 +88,11 @@ Perchlorates are strong oxidising salts and are not handled in this project. Sta
 
 ## Contamination control
 
-Two things in this challenge are invisible and both contaminate.
+Two things here are invisible and both contaminate.
 
-Perchlorate is one. Dust is the other: a system that moves regolith inside a habitat is itself a source of respirable dust. The design limit is **0.1 mg/m³ as a 24-hour time-weighted average**, stricter than the 0.3 mg/m³ general figure in NASA-STD-3001. Containment of the regolith handling path is part of the design, not an afterthought.
+Perchlorate is one. Dust is the other: a system that moves regolith inside a habitat is itself a source of respirable dust. NASA's limit for Martian dust below 10 µm is **0.1 mg/m³ as a 24-hour time-weighted average**, stricter than the 0.3 mg/m³ set for lunar dust in NASA-STD-3001. Containment of the regolith handling path is part of the design, not an afterthought.
 
-Introducing terrestrial bacteria to Mars is a planetary protection question under COSPAR. Stage 1 is a fully contained reactor.
+Introducing terrestrial bacteria to Mars is a planetary protection question under COSPAR policy. Stage 1 is a fully contained reactor.
 
 ## Return to Earth
 

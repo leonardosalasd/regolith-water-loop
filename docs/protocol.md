@@ -32,7 +32,7 @@ Write down whatever you end up with. The absolute values do not matter, repeatab
    yield from the raw mass. See [grading](#grading-the-scoria) below.
 2. Prepare the charcoal and leave it to soak overnight. See
    [preparing the charcoal](#preparing-the-charcoal) below.
-3. Load the column bottom up per RWL-001. Level each layer, geotextile disc between layers.
+3. Load the column bottom up per RWL-001. Level each layer, insect mesh disc between layers.
 4. Wash the bed with clean water until the effluent runs clear. New media sheds fines and will otherwise read as if the column is making water dirtier.
 5. Build the rig per RWL-002. Take one frame, read the target and white ROIs off it, write `setup.json`.
 

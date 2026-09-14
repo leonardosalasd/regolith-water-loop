@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" width="960" height="700" role="img" aria-label="Plan schematic of the system inside a habitat module, split into a dirty zone for regolith, a service zone for the pyrolysis retort, a wet zone for filter modules and the main water processor, and a crew zone, with sealed pass-throughs and a shared heated wall">
+  <defs>
+    <marker id="hk" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="hb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#3a78b5"/>
+    </marker>
+    <marker id="hg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#8a8a8a"/>
+    </marker>
+    <pattern id="dirty" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+      <rect width="10" height="10" fill="#ffffff"/>
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#e2e2e2" stroke-width="3"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="700" fill="#ffffff"/>
+  <rect x="16" y="16" width="928" height="668" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+
+  <text x="44" y="52" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" fill="#1a1a1a" letter-spacing="1.5">HABITAT INTEGRATION &#8212; PLAN</text>
+  <line x1="44" y1="60" x2="382" y2="60" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="44" y="82" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#555555" letter-spacing="1">ZONES AND CONTAINMENT</text>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#555555">
+    <line x1="560" y1="44" x2="600" y2="44" stroke="#1a1a1a" stroke-width="1.6" marker-end="url(#hk)"/>
+    <text x="608" y="48">SOLIDS</text>
+    <line x1="700" y1="44" x2="740" y2="44" stroke="#3a78b5" stroke-width="1.6" marker-end="url(#hb)"/>
+    <text x="748" y="48">WATER</text>
+    <line x1="560" y1="70" x2="600" y2="70" stroke="#8a8a8a" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#hg)"/>
+    <text x="608" y="74">GAS</text>
+    <rect x="704" y="63" width="12" height="14" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
+    <path d="M704,63 L716,77 M716,63 L704,77" stroke="#1a1a1a" stroke-width="1"/>
+    <text x="748" y="74">SEALED PASS-THROUGH</text>
+  </g>
+
+  <rect x="150" y="110" width="280" height="390" fill="url(#dirty)"/>
+  <rect x="150" y="110" width="750" height="390" fill="none" stroke="#1a1a1a" stroke-width="3.5"/>
+  <line x1="430" y1="110" x2="430" y2="500" stroke="#1a1a1a" stroke-width="6"/>
+  <line x1="650" y1="110" x2="650" y2="500" stroke="#1a1a1a" stroke-width="1.4"/>
+  <line x1="430" y1="330" x2="650" y2="330" stroke="#1a1a1a" stroke-width="1.4"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="162" y="132" font-size="11" font-weight="bold" letter-spacing="1">DIRTY ZONE</text>
+    <text x="162" y="146" font-size="9.5" fill="#555555">below cabin pressure</text>
+    <text x="442" y="132" font-size="11" font-weight="bold" letter-spacing="1">SERVICE ZONE</text>
+    <text x="442" y="352" font-size="11" font-weight="bold" letter-spacing="1">WET ZONE</text>
+    <text x="662" y="132" font-size="11" font-weight="bold" letter-spacing="1">CREW ZONE</text>
+    <text x="436" y="522" font-size="9.5" font-weight="bold">SEALED BULKHEAD</text>
+    <text x="30" y="290" font-size="10.5" font-weight="bold" fill="#555555" letter-spacing="1">OUTSIDE</text>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1.6" fill="#ffffff">
+    <rect x="50" y="300" width="100" height="70"/>
+    <rect x="175" y="290" width="105" height="90"/>
+    <rect x="300" y="150" width="125" height="90" stroke-width="2"/>
+    <rect x="300" y="270" width="125" height="150"/>
+    <rect x="440" y="150" width="160" height="100" stroke-width="2"/>
+    <rect x="445" y="362" width="175" height="58" stroke-width="2"/>
+    <rect x="445" y="436" width="175" height="50"/>
+    <rect x="680" y="160" width="190" height="60"/>
+    <rect x="680" y="262" width="190" height="60"/>
+    <rect x="680" y="370" width="190" height="60"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a" text-anchor="middle">
+    <text x="100" y="330" font-size="11" font-weight="bold">AIRLOCK</text>
+    <text x="100" y="345" font-size="9.5" fill="#555555">regolith in</text>
+    <text x="227" y="326" font-size="10.5" font-weight="bold">HANDLING</text>
+    <text x="227" y="341" font-size="9.5" fill="#555555">sealed glovebox</text>
+    <text x="362" y="186" font-size="11" font-weight="bold">STAGE 1</text>
+    <text x="362" y="201" font-size="9.5" fill="#555555">bioreactor</text>
+    <text x="362" y="215" font-size="9.5" fill="#555555">heated jacket</text>
+    <text x="362" y="336" font-size="10.5" font-weight="bold">CARTRIDGE</text>
+    <text x="362" y="350" font-size="10.5" font-weight="bold">FILL</text>
+    <text x="362" y="366" font-size="9.5" fill="#555555">regolith + char</text>
+    <text x="520" y="192" font-size="11" font-weight="bold">STAGE 3</text>
+    <text x="520" y="207" font-size="9.5" fill="#555555">pyrolysis retort</text>
+    <text x="532" y="387" font-size="10.5" font-weight="bold">STAGE 2 RACK</text>
+    <text x="532" y="402" font-size="9.5" fill="#555555">filter cartridges</text>
+    <text x="532" y="458" font-size="10" font-weight="bold">MAIN WATER</text>
+    <text x="532" y="472" font-size="10" font-weight="bold">PROCESSOR</text>
+    <text x="775" y="194" font-size="11" font-weight="bold">GALLEY</text>
+    <text x="775" y="296" font-size="11" font-weight="bold">LIFE SUPPORT</text>
+    <text x="775" y="404" font-size="11" font-weight="bold">HYGIENE</text>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1.6" fill="none" marker-end="url(#hk)">
+    <path d="M150,335 L173,335"/>
+    <path d="M227,290 L227,195 L298,195"/>
+    <path d="M362,240 L362,268"/>
+    <path d="M470,250 L470,300 L427,300"/>
+    <path d="M425,391 L443,391"/>
+    <path d="M678,190 L602,190"/>
+  </g>
+  <g stroke="#3a78b5" stroke-width="1.8" fill="none" marker-end="url(#hb)">
+    <path d="M678,400 L622,400"/>
+    <path d="M532,420 L532,434"/>
+    <path d="M620,470 L775,470 L775,432"/>
+  </g>
+  <g stroke="#8a8a8a" stroke-width="1.4" fill="none" stroke-dasharray="3 3" marker-end="url(#hg)">
+    <path d="M600,232 L636,232 L636,292 L678,292"/>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1.2">
+    <rect x="424" y="293" width="12" height="14" fill="#ffffff"/>
+    <path d="M424,293 L436,307 M436,293 L424,307" fill="none"/>
+    <rect x="424" y="384" width="12" height="14" fill="#ffffff"/>
+    <path d="M424,384 L436,398 M436,384 L424,398" fill="none"/>
+  </g>
+  <g stroke="#c07a3a" stroke-width="2.4">
+    <line x1="426" y1="160" x2="438" y2="160"/>
+    <line x1="426" y1="175" x2="438" y2="175"/>
+    <line x1="426" y1="190" x2="438" y2="190"/>
+    <line x1="426" y1="205" x2="438" y2="205"/>
+    <line x1="426" y1="220" x2="438" y2="220"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="9.5" fill="#1a1a1a">
+    <circle cx="186" cy="394" r="6" fill="none" stroke="#1a1a1a" stroke-width="1.4"/>
+    <circle cx="186" cy="394" r="2" fill="#1a1a1a"/>
+    <text x="197" y="398" font-weight="bold">DUST MONITOR</text>
+    <text x="240" y="264" font-weight="bold">RAW</text>
+    <text x="368" y="259" font-weight="bold">TREATED</text>
+    <text x="478" y="276" font-weight="bold">CHAR</text>
+    <text x="606" y="182" font-weight="bold">TRASH</text>
+    <text x="604" y="226" fill="#555555">OFF-GAS</text>
+    <text x="621" y="392" font-weight="bold" fill="#3a78b5">GREY</text>
+    <text x="662" y="462" font-weight="bold" fill="#3a78b5">POTABLE</text>
+    <text x="447" y="240" font-weight="bold" fill="#c07a3a">SHARED WALL, HEAT</text>
+  </g>
+
+  <text x="44" y="566" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">NOTES</text>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a1a1a">
+    <text x="44" y="588">1.  Dirty zone kept below cabin pressure, so any leak carries dust in, not out.</text>
+    <text x="44" y="606">2.  Cartridges are filled and sealed in the dirty zone and never opened in the cabin.</text>
+    <text x="44" y="624">3.  Retort and bioreactor share the bulkhead; retort heat reaches the jacket through it.</text>
+    <text x="44" y="642">4.  Dust monitor at the glovebox. Martian dust limit 0.1 mg/m&#179;, 24-hour average.</text>
+    <text x="44" y="660">5.  CO&#8322; from Stage 1 is ducted to life support (not drawn). Zone sizes are not derived.</text>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1" fill="none">
+    <rect x="600" y="540" width="320" height="128" stroke-width="1.6"/>
+    <line x1="600" y1="572" x2="920" y2="572"/>
+    <line x1="600" y1="604" x2="920" y2="604"/>
+    <line x1="600" y1="636" x2="920" y2="636"/>
+    <line x1="790" y1="604" x2="790" y2="668"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="610" y="562" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
+    <text x="610" y="593" font-size="12">Habitat integration &#8212; plan</text>
+    <text x="610" y="624" font-size="10.5">SCHEMATIC &#183; NOT TO SCALE</text>
+    <text x="800" y="624" font-size="10.5">DWG  RWL-004  REV A</text>
+    <text x="610" y="656" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
+    <text x="800" y="656" font-size="10.5">2026-09-13</text>
+  </g>
+</svg>

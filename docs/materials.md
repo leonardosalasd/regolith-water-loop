@@ -41,9 +41,9 @@ Every sample is photographed through glass, so the jars must be identical.
 Different thickness or curvature changes what the camera sees and the series
 stops comparing anything.
 
-Blue is not an arbitrary choice. The methylene blue number is the standard
-industrial test for the adsorption capacity of activated carbon, so a blue tracer
-mirrors the real assay. Blue also reads as dark grey once a photograph is
+Blue is not an arbitrary choice. Methylene blue uptake is a useful indicator of
+the adsorption capacity of activated carbon (Raposo 2009, see
+[references.md](references.md)), so a blue tracer mirrors a real assay. Blue also reads as dark grey once a photograph is
 converted, which is what the contrast measurement needs; yellow reads almost
 white.
 
