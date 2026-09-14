@@ -21,15 +21,14 @@ export default function Page() {
         <p>
           El regolito marciano contiene perclorato desde antes de que alguien
           aterrice. No es contaminación que causara la misión: así es el planeta.
-          Mientras el suelo esté así, nada crece en él y nada puede construirse
-          encima con seguridad.
+          Mientras el suelo esté así, es un riesgo químico para la tripulación.
         </p>
         <p>
           Al mismo tiempo, seis tripulantes producen aguas grises, restos de
-          comida y empaques todos los días, y todo termina en ese mismo suelo. Y
-          el agua es demasiado valiosa para usarse una sola vez, así que hay que
-          reciclarla: el hábitat ya tiene una unidad de ósmosis inversa, pero el
-          agua usada le llega muy cargada.
+          comida y empaques todos los días. Y el agua es demasiado valiosa para
+          usarse una sola vez, así que hay que reciclarla: se supone que el
+          hábitat tiene un procesador principal de agua, como ósmosis inversa,
+          pero el agua usada le llega muy cargada.
         </p>
         <Callout tone="warn" title="Un sistema, no tres">
           <p>
@@ -51,12 +50,11 @@ export default function Page() {
           de lo que salieron.
         </p>
         <p>
-          Lo que amarra todo: el horno trabaja a 450 °C y las bacterias necesitan
-          estar entre 20 y 35 °C en un planeta que promedia −63 °C. El horno las
-          calienta. También las alimenta: las bacterias reductoras de perclorato
-          necesitan una fuente de carbono para poder respirar, y esa sale de
-          procesar los mismos residuos. Quita el horno y el biorreactor se
-          congela y se muere de hambre.
+          Lo que amarra todo: el horno trabaja cerca de 500 °C y las bacterias se
+          cultivan a 37 °C en un planeta cuya superficie baja hasta unos −153 °C.
+          El horno las calienta. La meta es que también las alimente: las
+          bacterias reductoras de perclorato necesitan un donador orgánico, como
+          acetato, y los mismos residuos podrían darlo.
         </p>
         <p>
           <Link

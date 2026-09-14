@@ -72,9 +72,9 @@ export default function MaterialsPage() {
           </p>
         </Callout>
         <p>
-          Blue is not an arbitrary choice. The methylene blue number is the
-          standard industrial test for the adsorption capacity of activated
-          carbon, so a blue tracer mirrors the real assay — and blue reads as
+          Blue is not an arbitrary choice. Methylene blue uptake is a useful
+          indicator of the adsorption capacity of activated carbon, so a blue
+          tracer mirrors a real assay — and blue reads as
           dark grey once the photograph is converted, which is what the contrast
           measurement needs. Yellow reads almost white and is nearly invisible to
           the method.

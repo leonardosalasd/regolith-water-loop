@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import { Callout, PageHeader, Section, Table, Term } from "@/components/ui";
 
-export const metadata: Metadata = { title: "The system" };
+export const metadata: Metadata = {
+  title: "The system",
+  description:
+    "The three stages of the system and the two couplings that make them one machine: waste heat and electron donor.",
+  alternates: {
+    canonical: "/docs/system/",
+    languages: { en: "/docs/system/", es: "/es/docs/system/" },
+  },
+};
 
 export default function SystemPage() {
   return (
@@ -22,15 +30,16 @@ export default function SystemPage() {
         </p>
         <p>
           The route runs through perchlorate reductase and chlorite dismutase.
-          The strains are <Term>Azospira suillum</Term> (PS) and{" "}
-          <Term>Dechloromonas aromatica</Term> (RCB). Neither is exotic or
-          engineered — both occur in ordinary river sediment and soil.
+          The strains are <Term>Azospira suillum</Term> PS, grown in the
+          laboratory at 37 °C, and <Term>Dechloromonas aromatica</Term> RCB, a
+          soil microbe. Neither is engineered.
         </p>
         <Callout tone="warn" title="Do not oversell the oxygen">
           <p>
-            The O₂ in that equation is an intermediate the same organisms
-            consume. Net export to life support is close to zero. The benefit of
-            this stage is detoxification, not oxygen production.
+            The O₂ in that equation is respired by the same cells. Even if all
+            of it were captured, six crew would need 1.7–4.2 tonnes of regolith
+            treated every day to breathe from it. The benefit of this stage is
+            detoxification.
           </p>
         </Callout>
       </Section>
@@ -53,18 +62,18 @@ export default function SystemPage() {
           ]}
         />
         <p>
-          The effluent reaches reverse osmosis with reduced load, so the machine
-          works less and its membranes last longer. This is the stage built and
-          measured on the bench.
+          The effluent reaches the main water processor with reduced load, so
+          it works less and its membranes last longer. This is the stage built
+          and measured on the bench.
         </p>
       </Section>
 
       <Section id="stage-3" title="Stage 3 — Pyrolysis">
         <p>
-          Organic waste and cellulosic packaging are heated to roughly 450 °C
-          without oxygen. The material does not burn, it chars: pathogens are
-          destroyed, volatile gases driven off, and what remains is biochar —
-          porous, with high cation exchange capacity.
+          Food waste and paper are heated to around 500 °C without oxygen. The
+          material does not burn, it chars. Slow pyrolysis leaves about a quarter
+          of the feed as char, and that char adsorbs metals and organics from
+          water.
         </p>
       </Section>
 
@@ -75,16 +84,16 @@ export default function SystemPage() {
           rows={[
             [
               "Waste heat",
-              "The furnace runs at 450 °C. The bacteria need 20–35 °C and the Martian surface averages −63 °C. Placing the furnace at the bottom lets that heat rise.",
+              "The retort runs near 500 °C. The reference strain grows at 37 °C, and the Martian surface falls to about −153 °C. Retort heat keeps the bioreactor warm.",
             ],
             [
               "Electron donor",
-              "The bacteria need a carbon source to respire perchlorate at all. Volatile fatty acids from processing the same waste supply it.",
+              "The bacteria need an organic donor such as acetate or lactate to respire perchlorate. Supplying it from the pyrolysis liquid is the target; until that is shown, the donor is a consumable.",
             ],
           ]}
         />
         <p>
-          Remove Stage 3 and Stage 1 freezes and starves. Remove Stage 1 and the
+          Remove Stage 3 and Stage 1 loses its heat and, eventually, its donor. Remove Stage 1 and the
           regolith stays toxic and cannot serve as filter medium.
         </p>
       </Section>
@@ -108,15 +117,16 @@ export default function SystemPage() {
 
       <Section id="contamination" title="Contamination control">
         <p>
-          Two things in this challenge are invisible and both contaminate.
+          Two things here are invisible and both contaminate.
           Perchlorate is one. Dust is the other: a system that moves regolith
-          inside a habitat is itself a source of respirable dust. The design
-          limit is <Term>0.1 mg/m³</Term> as a 24-hour time-weighted average,
-          stricter than the 0.3 mg/m³ general figure in NASA-STD-3001.
+          inside a habitat is itself a source of respirable dust. NASA&apos;s limit
+          for Martian dust is <Term>0.1 mg/m³</Term> as a 24-hour time-weighted
+          average, stricter than the 0.3 mg/m³ set for lunar dust in
+          NASA-STD-3001.
         </p>
         <p>
           Introducing terrestrial bacteria to Mars is a planetary protection
-          question under COSPAR. Stage 1 is a fully contained reactor.
+          question under COSPAR policy. Stage 1 is a fully contained reactor.
         </p>
       </Section>
     </>

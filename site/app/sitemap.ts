@@ -3,7 +3,7 @@ import { siteUrl } from "../lib/i18n";
 
 export const dynamic = "force-static";
 
-const slugs = ["", "system", "drawings", "materials", "build", "method", "protocol", "results"];
+const slugs = ["", "system", "mars", "drawings", "materials", "build", "references", "method", "protocol", "results"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [

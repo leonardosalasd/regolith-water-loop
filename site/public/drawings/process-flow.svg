@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 700" width="960" height="700" role="img" aria-label="Process flow diagram of the three-stage system inside a pressurised habitat, showing regolith, water, char, heat and gas streams between the bioreactor, filter modules, pyrolysis retort, main water processor and crew">
+  <defs>
+    <marker id="ak" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#1a1a1a"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#3a78b5"/>
+    </marker>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#c07a3a"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,1 L10,5 L0,9 z" fill="#8a8a8a"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="960" height="700" fill="#ffffff"/>
+  <rect x="16" y="16" width="928" height="668" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+
+  <text x="44" y="52" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" fill="#1a1a1a" letter-spacing="1.5">SYSTEM PROCESS FLOW</text>
+  <line x1="44" y1="60" x2="300" y2="60" stroke="#1a1a1a" stroke-width="1"/>
+  <text x="44" y="82" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#555555" letter-spacing="1">SIX CREW &#183; EARLY PLANETARY BASE</text>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#555555">
+    <line x1="560" y1="44" x2="600" y2="44" stroke="#1a1a1a" stroke-width="1.6" marker-end="url(#ak)"/>
+    <text x="608" y="48">SOLIDS</text>
+    <line x1="700" y1="44" x2="740" y2="44" stroke="#3a78b5" stroke-width="1.6" marker-end="url(#ab)"/>
+    <text x="748" y="48">WATER</text>
+    <line x1="560" y1="70" x2="600" y2="70" stroke="#c07a3a" stroke-width="1.6" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+    <text x="608" y="74">HEAT</text>
+    <line x1="700" y1="70" x2="740" y2="70" stroke="#8a8a8a" stroke-width="1.4" stroke-dasharray="3 3" marker-end="url(#ag)"/>
+    <text x="748" y="74">GAS / UNTESTED</text>
+  </g>
+
+  <rect x="150" y="100" width="780" height="410" fill="none" stroke="#1a1a1a" stroke-width="1.4" stroke-dasharray="12 5"/>
+  <text x="162" y="498" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#1a1a1a" letter-spacing="1">PRESSURISED HABITAT</text>
+  <text x="30" y="124" font-family="Helvetica, Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#555555" letter-spacing="1">MARS SURFACE</text>
+
+  <g stroke="#1a1a1a" stroke-width="1.6" fill="#ffffff">
+    <rect x="30" y="148" width="100" height="44"/>
+    <rect x="30" y="426" width="100" height="44"/>
+    <rect x="210" y="140" width="180" height="80" stroke-width="2"/>
+    <rect x="210" y="300" width="180" height="80" stroke-width="2"/>
+    <rect x="210" y="420" width="180" height="56"/>
+    <rect x="520" y="230" width="180" height="70" stroke-width="2"/>
+    <rect x="440" y="116" width="120" height="44"/>
+    <rect x="740" y="110" width="160" height="60"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a" text-anchor="middle">
+    <text x="80" y="167" font-size="11" font-weight="bold">REGOLITH</text>
+    <text x="80" y="182" font-size="9.5" fill="#555555">0.4&#8211;1 % ClO&#8324;&#8315;</text>
+    <text x="80" y="445" font-size="11" font-weight="bold">GROUND ICE</text>
+    <text x="80" y="460" font-size="9.5" fill="#555555">fresh water</text>
+
+    <text x="300" y="166" font-size="12" font-weight="bold">STAGE 1 &#183; BIOREACTOR</text>
+    <text x="300" y="184" font-size="10" fill="#555555">closed &#183; anaerobic</text>
+    <text x="300" y="199" font-size="10" fill="#555555">heated jacket</text>
+
+    <text x="300" y="326" font-size="12" font-weight="bold">STAGE 2 &#183; FILTER MODULES</text>
+    <text x="300" y="344" font-size="10" fill="#555555">parallel cartridges, gravity</text>
+    <text x="300" y="359" font-size="10" fill="#555555">2&#8211;8 &#215; &#216;75 mm</text>
+
+    <text x="300" y="443" font-size="11" font-weight="bold">MAIN WATER PROCESSOR</text>
+    <text x="300" y="459" font-size="10" fill="#555555">e.g. reverse osmosis</text>
+
+    <text x="610" y="256" font-size="12" font-weight="bold">STAGE 3 &#183; PYROLYSIS</text>
+    <text x="610" y="274" font-size="10" fill="#555555">closed retort &#183; ~500 &#176;C</text>
+
+    <text x="500" y="135" font-size="10.5" font-weight="bold">DONOR STORE</text>
+    <text x="500" y="150" font-size="9.5" fill="#555555">acetate or lactate</text>
+
+    <text x="820" y="136" font-size="12" font-weight="bold">CREW OF SIX</text>
+    <text x="820" y="153" font-size="10" fill="#555555">hygiene &#183; galley</text>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1.6" fill="none" marker-end="url(#ak)">
+    <path d="M130,170 L208,170"/>
+    <path d="M300,220 L300,298"/>
+    <path d="M770,170 L770,250 L702,250"/>
+    <path d="M520,280 L455,280 L455,325 L392,325"/>
+  </g>
+  <g stroke="#3a78b5" stroke-width="1.8" fill="none" marker-end="url(#ab)">
+    <path d="M870,170 L870,360 L392,360"/>
+    <path d="M300,380 L300,418"/>
+    <path d="M130,448 L208,448"/>
+    <path d="M390,448 L912,448 L912,140 L902,140"/>
+  </g>
+  <path d="M550,230 L550,196 L392,196" stroke="#c07a3a" stroke-width="1.8" fill="none" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+  <g stroke="#8a8a8a" stroke-width="1.4" fill="none" stroke-dasharray="3 3" marker-end="url(#ag)">
+    <path d="M440,138 L392,138"/>
+    <path d="M650,230 L650,138 L562,138"/>
+    <path d="M610,300 L610,338"/>
+    <path d="M250,140 L250,112"/>
+  </g>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="9.5" fill="#1a1a1a">
+    <rect x="152" y="158" width="46" height="10" fill="#ffffff"/>
+    <text x="154" y="166" font-weight="bold">SEALED</text>
+    <text x="308" y="262" font-weight="bold">TREATED REGOLITH</text>
+    <text x="308" y="275" fill="#555555">rinsed of chloride</text>
+    <text x="778" y="210" font-weight="bold">FOOD + PAPER</text>
+    <text x="778" y="223" fill="#555555">8.3 kg/day trash</text>
+    <text x="462" y="306" font-weight="bold">CHAR</text>
+    <text x="462" y="318" fill="#555555">&#8804; 1 kg/day</text>
+    <text x="690" y="354" font-weight="bold" fill="#3a78b5">GREYWATER 33 L/day</text>
+    <text x="308" y="403" font-weight="bold" fill="#3a78b5">PRE-TREATED</text>
+    <text x="700" y="442" font-weight="bold" fill="#3a78b5">TO CREW, POTABLE</text>
+    <text x="408" y="190" font-weight="bold" fill="#c07a3a">WASTE HEAT</text>
+    <text x="658" y="186" fill="#555555">liquid as donor</text>
+    <text x="658" y="198" fill="#555555">&#8212; untested</text>
+    <text x="618" y="334" fill="#555555">OFF-GAS &#8594; SCRUBBER &#8594; LIFE SUPPORT</text>
+    <text x="258" y="120" fill="#555555">CO&#8322; &#8594; LIFE SUPPORT</text>
+  </g>
+
+  <text x="44" y="546" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">NOTES</text>
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a1a1a">
+    <text x="44" y="568">1.  Everything inside the dashed line runs at habitat pressure.</text>
+    <text x="44" y="588">2.  Rates from: rwl size --crew 6. Sources in docs/references.md.</text>
+    <text x="44" y="608">3.  O&#8322; from Stage 1 is respired by the bacteria and is not drawn as a product.</text>
+    <text x="44" y="628">4.  Not yet sized: chloride brine, spent cartridges, retort energy.</text>
+    <text x="44" y="648">5.  Stage 2 output is pre-treated only. Potability is the main processor&#8217;s job.</text>
+  </g>
+
+  <g stroke="#1a1a1a" stroke-width="1" fill="none">
+    <rect x="600" y="540" width="320" height="128" stroke-width="1.6"/>
+    <line x1="600" y1="572" x2="920" y2="572"/>
+    <line x1="600" y1="604" x2="920" y2="604"/>
+    <line x1="600" y1="636" x2="920" y2="636"/>
+    <line x1="790" y1="604" x2="790" y2="668"/>
+  </g>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="610" y="562" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
+    <text x="610" y="593" font-size="12">System process flow</text>
+    <text x="610" y="624" font-size="10.5">SCHEMATIC &#183; NOT TO SCALE</text>
+    <text x="800" y="624" font-size="10.5">DWG  RWL-003  REV A</text>
+    <text x="610" y="656" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
+    <text x="800" y="656" font-size="10.5">2026-09-13</text>
+  </g>
+</svg>

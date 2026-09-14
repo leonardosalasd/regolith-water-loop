@@ -80,9 +80,9 @@ export default function Page() {
           </p>
         </Callout>
         <p>
-          El azul no es una elección arbitraria. El índice de azul de metileno es
-          la prueba industrial estándar de la capacidad de adsorción del carbón
-          activado, así que un trazador azul imita el ensayo real — y el azul
+          El azul no es una elección arbitraria. La adsorción de azul de metileno
+          es un indicador útil de la capacidad de adsorción del carbón activado,
+          así que un trazador azul imita un ensayo real — y el azul
           queda gris oscuro al convertir la fotografía, que es lo que necesita la
           medición de contraste. El amarillo queda casi blanco y es prácticamente
           invisible para el método.

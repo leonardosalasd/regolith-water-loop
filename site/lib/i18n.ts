@@ -17,6 +17,7 @@ const groups: Record<Locale, NavGroup[]> = {
       items: [
         { slug: "", label: "Introduction" },
         { slug: "system", label: "The system" },
+        { slug: "mars", label: "Operating on Mars" },
       ],
     },
     {
@@ -25,6 +26,7 @@ const groups: Record<Locale, NavGroup[]> = {
         { slug: "drawings", label: "Drawings" },
         { slug: "materials", label: "Materials" },
         { slug: "build", label: "Build log" },
+        { slug: "references", label: "References" },
       ],
     },
     {
@@ -42,6 +44,7 @@ const groups: Record<Locale, NavGroup[]> = {
       items: [
         { slug: "", label: "Introducción" },
         { slug: "system", label: "El sistema" },
+        { slug: "mars", label: "Operación en Marte" },
       ],
     },
     {
@@ -50,6 +53,7 @@ const groups: Record<Locale, NavGroup[]> = {
         { slug: "drawings", label: "Planos" },
         { slug: "materials", label: "Materiales" },
         { slug: "build", label: "Bitácora de armado" },
+        { slug: "references", label: "Referencias" },
       ],
     },
     {

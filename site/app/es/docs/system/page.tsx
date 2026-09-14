@@ -30,15 +30,16 @@ export default function Page() {
         </p>
         <p>
           La ruta pasa por la perclorato reductasa y la clorito dismutasa. Las
-          cepas son <Term>Azospira suillum</Term> (PS) y{" "}
-          <Term>Dechloromonas aromatica</Term> (RCB). Ninguna es exótica ni
-          modificada: las dos se encuentran en sedimento de río y suelo comunes.
+          cepas son <Term>Azospira suillum</Term> PS, que en laboratorio se
+          cultiva a 37 °C, y <Term>Dechloromonas aromatica</Term> RCB, un
+          microbio del suelo. Ninguna está modificada.
         </p>
         <Callout tone="warn" title="No exagerar con el oxígeno">
           <p>
-            El O₂ de esa ecuación es un intermediario que los mismos organismos
-            consumen. La exportación neta al soporte vital es cercana a cero. El
-            beneficio de esta etapa es la destoxificación, no producir oxígeno.
+            El O₂ de esa ecuación lo respiran las mismas células. Aunque se
+            capturara todo, seis tripulantes necesitarían tratar 1.7–4.2
+            toneladas de regolito al día para respirar de ahí. El beneficio de
+            esta etapa es la destoxificación.
           </p>
         </Callout>
       </Section>
@@ -61,7 +62,7 @@ export default function Page() {
           ]}
         />
         <p>
-          El efluente llega a la ósmosis inversa con menos carga, así que la
+          El efluente llega al procesador principal de agua con menos carga, así que la
           máquina trabaja menos y sus membranas duran más. Esta es la etapa que
           se construye y se mide en banco.
         </p>
@@ -69,10 +70,10 @@ export default function Page() {
 
       <Section id="etapa-3" title="Etapa 3 — Pirólisis">
         <p>
-          Los residuos orgánicos y los empaques celulósicos se calientan a unos
-          450 °C sin oxígeno. El material no se quema, se carboniza: los
-          patógenos se destruyen, los gases volátiles se van, y lo que queda es
-          biochar — poroso, con alta capacidad de intercambio catiónico.
+          Los restos de comida y el papel se calientan a unos 500 °C sin
+          oxígeno. El material no se quema, se carboniza. La pirólisis lenta deja
+          cerca de una cuarta parte como carbón, y ese carbón adsorbe metales y
+          compuestos orgánicos del agua.
         </p>
       </Section>
 
@@ -86,16 +87,16 @@ export default function Page() {
           rows={[
             [
               "Calor residual",
-              "El horno trabaja a 450 °C. Las bacterias necesitan 20–35 °C y la superficie marciana promedia −63 °C. Poner el horno abajo deja que ese calor suba.",
+              "La retorta trabaja cerca de 500 °C. La cepa de referencia crece a 37 °C y la superficie marciana baja hasta unos −153 °C. El calor de la retorta mantiene tibio el biorreactor.",
             ],
             [
               "Donador de electrones",
-              "Las bacterias necesitan una fuente de carbono para poder respirar el perclorato. Los ácidos grasos volátiles de procesar los mismos residuos se la dan.",
+              "Las bacterias necesitan un donador orgánico, como acetato o lactato, para respirar el perclorato. La meta es sacarlo del líquido de la pirólisis; mientras no se demuestre, el donador es un consumible.",
             ],
           ]}
         />
         <p>
-          Quita la etapa 3 y la etapa 1 se congela y se muere de hambre. Quita la
+          Quita la etapa 3 y la etapa 1 pierde su calor y, con el tiempo, su donador. Quita la
           etapa 1 y el regolito sigue tóxico y no puede servir de medio
           filtrante.
         </p>
@@ -120,16 +121,16 @@ export default function Page() {
 
       <Section id="contaminacion" title="Control de contaminación">
         <p>
-          Dos cosas en este reto son invisibles y las dos contaminan. El
+          Dos cosas aquí son invisibles y las dos contaminan. El
           perclorato es una. El polvo es la otra: un sistema que mueve regolito
           dentro de un hábitat es en sí mismo una fuente de polvo respirable. El
-          límite de diseño es <Term>0.1 mg/m³</Term> como promedio ponderado en
-          24 horas, más estricto que la cifra general de 0.3 mg/m³ de la
-          NASA-STD-3001.
+          límite de la NASA para polvo marciano es <Term>0.1 mg/m³</Term> como
+          promedio ponderado en 24 horas, más estricto que los 0.3 mg/m³ que la
+          NASA-STD-3001 fija para polvo lunar.
         </p>
         <p>
           Introducir bacterias terrestres en Marte es una cuestión de protección
-          planetaria bajo COSPAR. La etapa 1 es un reactor de contención total.
+          planetaria bajo la política de COSPAR. La etapa 1 es un reactor de contención total.
         </p>
       </Section>
     </>

@@ -21,14 +21,13 @@ export default function Home() {
         <p>
           Martian regolith contains perchlorate before anyone lands on it. It is
           not contamination the mission caused; it is how the planet is. While
-          the soil is like that, nothing can grow in it and nothing can safely be
-          built on it.
+          the soil is like that, it is a chemical hazard to the crew.
         </p>
         <p>
           Meanwhile six crew produce greywater, food residue and packaging every
-          day, and all of it ends up in that same soil. And water is far too
-          valuable to use once, so it has to be recycled — the habitat already
-          has a reverse osmosis unit, but used water reaches it heavily loaded.
+          day. And water is far too valuable to use once, so it has to be
+          recycled — the habitat is assumed to run a main water processor such
+          as reverse osmosis, but used water reaches it heavily loaded.
         </p>
         <Callout tone="warn" title="One system, not three">
           <p>
@@ -48,11 +47,11 @@ export default function Home() {
           reaching the reverse osmosis unit far cleaner than it left.
         </p>
         <p>
-          What ties it together: the furnace runs at 450 °C, and the bacteria
-          need to sit at 20–35 °C on a planet averaging −63 °C. The furnace heats
-          them. It also feeds them — perchlorate-reducing bacteria need a carbon
-          source to respire at all, and that comes from processing the same
-          waste. Remove the furnace and the bioreactor freezes and starves.
+          What ties it together: the furnace runs near 500 °C, and the bacteria
+          are grown at 37 °C on a planet whose surface falls to about −153 °C.
+          The furnace heats them. The goal is for it to feed them too, since
+          perchlorate-reducing bacteria need an organic donor such as acetate,
+          and the same waste could supply it.
         </p>
         <p>
           <Link
