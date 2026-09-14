@@ -41,7 +41,7 @@ Treated regolith and biochar are layered in a column. Greywater is applied at th
 | Coarse regolith | distributes flow, prevents channelling |
 | Fine regolith | retains suspended solids |
 | Biochar | adsorbs metals and dissolved organic load |
-| Support gravel | drainage |
+| Support regolith | drainage |
 
 The effluent reaches reverse osmosis with reduced load, so the machine works less and its membranes last longer.
 
@@ -76,12 +76,13 @@ The bench build substitutes Earth materials for the Martian ones.
 
 | Mars | Bench | Simulated? |
 | --- | --- | --- |
-| Regolith | Volcanic scoria, basaltic | Yes — analogous rock, not regolith |
-| Biochar from crew waste | Biochar from fibrous agricultural residue | No — this is real biochar |
+| Regolith, coarse fractions | Volcanic scoria, basaltic | Yes — analogous rock, not regolith |
+| Regolith, fine fraction | Fine silica sand | Yes — sand-sized scoria could not be produced by hand |
+| Biochar from crew waste | Commercial lump charcoal | Partly — real pyrolysis char, but from wood and not made by this project |
 | Greywater | Synthetic mix to a written recipe | Yes |
 | Perchlorate reduction | Not reproduced | Modelled from literature |
 
-Perchlorates are strong oxidising salts and are not handled in this project. Stage 1 is supported by published work; Stages 2 and 3 are built and measured.
+Perchlorates are strong oxidising salts and are not handled in this project. Stages 1 and 3 are supported by published work; Stage 2 is the stage built and measured on the bench.
 
 ## Contamination control
 
@@ -93,6 +94,6 @@ Introducing terrestrial bacteria to Mars is a planetary protection question unde
 
 ## Return to Earth
 
-The same column, built from local volcanic rock and agricultural residue char, works as decentralised passive pre-treatment for household water storage. In many places piped water does not arrive clean and households store it before use. This is not an analogy drawn after the fact — it is the same hardware.
+The same column, built from local volcanic rock, sand and charcoal, works as decentralised passive pre-treatment for household water storage. In many places piped water does not arrive clean and households store it before use. This is not an analogy drawn after the fact — it is the same hardware.
 
 Relevant Sustainable Development Goals: 6 (clean water and sanitation), 12 (responsible consumption and production), 9 (industry, innovation and infrastructure).

@@ -26,7 +26,7 @@ export default function Page() {
           rows={[
             ["Tubo de PVC, 3 pulg", "750 mm", "ferretería"],
             ["Escoria volcánica en bruto", "3 kg", "vivero"],
-            ["Arena fina, que pase la malla mosquitera", "~1 kg", "tienda de albercas o ferretería"],
+            ["Arena sílica fina para acuario", "~1.3 kg", "tienda de acuarios o mascotas"],
             ["Carbón vegetal en trozos, no briquetas", "~0.65 L machacado", "cualquier tienda"],
             ["Tapa de PVC, 3 pulg", "1", "ferretería"],
             ["Manguera transparente, ½ pulg", "1 m", "ferretería"],
@@ -38,7 +38,8 @@ export default function Page() {
         <p>
           El tubo es opaco, así que las capas no se ven una vez cargadas. Cada una
           se fotografía desde arriba conforme entra, y eso documenta el armado
-          igual de bien. El silicón caliente no aguanta sobre PVC mojado; la
+          igual de bien. La arena sílica es inerte y no cambia la química del
+          agua. El silicón caliente no aguanta sobre PVC mojado; la
           salida se sella con epóxico de dos componentes.
         </p>
       </Section>

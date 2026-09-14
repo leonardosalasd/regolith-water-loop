@@ -42,7 +42,7 @@ This repository holds the design, the bench build, and the code that measures wh
 | [docs/drawings/](docs/drawings/) | Dimensioned drawings, RWL-001 and RWL-002 |
 | [GLOSSARY.md](GLOSSARY.md) | Terms used throughout |
 
-Stage 2, the filtration column, is built and measured. Stages 1 and 3 are supported by published work. Perchlorate salts are strong oxidisers and are not handled in this project.
+Stage 2, the filtration column, is the stage built and measured on the bench. Stages 1 and 3 are supported by published work. Perchlorate salts are strong oxidisers and are not handled in this project.
 
 ---
 

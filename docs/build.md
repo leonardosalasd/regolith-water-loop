@@ -16,7 +16,10 @@ A bore through a 3 in PVC end cap carries a length of clear ½ in hose into a
 ½ in ball valve. The cap slides onto the pipe over PTFE tape rather than being
 cemented, so the column can be taken apart.
 
-![End cap, hose and ball valve](build/01-outlet.jpg)
+The first seal was hot-melt glue, which does not hold on wet PVC. It was stripped
+out and replaced with two-part epoxy.
+
+![End cap, hose and ball valve, with the first hot-melt seal](build/01-outlet.jpg)
 
 > [!WARNING]
 > Not yet leak-tested. The outlet joint is waiting on a full-height test with the
@@ -58,14 +61,22 @@ Sorted with the insect mesh and by hand into two fractions.
 | Coarser | ≈ 300 ml | Layer 1, support |
 | Finer | ≈ 500 ml | Layer 4, coarse top layer |
 
-> [!WARNING]
-> Layer 3 is still missing. Hand crushing stopped at gravel size. Layer 3 needs
-> grains small enough to pass the insect mesh, and neither fraction is that fine,
-> so its medium is still to be sourced.
+## Fine sand
+
+Hand crushing stopped at gravel size, so neither scoria fraction is fine enough
+for layer 3. A fine carbonate sand already on hand was tried first and set aside:
+it kept releasing fines into the rinse water, and there was not enough of it.
+
+Layer 3 uses aquarium-grade fine silica sand instead. Quartz does not break down
+into fines the way carbonate does, and it leaves water chemistry unchanged. A
+3 kg bag covers the ≈ 1.3 kg the layer needs and leaves enough to reload it.
+
+Before loading, it is rinsed until the water runs clear and checked for drainage
+in a perforated cup.
 
 ## Still to do
 
 - Leak-test the outlet with the pipe full
-- Source a sand-sized fraction for layer 3
+- Rinse the silica sand and check its drainage
 - Load the column and wash the bed until the effluent runs clear
 - Build the photometric rig and shoot the calibration series

@@ -74,16 +74,18 @@ export default function Home() {
           head={["Stage", "Status", "Evidence"]}
           rows={[
             ["1 · Bioremediation", "Modelled", "Published literature"],
-            ["2 · Filtration column", "Built and measured", "Bench data, this site"],
-            ["3 · Pyrolysis", "Partially built", "Biochar produced from agricultural residue"],
+            ["2 · Filtration column", "In progress", "Build log, this site"],
+            ["3 · Pyrolysis", "Modelled", "Commercial charcoal stands in for its product"],
           ]}
         />
         <p>
           The bench column substitutes Earth materials for the Martian ones.{" "}
           <strong>Volcanic scoria</strong>, a basaltic rock, stands in for
-          regolith. The biochar is not a substitute at all — it is real biochar,
-          made from fibrous agricultural residue such as sugarcane
-          bagasse, coconut husk or rice husk.
+          regolith in the coarse layers, and fine silica sand for its fine
+          fraction, which could not be crushed out of scoria by hand. The biochar
+          layer is commercial lump charcoal: wood char made by pyrolysis, the
+          same product Stage 3 would make from crew waste, but not produced by
+          this project.
         </p>
       </Section>
 

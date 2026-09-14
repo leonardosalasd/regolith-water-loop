@@ -10,7 +10,7 @@ pool supply shop. No laboratory equipment is required.
 | PVC pipe, 3 in | 750 mm | hardware store |
 | PVC end cap, 3 in | 1 | hardware store |
 | Volcanic scoria (lava rock), raw | 3 kg | garden centre |
-| Fine sand, passing the insect mesh | ~1 kg | pool supply or hardware store |
+| Fine silica sand, aquarium grade | ~1.3 kg | aquarium or pet shop |
 | Lump charcoal, not briquettes | ~0.65 L crushed | any grocery store |
 | Transparent hose, ½ in | 1 m | hardware store |
 | Plastic ball valve, ½ in | 1 | hardware store |
@@ -19,6 +19,9 @@ pool supply shop. No laboratory equipment is required.
 
 The pipe is opaque, so the layers cannot be seen once loaded. Each one is
 photographed from above as it goes in, which records the build just as well.
+
+The silica sand is inert: it does not change pH or water chemistry. It is sold in
+3 kg bags, which leaves enough to reload the layer.
 
 Hot-melt glue does not hold on wet PVC. Seal the outlet with two-part epoxy.
 

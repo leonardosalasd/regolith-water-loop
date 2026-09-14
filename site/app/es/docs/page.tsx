@@ -78,16 +78,18 @@ export default function Page() {
           head={["Etapa", "Estado", "Evidencia"]}
           rows={[
             ["1 · Biorremediación", "Modelada", "Literatura publicada"],
-            ["2 · Columna de filtración", "Construida y medida", "Datos de banco, en este sitio"],
-            ["3 · Pirólisis", "Parcialmente construida", "Biochar producido de residuo agrícola"],
+            ["2 · Columna de filtración", "En curso", "Bitácora de armado, en este sitio"],
+            ["3 · Pirólisis", "Modelada", "Carbón comercial en lugar de su producto"],
           ]}
         />
         <p>
           La columna de banco sustituye los materiales marcianos por terrestres.
           La <strong>escoria volcánica</strong>, una roca basáltica, hace de
-          regolito. El biochar no es sustituto de nada: es biochar de verdad,
-          hecho de residuo fibroso agrícola: bagazo de caña, fibra de coco o
-          cascarilla de arroz.
+          regolito en las capas gruesas, y arena sílica fina hace de su fracción
+          fina, que no se pudo obtener machacando escoria a mano. La capa de
+          biochar es carbón vegetal comercial: madera carbonizada por pirólisis,
+          el mismo producto que haría la etapa 3 con los residuos de la
+          tripulación, pero no producido por este proyecto.
         </p>
       </Section>
 

@@ -136,7 +136,7 @@
     <text x="424" y="132" font-weight="bold">FREEBOARD</text>
     <text x="424" y="220">CHARGE VOLUME &#8212; 884 ml</text>
     <text x="424" y="320" font-weight="bold">4  COARSE SCORIA</text>
-    <text x="424" y="420" font-weight="bold">3  FINE SCORIA</text>
+    <text x="424" y="420" font-weight="bold">3  FINE SILICA SAND</text>
     <text x="424" y="548" font-weight="bold">2  BIOCHAR</text>
     <text x="424" y="616" font-weight="bold">1  SUPPORT SCORIA</text>
     <text x="424" y="656">SCREEN &#8212; plastic mesh</text>
@@ -163,7 +163,7 @@
 
     <text x="632" y="196">1</text><text x="660" y="196">Scoria, over 8 mm</text><text x="792" y="196">50</text><text x="846" y="196">221</text><text x="892" y="196">200 g</text>
     <text x="632" y="227">2</text><text x="660" y="227">Lump charcoal, graded</text><text x="792" y="227">120</text><text x="846" y="227">530</text><text x="892" y="227">160 g</text>
-    <text x="632" y="258">3</text><text x="660" y="258">Scoria, 0.4&#8211;0.8 mm</text><text x="792" y="258">200</text><text x="846" y="258">883</text><text x="892" y="258">795 g</text>
+    <text x="632" y="258">3</text><text x="660" y="258">Silica sand, fine</text><text x="792" y="258">200</text><text x="846" y="258">883</text><text x="892" y="258">1330 g</text>
     <text x="632" y="289">4</text><text x="660" y="289">Scoria, 4&#8211;8 mm</text><text x="792" y="289">50</text><text x="846" y="289">221</text><text x="892" y="289">200 g</text>
   </g>
   <text x="620" y="318" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#555555">Depth in mm &#183; volume in cm&#179; &#183; mass indicative</text>
@@ -205,7 +205,7 @@
     <text x="630" y="662" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
     <text x="630" y="693" font-size="12">Filtration column &#8212; section</text>
     <text x="630" y="724" font-size="10.5">DIMENSIONS IN MM &#183; SCALE NTS</text>
-    <text x="810" y="724" font-size="10.5">DWG  RWL-001  REV B</text>
+    <text x="810" y="724" font-size="10.5">DWG  RWL-001  REV C</text>
     <text x="630" y="756" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
     <text x="810" y="756" font-size="10.5">2026-09-13</text>
   </g>

@@ -39,12 +39,16 @@ export default function Page() {
           into a ½ in ball valve. The cap slides onto the pipe over PTFE tape
           rather than being cemented, so the column can be taken apart.
         </p>
+        <p>
+          The first seal was hot-melt glue, which does not hold on wet PVC. It was
+          stripped out and replaced with two-part epoxy.
+        </p>
         <Photo
           src="/build/01-outlet.webp"
           alt="PVC end cap with clear hose passing through its centre into a ball valve"
           width={982}
           height={1308}
-          caption="End cap, hose and ball valve."
+          caption="End cap, hose and ball valve, with the first hot-melt seal."
         />
         <Callout tone="warn" title="Not yet leak-tested">
           <p>
@@ -119,19 +123,31 @@ export default function Page() {
             ["Finer", "≈ 500 ml", "Layer 4, coarse top layer"],
           ]}
         />
-        <Callout tone="warn" title="Layer 3 is still missing">
-          <p>
-            Hand crushing stopped at gravel size. Layer 3 needs grains small enough
-            to pass the insect mesh, and neither fraction is that fine, so its
-            medium is still to be sourced.
-          </p>
-        </Callout>
+      </Section>
+
+      <Section title="Fine sand">
+        <p>
+          Hand crushing stopped at gravel size, so neither scoria fraction is fine
+          enough for layer 3. A fine carbonate sand already on hand was tried first
+          and set aside: it kept releasing fines into the rinse water, and there
+          was not enough of it.
+        </p>
+        <p>
+          Layer 3 uses aquarium-grade fine silica sand instead. Quartz does not
+          break down into fines the way carbonate does, and it leaves water
+          chemistry unchanged. A 3 kg bag covers the ≈ 1.3 kg the layer needs and
+          leaves enough to reload it.
+        </p>
+        <p>
+          Before loading, it is rinsed until the water runs clear and checked for
+          drainage in a perforated cup.
+        </p>
       </Section>
 
       <Section title="Still to do">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
           <li>Leak-test the outlet with the pipe full</li>
-          <li>Source a sand-sized fraction for layer 3</li>
+          <li>Rinse the silica sand and check its drainage</li>
           <li>Load the column and wash the bed until the effluent runs clear</li>
           <li>Build the photometric rig and shoot the calibration series</li>
         </ul>

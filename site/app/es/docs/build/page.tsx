@@ -41,12 +41,16 @@ export default function Page() {
           tapa entra en el tubo sobre cinta teflón, sin cementar, para poder
           desarmar la columna.
         </p>
+        <p>
+          El primer sellado fue con silicón caliente, que no aguanta sobre PVC
+          mojado. Se retiró y se sustituyó por epóxico de dos componentes.
+        </p>
         <Photo
           src="/build/01-outlet.webp"
           alt="Tapa de PVC con manguera transparente que atraviesa el centro hacia una válvula"
           width={982}
           height={1308}
-          caption="Tapa, manguera y válvula."
+          caption="Tapa, manguera y válvula, con el primer sellado de silicón caliente."
         />
         <Callout tone="warn" title="Sin prueba de fugas todavía">
           <p>
@@ -122,19 +126,31 @@ export default function Page() {
             ["Más fina", "≈ 500 ml", "Capa 4, capa gruesa superior"],
           ]}
         />
-        <Callout tone="warn" title="Falta la capa 3">
-          <p>
-            El machacado a mano se quedó en tamaño grava. La capa 3 necesita granos
-            lo bastante chicos para pasar la malla mosquitera, y ninguna de las dos
-            fracciones lo es, así que su material está pendiente.
-          </p>
-        </Callout>
+      </Section>
+
+      <Section title="Arena fina">
+        <p>
+          El machacado a mano se quedó en tamaño grava, así que ninguna de las dos
+          fracciones de escoria es lo bastante fina para la capa 3. Primero se probó
+          una arena fina de carbonato que ya se tenía, y se descartó: seguía
+          soltando finos en el agua de enjuague y no alcanzaba.
+        </p>
+        <p>
+          La capa 3 usa en su lugar arena sílica fina para acuario. El cuarzo no se
+          deshace en finos como el carbonato y no cambia la química del agua. Una
+          bolsa de 3 kg cubre los ≈ 1.3 kg que pide la capa y deja para volver a
+          cargarla.
+        </p>
+        <p>
+          Antes de cargarla se enjuaga hasta que el agua salga clara y se prueba su
+          drenaje en un vaso perforado.
+        </p>
       </Section>
 
       <Section title="Pendiente">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
           <li>Prueba de fugas de la salida con el tubo lleno</li>
-          <li>Conseguir una fracción tamaño arena para la capa 3</li>
+          <li>Enjuagar la arena sílica y probar su drenaje</li>
           <li>Cargar la columna y lavar el lecho hasta que el efluente salga claro</li>
           <li>Armar el montaje fotométrico y tomar la serie de calibración</li>
         </ul>
