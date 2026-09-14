@@ -35,11 +35,13 @@ This repository holds the design, the bench build, and the code that measures wh
 | | |
 | --- | --- |
 | [docs/system.md](docs/system.md) | The three stages and how they depend on each other |
+| [docs/mars.md](docs/mars.md) | Mars conditions, sizing for six crew and habitat requirements |
 | [docs/method.md](docs/method.md) | How turbidity is measured from photographs |
 | [docs/protocol.md](docs/protocol.md) | Greywater recipe, grading, calibration and run procedure |
 | [docs/build.md](docs/build.md) | Build log with photographs and measured volumes |
 | [docs/print/target-sheet.pdf](docs/print/target-sheet.pdf) | Printable checker target and white card for the rig |
-| [docs/drawings/](docs/drawings/) | Dimensioned drawings, RWL-001 and RWL-002 |
+| [docs/drawings/](docs/drawings/) | Bench drawings RWL-001 and RWL-002, system schematics RWL-003 and RWL-004 |
+| [docs/references.md](docs/references.md) | Every source, checked against the claim it supports |
 | [GLOSSARY.md](GLOSSARY.md) | Terms used throughout |
 
 Stage 2, the filtration column, is the stage built and measured on the bench. Stages 1 and 3 are supported by published work. Perchlorate salts are strong oxidisers and are not handled in this project.
@@ -62,6 +64,14 @@ rwl report --readings readings.csv --calibration calibration.json \
 ```
 
 Read [docs/method.md](docs/method.md) before shooting a session. The rig has to stay fixed or the series is void.
+
+### Sizing
+
+```bash
+rwl size --crew 6 --base early
+```
+
+Greywater, filter area under Mars gravity, char output and perchlorate stoichiometry for a crew. Every constant is cited in [src/rwl/sizing.py](src/rwl/sizing.py).
 
 ### Development
 

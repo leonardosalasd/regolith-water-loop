@@ -50,8 +50,10 @@ def _content() -> bytes:
 
     wx, wy = 65.0, 50.0
     ops.append("0.55 G [2 2] 0 d")
-    rect(cx - CUT_MARGIN_MM, cy - CUT_MARGIN_MM, CHECKER_MM + 2 * CUT_MARGIN_MM, CHECKER_MM + 2 * CUT_MARGIN_MM, fill=False)
-    rect(wx - CUT_MARGIN_MM, wy - CUT_MARGIN_MM, WHITE_MM + 2 * CUT_MARGIN_MM, WHITE_MM + 2 * CUT_MARGIN_MM, fill=False)
+    checker_cut = CHECKER_MM + 2 * CUT_MARGIN_MM
+    white_cut = WHITE_MM + 2 * CUT_MARGIN_MM
+    rect(cx - CUT_MARGIN_MM, cy - CUT_MARGIN_MM, checker_cut, checker_cut, fill=False)
+    rect(wx - CUT_MARGIN_MM, wy - CUT_MARGIN_MM, white_cut, white_cut, fill=False)
     ops.append("[] 0 d 0 G 0 g")
 
     text(cx, cy - 10, 9, "TARGET CARD  -  100 x 100 mm  -  cut on the dashed line")

@@ -1,4 +1,4 @@
-"""Command line entry point for the turbidity workflow."""
+"""Command line entry point for the turbidity workflow and mission sizing."""
 
 from __future__ import annotations
 
@@ -8,6 +8,7 @@ import json
 import sys
 from pathlib import Path
 
+from . import sizing
 from . import target as target_sheet
 from .turbidity import ROI, Calibration, Reading, fit, measure, reduction
 
@@ -94,8 +95,44 @@ def cmd_target(args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_size(args: argparse.Namespace) -> int:
+    try:
+        result = sizing.size(args.crew, args.base)
+        chem = sizing.perchlorate(args.regolith)
+    except ValueError as exc:
+        raise SystemExit(str(exc)) from exc
+    oxygen_regolith = sizing.regolith_for_oxygen(result.crew_oxygen_kg_per_day)
+
+    def pair(values: tuple[float, float], digits: int = 3) -> str:
+        return f"{values[0]:.{digits}f} - {values[1]:.{digits}f}"
+
+    rows = [
+        (f"crew {result.crew}, {result.base} base", ""),
+        ("greywater", f"{result.greywater_l_per_day:.1f} L/day ({result.flow_l_per_h:.2f} L/h)"),
+        ("filter area, Earth g", f"{pair(result.filter_area_m2, 4)} m2"),
+        ("filter area, Mars g", f"{pair(result.filter_area_mars_m2, 4)} m2 at the same head"),
+        ("bench columns, Mars g", pair(result.bench_columns_mars, 1)),
+        ("bed volume, Mars g", f"{pair(result.bed_volume_m3, 4)} m3"),
+        ("trash", f"{result.trash_kg_per_day:.2f} kg/day"),
+        ("char, upper estimate", f"{result.char_kg_per_day:.2f} kg/day"),
+        ("", ""),
+        (f"per {chem.regolith_kg:.0f} kg regolith", ""),
+        ("perchlorate", f"{pair(chem.perchlorate_kg, 1)} kg"),
+        ("acetate, full reduction", f"{pair(chem.acetate_full_kg, 1)} kg"),
+        ("O2 if all captured", f"{pair(chem.oxygen_max_kg, 1)} kg"),
+        (
+            "regolith for crew O2",
+            f"{oxygen_regolith[0] / 1000:.1f} - {oxygen_regolith[1] / 1000:.1f} t/day "
+            f"to cover {result.crew_oxygen_kg_per_day:.2f} kg O2",
+        ),
+    ]
+    for label, value in rows:
+        print(f"{label:<25}{value}".rstrip())
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="rwl", description="Turbidity measurement from photographs")
+    parser = argparse.ArgumentParser(prog="rwl", description="Turbidity from photographs and mission sizing")
     subcommands = parser.add_subparsers(dest="command", required=True)
 
     measure_cmd = subcommands.add_parser("measure", help="read contrast from sample photographs")
@@ -120,6 +157,12 @@ def build_parser() -> argparse.ArgumentParser:
     target_cmd = subcommands.add_parser("target", help="write the printable A4 target sheet")
     target_cmd.add_argument("--out", type=Path, default=Path("target-sheet.pdf"))
     target_cmd.set_defaults(func=cmd_target)
+
+    size_cmd = subcommands.add_parser("size", help="size the system for a crew")
+    size_cmd.add_argument("--crew", type=int, default=6)
+    size_cmd.add_argument("--base", choices=sorted(sizing.HYGIENE_WASTEWATER), default="early")
+    size_cmd.add_argument("--regolith", type=float, default=1000.0, help="regolith mass in kg")
+    size_cmd.set_defaults(func=cmd_size)
 
     return parser
 
