@@ -89,16 +89,10 @@ export default function MaterialsPage() {
             ["Precision balance", "Media placed by depth; volumes recorded rather than masses"],
             ["Geotextile", "Discs cut from the same insect mesh"],
             ["Graduated cylinder", "Kitchen measuring jug"],
-            ["Clamps and stand", "A cardboard box with a hole cut in the top"],
+            ["Clamps and stand", "Column taped to a mop handle leaning on a wall"],
             ["Nephelometer", "Photographs and the analysis code"],
           ]}
         />
-        <p>
-          The box is worth a word. The column passes through a hole in the lid,
-          the outlet and collecting jar sit hidden inside, and on camera the
-          result reads as a column standing on a plinth rather than a tube
-          strapped to a chair.
-        </p>
       </Section>
 
       <Section title="Not handled">

@@ -8,6 +8,11 @@ volumes were measured with 200 ml jars.
 PVC pipe, 3 in nominal, cut to 750 mm. The pipe is opaque, so each layer is
 photographed from above as it goes in rather than through the wall.
 
+With the cap on, the depth from the cap floor to the rim is 770 mm. Layer
+surfaces are checked with a tape measure from the rim.
+
+The column is taped to a mop handle leaning against a wall.
+
 ![PVC pipe with a tape measure reading 75 cm](build/02-column-body.jpg)
 
 ## Outlet
@@ -74,8 +79,17 @@ Rinsed in a tub until the water ran clear.
 
 ![Rinsed silica sand under clear water](build/07-sand-washed.jpg)
 
+## Loaded column
+
+Loaded bottom up per RWL-001, each layer placed into standing water and checked
+with a tape measure from the rim.
+
+![Each layer from above as loaded: support scoria, charcoal, silica sand, coarse scoria](build/09-layers.jpg)
+
+![Loaded column taped to a mop handle, ball valve hanging free](build/08-column-loaded.jpg)
+
 ## Still to do
 
 - Check the rinsed sand's drainage in a perforated cup
-- Load the column and wash the bed until the effluent runs clear
+- Wash the bed until the effluent runs clear
 - Build the photometric rig and shoot the calibration series

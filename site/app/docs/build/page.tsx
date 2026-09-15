@@ -24,6 +24,11 @@ export default function Page() {
           PVC pipe, 3 in nominal, cut to 750 mm. The pipe is opaque, so each layer
           is photographed from above as it goes in rather than through the wall.
         </p>
+        <p>
+          With the cap on, the depth from the cap floor to the rim is 770 mm.
+          Layer surfaces are checked with a tape measure from the rim. The column
+          is taped to a mop handle leaning against a wall.
+        </p>
         <Photo
           src="/build/02-column-body.webp"
           alt="White PVC pipe with a tape measure along it reading 75 cm"
@@ -148,10 +153,31 @@ export default function Page() {
         />
       </Section>
 
+      <Section title="Loaded column">
+        <p>
+          Loaded bottom up per RWL-001, each layer placed into standing water and
+          checked with a tape measure from the rim.
+        </p>
+        <Photo
+          src="/build/09-layers.webp"
+          alt="Four views down the pipe as each layer went in: dark support scoria, black charcoal, pale silica sand and red scoria on top"
+          width={1600}
+          height={526}
+          caption="Left to right: support scoria, charcoal, silica sand, coarse scoria."
+        />
+        <Photo
+          src="/build/08-column-loaded.webp"
+          alt="Loaded white PVC column taped to a mop handle, with the ball valve hanging free below"
+          width={814}
+          height={1600}
+          caption="Loaded and taped to the mop handle."
+        />
+      </Section>
+
       <Section title="Still to do">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
           <li>Check the rinsed sand&apos;s drainage in a perforated cup</li>
-          <li>Load the column and wash the bed until the effluent runs clear</li>
+          <li>Wash the bed until the effluent runs clear</li>
           <li>Build the photometric rig and shoot the calibration series</li>
         </ul>
       </Section>

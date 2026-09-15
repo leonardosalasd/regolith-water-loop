@@ -97,16 +97,10 @@ export default function Page() {
             ["Balanza de precisión", "El medio se coloca por espesor; se registran volúmenes en vez de masas"],
             ["Geotextil", "Discos cortados de la misma malla mosquitera"],
             ["Probeta graduada", "Vaso medidor de cocina"],
-            ["Prensas y soporte", "Una caja de cartón con un agujero en la tapa"],
+            ["Prensas y soporte", "La columna amarrada con cinta a un trapeador recargado en la pared"],
             ["Turbidímetro", "Fotografías y el código de análisis"],
           ]}
         />
-        <p>
-          La caja merece una línea. La columna pasa por un agujero en la tapa, la
-          salida y el frasco de recolección quedan escondidos dentro, y en cámara
-          el resultado se lee como una columna sobre un pedestal en vez de un
-          tubo amarrado a una silla.
-        </p>
       </Section>
 
       <Section title="Lo que no se maneja">

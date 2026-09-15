@@ -28,7 +28,7 @@ export default function Page() {
         <Sheet
           src="/drawings/column-section.svg"
           alt="Corte vertical de la columna de filtración con cuatro capas y cotas"
-          drawing="RWL-001 REV D"
+          drawing="RWL-001 REV E"
           label="ver en grande"
           caption="Llena por espesor, no por masa. Los espesores son la especificación; las masas dependen del diámetro del tubo que realmente se use."
         />

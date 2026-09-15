@@ -28,7 +28,7 @@ export default function DrawingsPage() {
         <Sheet
           src="/drawings/column-section.svg"
           alt="Vertical section of the filtration column showing four media layers with dimensions"
-          drawing="RWL-001 REV D"
+          drawing="RWL-001 REV E"
           caption="Fill by depth, not by mass. Layer depths are the specification; masses depend on the bore of the pipe actually used."
         />
       </Section>

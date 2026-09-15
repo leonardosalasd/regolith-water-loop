@@ -25,6 +25,11 @@ export default function Page() {
           cada capa se fotografía desde arriba conforme se carga, no a través de la
           pared.
         </p>
+        <p>
+          Con la tapa puesta, del fondo de la tapa al borde hay 770 mm. La
+          superficie de cada capa se revisa con cinta métrica desde el borde. La
+          columna va amarrada con cinta a un trapeador recargado en la pared.
+        </p>
         <Photo
           src="/build/02-column-body.webp"
           alt="Tubo de PVC blanco con una cinta métrica que marca 75 cm"
@@ -152,10 +157,31 @@ export default function Page() {
         />
       </Section>
 
+      <Section title="Columna cargada">
+        <p>
+          Cargada de abajo hacia arriba según RWL-001, cada capa sobre agua y
+          revisada con cinta métrica desde el borde.
+        </p>
+        <Photo
+          src="/build/09-layers.webp"
+          alt="Cuatro vistas hacia dentro del tubo al cargar cada capa: escoria de soporte oscura, carbón negro, arena sílica clara y escoria roja arriba"
+          width={1600}
+          height={526}
+          caption="De izquierda a derecha: escoria de soporte, carbón, arena sílica, escoria gruesa."
+        />
+        <Photo
+          src="/build/08-column-loaded.webp"
+          alt="Columna de PVC blanco cargada y amarrada a un trapeador, con la llave de esfera colgando abajo"
+          width={814}
+          height={1600}
+          caption="Cargada y amarrada al trapeador."
+        />
+      </Section>
+
       <Section title="Pendiente">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
           <li>Probar el drenaje de la arena enjuagada en un vaso perforado</li>
-          <li>Cargar la columna y lavar el lecho hasta que el efluente salga claro</li>
+          <li>Lavar el lecho hasta que el efluente salga claro</li>
           <li>Armar el montaje fotométrico y tomar la serie de calibración</li>
         </ul>
       </Section>
