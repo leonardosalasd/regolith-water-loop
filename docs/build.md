@@ -21,9 +21,7 @@ out and replaced with two-part epoxy.
 
 ![End cap, hose and ball valve, with the first hot-melt seal](build/01-outlet.jpg)
 
-> [!WARNING]
-> Not yet leak-tested. The outlet joint is waiting on a full-height test with the
-> pipe filled to the top. Nothing goes into the column until it holds.
+Leak test: filled with water and left for two hours. Not a drop came through.
 
 ## Layer separators
 
@@ -71,12 +69,12 @@ Layer 3 uses aquarium-grade fine silica sand instead. Quartz does not break down
 into fines the way carbonate does, and it leaves water chemistry unchanged. A
 3 kg bag covers the ≈ 1.3 kg the layer needs and leaves enough to reload it.
 
-Before loading, it is rinsed until the water runs clear and checked for drainage
-in a perforated cup.
+Rinsed in a tub until the water ran clear.
+
+![Rinsed silica sand under clear water](build/07-sand-washed.jpg)
 
 ## Still to do
 
-- Leak-test the outlet with the pipe full
-- Rinse the silica sand and check its drainage
+- Check the rinsed sand's drainage in a perforated cup
 - Load the column and wash the bed until the effluent runs clear
 - Build the photometric rig and shoot the calibration series

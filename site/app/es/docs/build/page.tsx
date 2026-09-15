@@ -52,11 +52,8 @@ export default function Page() {
           height={1308}
           caption="Tapa, manguera y válvula, con el primer sellado de silicón caliente."
         />
-        <Callout tone="warn" title="Sin prueba de fugas todavía">
-          <p>
-            La unión de la salida espera una prueba de fugas con el tubo lleno hasta
-            arriba. No entra nada a la columna hasta que aguante.
-          </p>
+        <Callout tone="note" title="Prueba de fugas">
+          <p>Se llenó de agua y se dejó dos horas. No salió ni una gota.</p>
         </Callout>
       </Section>
 
@@ -141,16 +138,19 @@ export default function Page() {
           bolsa de 3 kg cubre los ≈ 1.3 kg que pide la capa y deja para volver a
           cargarla.
         </p>
-        <p>
-          Antes de cargarla se enjuaga hasta que el agua salga clara y se prueba su
-          drenaje en un vaso perforado.
-        </p>
+        <p>Se enjuagó en un bote hasta que el agua salió clara.</p>
+        <Photo
+          src="/build/07-sand-washed.webp"
+          alt="Bote con arena sílica fina enjuagada bajo agua clara"
+          width={880}
+          height={998}
+          caption="Enjuagada, antes de cargar."
+        />
       </Section>
 
       <Section title="Pendiente">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
-          <li>Prueba de fugas de la salida con el tubo lleno</li>
-          <li>Enjuagar la arena sílica y probar su drenaje</li>
+          <li>Probar el drenaje de la arena enjuagada en un vaso perforado</li>
           <li>Cargar la columna y lavar el lecho hasta que el efluente salga claro</li>
           <li>Armar el montaje fotométrico y tomar la serie de calibración</li>
         </ul>

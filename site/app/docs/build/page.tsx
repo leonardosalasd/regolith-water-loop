@@ -50,11 +50,8 @@ export default function Page() {
           height={1308}
           caption="End cap, hose and ball valve, with the first hot-melt seal."
         />
-        <Callout tone="warn" title="Not yet leak-tested">
-          <p>
-            The outlet joint is waiting on a full-height leak test with the pipe
-            filled to the top. Nothing goes into the column until it holds.
-          </p>
+        <Callout tone="note" title="Leak test">
+          <p>Filled with water and left for two hours. Not a drop came through.</p>
         </Callout>
       </Section>
 
@@ -138,16 +135,19 @@ export default function Page() {
           chemistry unchanged. A 3 kg bag covers the ≈ 1.3 kg the layer needs and
           leaves enough to reload it.
         </p>
-        <p>
-          Before loading, it is rinsed until the water runs clear and checked for
-          drainage in a perforated cup.
-        </p>
+        <p>Rinsed in a tub until the water ran clear.</p>
+        <Photo
+          src="/build/07-sand-washed.webp"
+          alt="Tub of rinsed fine silica sand under clear water"
+          width={880}
+          height={998}
+          caption="Rinsed, before loading."
+        />
       </Section>
 
       <Section title="Still to do">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
-          <li>Leak-test the outlet with the pipe full</li>
-          <li>Rinse the silica sand and check its drainage</li>
+          <li>Check the rinsed sand&apos;s drainage in a perforated cup</li>
           <li>Load the column and wash the bed until the effluent runs clear</li>
           <li>Build the photometric rig and shoot the calibration series</li>
         </ul>
