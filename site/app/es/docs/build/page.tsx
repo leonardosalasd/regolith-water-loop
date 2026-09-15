@@ -53,7 +53,11 @@ export default function Page() {
           caption="Tapa, manguera y válvula, con el primer sellado de silicón caliente."
         />
         <Callout tone="note" title="Prueba de fugas">
-          <p>Se llenó de agua y se dejó dos horas. No salió ni una gota.</p>
+          <p>
+            La salida tapada aguantó agua dos horas, y luego la tapa con el tubo
+            lleno también. Ni una gota en ninguna unión, y la llave deja pasar el
+            agua sin problema.
+          </p>
         </Callout>
       </Section>
 

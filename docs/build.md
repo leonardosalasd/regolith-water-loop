@@ -21,7 +21,8 @@ out and replaced with two-part epoxy.
 
 ![End cap, hose and ball valve, with the first hot-melt seal](build/01-outlet.jpg)
 
-Leak test: filled with water and left for two hours. Not a drop came through.
+Leak tests: the capped outlet held water for two hours, then the cap on the full
+pipe held too. Not a drop at either joint, and the valve flows freely.
 
 ## Layer separators
 

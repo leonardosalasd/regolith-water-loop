@@ -51,7 +51,10 @@ export default function Page() {
           caption="End cap, hose and ball valve, with the first hot-melt seal."
         />
         <Callout tone="note" title="Leak test">
-          <p>Filled with water and left for two hours. Not a drop came through.</p>
+          <p>
+            The capped outlet held water for two hours, then the cap on the full
+            pipe held too. Not a drop at either joint, and the valve flows freely.
+          </p>
         </Callout>
       </Section>
 
