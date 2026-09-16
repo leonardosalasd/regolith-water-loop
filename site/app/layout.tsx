@@ -26,7 +26,7 @@ const mono = IBM_Plex_Mono({
 });
 
 const description =
-  "Open hardware: a three-stage water pre-treatment column that turns volcanic regolith and pyrolysis biochar into a gravity-fed filter, built on a bench and measured from photographs.";
+  "Open hardware: a three-stage water pre-treatment column that turns volcanic regolith and pyrolysis biochar into a gravity-fed filter, built and tested on a bench.";
 
 export const viewport: Viewport = {
   themeColor: "#0c0b0b",

@@ -180,8 +180,6 @@ export default function Page() {
 
       <Section title="Pendiente">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
-          <li>Probar el drenaje de la arena enjuagada en un vaso perforado</li>
-          <li>Lavar el lecho hasta que el efluente salga claro</li>
           <li>Armar el montaje fotométrico y tomar la serie de calibración</li>
         </ul>
       </Section>

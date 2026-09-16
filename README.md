@@ -4,7 +4,7 @@
 
 # **Regolith Water Loop**
 
-Three-stage water pre-treatment column: bioremediated regolith, pyrolysis biochar, and a gravity feed. Bench-built and measured.
+Three-stage water pre-treatment column: bioremediated regolith, pyrolysis biochar, and a gravity feed. Bench-built and tested.
 
 [**Leonardo Salas**](mailto:leonardo.salas01@outlook.com) · [rwl.leonardosalas.dev](https://rwl.leonardosalas.dev)
 
@@ -22,7 +22,7 @@ Three-stage water pre-treatment column: bioremediated regolith, pyrolysis biocha
 
 > [!CAUTION]
 > **This is not a drinking water system.**
-> This column is a pre-treatment stage. It reduces turbidity, suspended solids and part of the chemical load. It does **not** remove bacteria, viruses or parasites, and it does **not** make water safe to drink. Water leaving this column still requires proper disinfection.
+> This column is a pre-treatment stage. It is meant to reduce turbidity and suspended solids. It does **not** remove bacteria, viruses or parasites, and it does **not** make water safe to drink. Water leaving this column still requires proper disinfection.
 
 ---
 
@@ -39,12 +39,13 @@ This repository holds the design, the bench build, and the code that measures wh
 | [docs/method.md](docs/method.md) | How turbidity is measured from photographs |
 | [docs/protocol.md](docs/protocol.md) | Greywater recipe, grading, calibration and run procedure |
 | [docs/build.md](docs/build.md) | Build log with photographs and measured volumes |
+| [docs/results.md](docs/results.md) | First runs and what they show |
 | [docs/print/target-sheet.pdf](docs/print/target-sheet.pdf) | Printable checker target and white card for the rig |
 | [docs/drawings/](docs/drawings/) | Bench drawings RWL-001 and RWL-002, system schematics RWL-003 and RWL-004 |
 | [docs/references.md](docs/references.md) | Every source, checked against the claim it supports |
 | [GLOSSARY.md](GLOSSARY.md) | Terms used throughout |
 
-Stage 2, the filtration column, is the stage built and measured on the bench. Stages 1 and 3 are supported by published work. Perchlorate salts are strong oxidisers and are not handled in this project.
+Stage 2, the filtration column, is the stage built and tested on the bench; see [docs/results.md](docs/results.md). Stages 1 and 3 are supported by published work. Perchlorate salts are strong oxidisers and are not handled in this project.
 
 ---
 

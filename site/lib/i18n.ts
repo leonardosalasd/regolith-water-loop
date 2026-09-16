@@ -34,7 +34,7 @@ const groups: Record<Locale, NavGroup[]> = {
       items: [
         { slug: "method", label: "Method" },
         { slug: "protocol", label: "Run protocol" },
-        { slug: "results", label: "Results", note: "pending" },
+        { slug: "results", label: "Results" },
       ],
     },
   ],
@@ -61,7 +61,7 @@ const groups: Record<Locale, NavGroup[]> = {
       items: [
         { slug: "method", label: "Método" },
         { slug: "protocol", label: "Protocolo" },
-        { slug: "results", label: "Resultados", note: "pendiente" },
+        { slug: "results", label: "Resultados" },
       ],
     },
   ],

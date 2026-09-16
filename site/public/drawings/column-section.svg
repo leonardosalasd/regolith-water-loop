@@ -185,15 +185,14 @@
   </g>
 
   <text x="44" y="664" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">SUPPORT ARRANGEMENT</text>
-  <text x="44" y="680" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#555555">Cardboard box, column through the lid, jar inside.</text>
-  <g stroke="#1a1a1a" stroke-width="1.6" fill="none">
-    <rect x="56" y="722" width="160" height="54"/>
-    <rect x="96" y="690" width="22" height="32"/>
-  </g>
-  <g stroke="#1a1a1a" stroke-width="1" fill="none" stroke-dasharray="4 3">
-    <rect x="96" y="722" width="22" height="22"/>
-    <path d="M107,744 L107,752 L156,752 L156,758"/>
-    <rect x="146" y="758" width="24" height="18"/>
+  <text x="44" y="680" font-family="Helvetica, Arial, sans-serif" font-size="10.5" fill="#555555">Taped to a mop handle, leaning on a wall.</text>
+  <g stroke="#1a1a1a" fill="none">
+    <line x1="60" y1="690" x2="60" y2="776" stroke-width="2.4"/>
+    <line x1="56" y1="776" x2="216" y2="776" stroke-width="1.6"/>
+    <line x1="96" y1="776" x2="70" y2="690" stroke-width="3"/>
+    <path d="M76,700 L98,700 L117,764 L95,764 z" stroke-width="1.6"/>
+    <path d="M106,764 L108,772" stroke-width="1.6"/>
+    <path d="M72,712 L104,712 M82,746 L114,746" stroke-width="3" stroke="#555555"/>
   </g>
 
   <g stroke="#1a1a1a" stroke-width="1" fill="none">
@@ -207,8 +206,8 @@
     <text x="630" y="662" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
     <text x="630" y="693" font-size="12">Filtration column &#8212; section</text>
     <text x="630" y="724" font-size="10.5">DIMENSIONS IN MM &#183; SCALE NTS</text>
-    <text x="810" y="724" font-size="10.5">DWG  RWL-001  REV D</text>
+    <text x="810" y="724" font-size="10.5">DWG  RWL-001  REV E</text>
     <text x="630" y="756" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
-    <text x="810" y="756" font-size="10.5">2026-09-13</text>
+    <text x="810" y="756" font-size="10.5">2026-09-15</text>
   </g>
 </svg>

@@ -64,7 +64,7 @@ export default function Page() {
         <p>
           El efluente llega al procesador principal de agua con menos carga, así que la
           máquina trabaja menos y sus membranas duran más. Esta es la etapa que
-          se construye y se mide en banco.
+          se construyó y se probó en banco.
         </p>
       </Section>
 

@@ -55,7 +55,7 @@ white.
 | Precision balance | Media placed by depth; volumes recorded rather than masses |
 | Geotextile | Discs cut from the same insect mesh |
 | Graduated cylinder | Kitchen measuring jug |
-| Clamps and stand | A board with a hole, laid across a bucket |
+| Clamps and stand | Column taped to a mop handle leaning on a wall |
 | Nephelometer | Photographs and the analysis code |
 
 ## Not handled

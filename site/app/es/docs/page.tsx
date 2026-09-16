@@ -68,7 +68,7 @@ export default function Page() {
 
       <Section title="Qué se construye realmente">
         <p>
-          La etapa 2, la columna de filtración, se construye en banco y se mide.
+          La etapa 2, la columna de filtración, está construida en banco y probada.
           Las etapas 1 y 3 se respaldan con literatura publicada. Los percloratos
           son sales oxidantes fuertes y no se manejan en este proyecto.
         </p>
@@ -76,7 +76,7 @@ export default function Page() {
           head={["Etapa", "Estado", "Evidencia"]}
           rows={[
             ["1 · Biorremediación", "Modelada", "Literatura publicada"],
-            ["2 · Columna de filtración", "En curso", "Bitácora de armado, en este sitio"],
+            ["2 · Columna de filtración", "Construida, primeras corridas", "Bitácora y resultados, a simple vista"],
             ["3 · Pirólisis", "Modelada", "Carbón comercial en lugar de su producto"],
           ]}
         />
@@ -101,8 +101,8 @@ export default function Page() {
         </p>
         <Callout tone="safety" title="Esto no potabiliza agua">
           <p>
-            La columna es una etapa de pretratamiento. Reduce turbidez, sólidos
-            en suspensión y parte de la carga química. <strong>No</strong>{" "}
+            La columna es una etapa de pretratamiento, pensada para reducir
+            turbidez y sólidos en suspensión. <strong>No</strong>{" "}
             elimina bacterias, virus ni parásitos, y <strong>no</strong> vuelve
             el agua apta para beber. El agua que sale de aquí todavía necesita
             desinfección.

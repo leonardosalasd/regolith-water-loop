@@ -64,7 +64,7 @@ export default function SystemPage() {
         <p>
           The effluent reaches the main water processor with reduced load, so
           it works less and its membranes last longer. This is the stage built
-          and measured on the bench.
+          and tested on the bench.
         </p>
       </Section>
 

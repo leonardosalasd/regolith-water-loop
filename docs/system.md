@@ -47,7 +47,7 @@ Treated regolith and biochar are layered in a column. Greywater is applied at th
 
 The effluent reaches reverse osmosis with reduced load, so the machine works less and its membranes last longer.
 
-This is the stage built and measured on the bench. See [method.md](method.md).
+This is the stage built and tested on the bench. See [results.md](results.md).
 
 ### Stage 3 — Pyrolysis
 
@@ -84,7 +84,7 @@ The bench build substitutes Earth materials for the Martian ones.
 | Greywater | Synthetic mix to a written recipe | Yes |
 | Perchlorate reduction | Not reproduced | Modelled from literature |
 
-Perchlorates are strong oxidising salts and are not handled in this project. Stages 1 and 3 are supported by published work; Stage 2 is the stage built and measured on the bench.
+Perchlorates are strong oxidising salts and are not handled in this project. Stages 1 and 3 are supported by published work; Stage 2 is the stage built and tested on the bench.
 
 ## Contamination control
 

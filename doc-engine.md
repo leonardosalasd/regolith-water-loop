@@ -16,5 +16,6 @@ accent: "#F54927"
 - [Measurement method](docs/method.md)
 - [Run protocol](docs/protocol.md)
 - [Build log](docs/build.md)
+- [Results](docs/results.md)
 - [References](docs/references.md)
 - [Glossary](GLOSSARY.md)

@@ -90,6 +90,6 @@ with a tape measure from the rim.
 
 ## Still to do
 
-- Check the rinsed sand's drainage in a perforated cup
-- Wash the bed until the effluent runs clear
 - Build the photometric rig and shoot the calibration series
+
+First runs are in [results.md](results.md).

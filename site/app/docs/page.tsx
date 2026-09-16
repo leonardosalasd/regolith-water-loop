@@ -65,7 +65,7 @@ export default function Home() {
 
       <Section title="What is actually built">
         <p>
-          Stage 2, the filtration column, is built on a bench and measured.
+          Stage 2, the filtration column, is built on a bench and tested.
           Stages 1 and 3 are supported by published work. Perchlorates are strong
           oxidising salts and are not handled in this project.
         </p>
@@ -73,7 +73,7 @@ export default function Home() {
           head={["Stage", "Status", "Evidence"]}
           rows={[
             ["1 · Bioremediation", "Modelled", "Published literature"],
-            ["2 · Filtration column", "In progress", "Build log, this site"],
+            ["2 · Filtration column", "Built, first runs", "Build log and results, by eye"],
             ["3 · Pyrolysis", "Modelled", "Commercial charcoal stands in for its product"],
           ]}
         />
@@ -98,8 +98,8 @@ export default function Home() {
         </p>
         <Callout tone="safety" title="This is not a drinking water system">
           <p>
-            The column is a pre-treatment stage. It reduces turbidity, suspended
-            solids and part of the chemical load. It does <strong>not</strong>{" "}
+            The column is a pre-treatment stage, meant to reduce turbidity and
+            suspended solids. It does <strong>not</strong>{" "}
             remove bacteria, viruses or parasites, and it does{" "}
             <strong>not</strong> make water safe to drink. Water leaving this
             column still requires proper disinfection.

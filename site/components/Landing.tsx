@@ -12,7 +12,7 @@ import {
 
 const copy = {
   en: {
-    lede: "A three-stage water pre-treatment column: bioremediated regolith, pyrolysis biochar, and a gravity feed. Built on a bench and measured from photographs.",
+    lede: "A three-stage water pre-treatment column: bioremediated regolith, pyrolysis biochar, and a gravity feed. Built and tested on a bench.",
     docsTitle: "Documentation",
     docsBody: "The system, dimensioned drawings, materials, and the measurement method.",
     repoTitle: "Source code",
@@ -23,7 +23,7 @@ const copy = {
       "This is a pre-treatment stage. It does not remove bacteria, viruses or parasites, and it does not make water safe to drink.",
   },
   es: {
-    lede: "Una columna de pretratamiento de agua en tres etapas: regolito biorremediado, biochar de pirólisis y alimentación por gravedad. Construida en banco y medida con fotografías.",
+    lede: "Una columna de pretratamiento de agua en tres etapas: regolito biorremediado, biochar de pirólisis y alimentación por gravedad. Construida y probada en banco.",
     docsTitle: "Documentación",
     docsBody: "El sistema, los planos acotados, los materiales y el método de medición.",
     repoTitle: "Código fuente",

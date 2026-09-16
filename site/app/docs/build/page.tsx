@@ -176,8 +176,6 @@ export default function Page() {
 
       <Section title="Still to do">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
-          <li>Check the rinsed sand&apos;s drainage in a perforated cup</li>
-          <li>Wash the bed until the effluent runs clear</li>
           <li>Build the photometric rig and shoot the calibration series</li>
         </ul>
       </Section>
