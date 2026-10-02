@@ -76,3 +76,16 @@ def test_cli_version():
     with pytest.raises(SystemExit) as exc:
         main(["--version"])
     assert exc.value.code == 0
+
+
+def test_cli_bare_shows_info(capsys):
+    assert main([]) == 0
+    out = capsys.readouterr().out
+    assert "Leonardo Salas" in out
+    assert "size" in out and "measure" in out
+
+
+def test_cli_info_command_matches_bare(capsys):
+    assert main(["info"]) == 0
+    out = capsys.readouterr().out
+    assert "rwl <command> -h" in out

@@ -5,25 +5,75 @@ from __future__ import annotations
 import argparse
 import csv
 import json
-from importlib.metadata import PackageNotFoundError, version
+from importlib.metadata import PackageNotFoundError, metadata
+from importlib.metadata import version as pkg_version
 from pathlib import Path
 
-from rich.console import Console
+from rich.console import Console, Group
 from rich.table import Table
+from rich.text import Text
 
 from . import sizing
 from . import target as target_sheet
 from .turbidity import ROI, Calibration, Reading, fit, measure, reduction
 
+BRAND = "#f54927"
+
 console = Console()
 err_console = Console(stderr=True)
 
+COMMANDS = {
+    "measure": "read contrast from sample photographs",
+    "calibrate": "fit a dilution series",
+    "report": "compare influent and effluent",
+    "target": "write the printable A4 target sheet",
+    "size": "size the system for a crew",
+    "info": "show this screen: what rwl does and who made it",
+}
 
-def _version() -> str:
+
+def _meta() -> tuple[str, str, dict[str, str]]:
     try:
-        return version("rwl")
+        meta = metadata("rwl")
+        urls = dict(
+            entry.split(", ", 1) for entry in meta.get_all("Project-URL") or []  # type: ignore[union-attr]
+        )
+        return pkg_version("rwl"), meta["Author-email"], urls
     except PackageNotFoundError:
-        return "0.0.0+local"
+        return "0.0.0+local", "Leonardo Salas <leonardo.salas01@outlook.com>", {}
+
+
+def _logo() -> Text:
+    mark = Text("◉ · ", style=f"bold {BRAND}")
+    mark.append("rwl", style="bold")
+    mark.append("  Regolith Water Loop", style="dim")
+    return mark
+
+
+def cmd_info(_args: argparse.Namespace) -> int:
+    version, author, urls = _meta()
+    lines = [
+        _logo(),
+        Text(""),
+        Text("Turbidity measurement and crew-scale sizing for a three-stage Mars water pre-treatment column."),
+        Text(""),
+        Text(f"version  {version}", style="dim"),
+        Text(f"author   {author}", style="dim"),
+    ]
+    for label in ("Homepage", "Repository"):
+        if label in urls:
+            lines.append(Text(f"{label.lower():<8} {urls[label]}", style=f"dim {BRAND}"))
+
+    commands = Table(title="commands", title_style=f"bold {BRAND}", border_style="dim")
+    commands.add_column("command", style="bold")
+    commands.add_column("does")
+    for name, help_text in COMMANDS.items():
+        commands.add_row(name, help_text)
+
+    console.print(Group(*lines))
+    console.print(commands)
+    console.print("\nrun [bold]rwl <command> -h[/] for the options of each one, e.g. [bold]rwl size -h[/]")
+    return 0
 
 
 def _load_setup(path: Path) -> tuple[ROI, ROI]:
@@ -58,8 +108,13 @@ def cmd_measure(args: argparse.Namespace) -> int:
     target, white = _load_setup(args.setup)
     readings = [measure(image, Path(image).stem, target, white) for image in args.images]
     _write_readings(args.out, readings)
+    table = Table(border_style="dim")
+    table.add_column("sample", style="bold")
+    table.add_column("contrast", style=BRAND)
+    table.add_column("transmittance", style="cyan")
     for reading in readings:
-        console.print(f"[bold]{reading.sample}[/]\tcontrast={reading.contrast:.4f}\tT={reading.transmittance:.4f}")
+        table.add_row(reading.sample, f"{reading.contrast:.4f}", f"{reading.transmittance:.4f}")
+    console.print(table)
     console.print(f"\n{len(readings)} readings written to [cyan]{args.out}[/]")
     return 0
 
@@ -79,7 +134,7 @@ def cmd_calibrate(args: argparse.Namespace) -> int:
 
     console.print(f"slope={calibration.slope:.4f} intercept={calibration.intercept:.4f}")
     style = "green" if calibration.r_squared >= 0.9 else "yellow"
-    console.print(f"R^2=[{style}]{calibration.r_squared:.4f}[/]")
+    console.print(f"R^2=[bold {style}]{calibration.r_squared:.4f}[/]")
     if calibration.r_squared < 0.9:
         err_console.print("[yellow]warning:[/] poor fit, check lighting consistency across the series")
     console.print(f"calibration written to [cyan]{args.out}[/]")
@@ -113,9 +168,9 @@ def _size_table(result: sizing.Sizing, chem: sizing.Perchlorate, oxygen_regolith
     def pair(values: tuple[float, float], digits: int = 3) -> str:
         return f"{values[0]:.{digits}f} - {values[1]:.{digits}f}"
 
-    table = Table(title=f"crew {result.crew}, {result.base} base", show_header=False)
+    table = Table(title=f"crew {result.crew}, {result.base} base", title_style=f"bold {BRAND}", show_header=False)
     table.add_column(style="bold")
-    table.add_column()
+    table.add_column(style="cyan")
     table.add_row("greywater", f"{result.greywater_l_per_day:.1f} L/day ({result.flow_l_per_h:.2f} L/h)")
     table.add_row("filter area, Earth g", f"{pair(result.filter_area_m2, 4)} m2")
     table.add_row("filter area, Mars g", f"{pair(result.filter_area_mars_m2, 4)} m2 at the same head")
@@ -124,7 +179,7 @@ def _size_table(result: sizing.Sizing, chem: sizing.Perchlorate, oxygen_regolith
     table.add_row("trash", f"{result.trash_kg_per_day:.2f} kg/day")
     table.add_row("char, upper estimate", f"{result.char_kg_per_day:.2f} kg/day")
     table.add_row("", "")
-    table.add_row(f"per {chem.regolith_kg:.0f} kg regolith", "")
+    table.add_row(f"per {chem.regolith_kg:.0f} kg regolith", "", style="dim")
     table.add_row("perchlorate", f"{pair(chem.perchlorate_kg, 1)} kg")
     table.add_row("acetate, full reduction", f"{pair(chem.acetate_full_kg, 1)} kg")
     table.add_row("O2 if all captured", f"{pair(chem.oxygen_max_kg, 1)} kg")
@@ -147,10 +202,10 @@ def cmd_size(args: argparse.Namespace) -> int:
     console.print(_size_table(result, chem, oxygen_regolith))
 
     if args.explain:
-        steps = Table(title="how each number was computed")
+        steps = Table(title="how each number was computed", title_style=f"bold {BRAND}", border_style="dim")
         steps.add_column("quantity", style="bold")
         steps.add_column("formula")
-        steps.add_column("result", style="green")
+        steps.add_column("result", style="bold green")
         steps.add_column("source", style="cyan")
         for step in sizing.explain(args.crew, args.base, args.regolith):
             steps.add_row(step.label, step.formula, step.result, step.source)
@@ -160,45 +215,78 @@ def cmd_size(args: argparse.Namespace) -> int:
 
 
 def build_parser() -> argparse.ArgumentParser:
+    version, _, _ = _meta()
     parser = argparse.ArgumentParser(prog="rwl", description="Turbidity from photographs and mission sizing")
-    parser.add_argument("--version", action="version", version=f"rwl {_version()}")
-    subcommands = parser.add_subparsers(dest="command", required=True)
+    parser.add_argument("--version", action="version", version=f"rwl {version}")
+    subcommands = parser.add_subparsers(dest="command")
 
-    measure_cmd = subcommands.add_parser("measure", help="read contrast from sample photographs")
+    measure_cmd = subcommands.add_parser(
+        "measure",
+        help=COMMANDS["measure"],
+        description="Read target/white contrast off each photograph and write a readings CSV.",
+        epilog="example: rwl measure photos/*.jpg --setup setup.json --out readings.csv",
+    )
     measure_cmd.add_argument("images", nargs="+")
     measure_cmd.add_argument("--setup", type=Path, required=True, help="JSON file with target and white ROIs")
     measure_cmd.add_argument("--out", type=Path, default=Path("readings.csv"))
     measure_cmd.set_defaults(func=cmd_measure)
 
-    calibrate_cmd = subcommands.add_parser("calibrate", help="fit a dilution series")
+    calibrate_cmd = subcommands.add_parser(
+        "calibrate",
+        help=COMMANDS["calibrate"],
+        description="Fit contrast vs. known concentration to a log-linear curve.",
+        epilog="example: rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json",
+    )
     calibrate_cmd.add_argument("--readings", type=Path, required=True)
     calibrate_cmd.add_argument("--levels", type=Path, required=True, help="CSV of sample,concentration")
     calibrate_cmd.add_argument("--out", type=Path, default=Path("calibration.json"))
     calibrate_cmd.set_defaults(func=cmd_calibrate)
 
-    report_cmd = subcommands.add_parser("report", help="compare influent and effluent")
+    report_cmd = subcommands.add_parser(
+        "report",
+        help=COMMANDS["report"],
+        description="Turn an influent/effluent pair of readings into a removal percentage.",
+        epilog="example: rwl report --readings readings.csv --calibration calibration.json "
+        "--before influent --after effluent",
+    )
     report_cmd.add_argument("--readings", type=Path, required=True)
     report_cmd.add_argument("--calibration", type=Path, required=True)
     report_cmd.add_argument("--before", required=True)
     report_cmd.add_argument("--after", required=True)
     report_cmd.set_defaults(func=cmd_report)
 
-    target_cmd = subcommands.add_parser("target", help="write the printable A4 target sheet")
+    target_cmd = subcommands.add_parser(
+        "target",
+        help=COMMANDS["target"],
+        description="Write the printable A4 checker + white card target sheet.",
+        epilog="example: rwl target --out target-sheet.pdf",
+    )
     target_cmd.add_argument("--out", type=Path, default=Path("target-sheet.pdf"))
     target_cmd.set_defaults(func=cmd_target)
 
-    size_cmd = subcommands.add_parser("size", help="size the system for a crew")
+    size_cmd = subcommands.add_parser(
+        "size",
+        help=COMMANDS["size"],
+        description="Size the three-stage system for a crew, with Mars-gravity filtration area and "
+        "perchlorate/acetate/oxygen stoichiometry.",
+        epilog="example: rwl size --crew 6 --base early --explain",
+    )
     size_cmd.add_argument("--crew", type=int, default=6)
     size_cmd.add_argument("--base", choices=sorted(sizing.HYGIENE_WASTEWATER), default="early")
     size_cmd.add_argument("--regolith", type=float, default=1000.0, help="regolith mass in kg")
     size_cmd.add_argument("--explain", action="store_true", help="show the formula and source behind each number")
     size_cmd.set_defaults(func=cmd_size)
 
+    info_cmd = subcommands.add_parser("info", help=COMMANDS["info"])
+    info_cmd.set_defaults(func=cmd_info)
+
     return parser
 
 
 def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
+    if args.command is None:
+        return cmd_info(args)
     return args.func(args)
 
 
