@@ -1,11 +1,16 @@
 [project]
-name = "regolith-water-loop"
-version = "0.1.0"
-description = "Turbidity measurement and analysis for a three-stage water pre-treatment column"
+name = "rwl"
+dynamic = ["version"]
+description = "Turbidity measurement and crew-scale sizing for a three-stage water pre-treatment column"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { file = "LICENSE" }
-dependencies = ["numpy>=1.24", "pillow>=10.0"]
+authors = [{ name = "Leonardo Salas", email = "leonardo.salas01@outlook.com" }]
+dependencies = ["numpy>=1.24", "pillow>=10.0", "rich>=13.0"]
+
+[project.urls]
+Homepage = "https://rwl.leonardosalas.dev"
+Repository = "https://github.com/leonardosalasd/regolith-water-loop"
 
 [project.scripts]
 rwl = "rwl.cli:main"
@@ -14,11 +19,20 @@ rwl = "rwl.cli:main"
 dev = ["pytest>=8.0"]
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/rwl"]
+
+[tool.hatch.build.targets.sdist]
+only-include = ["src/rwl", "tests"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -54,3 +54,25 @@ def test_cli_prints_sizing(capsys):
     out = capsys.readouterr().out
     assert "33.2 L/day" in out
     assert "regolith for crew O2" in out
+
+
+def test_explain_matches_size_and_perchlorate():
+    steps = {step.label: step for step in sizing.explain(6, "early", 1000)}
+    result = sizing.size(6, "early")
+    chem = sizing.perchlorate(1000)
+    assert f"{result.greywater_l_per_day:.1f} L/day" in steps["Greywater"].result
+    assert f"{chem.perchlorate_kg[0]:.1f}" in steps["Perchlorate in regolith"].result
+    assert all(step.source for step in steps.values())
+
+
+def test_cli_explain_adds_a_formula_table(capsys):
+    assert main(["size", "--explain"]) == 0
+    out = capsys.readouterr().out
+    assert "how each number was computed" in out
+    assert "Darcy" in out
+
+
+def test_cli_version():
+    with pytest.raises(SystemExit) as exc:
+        main(["--version"])
+    assert exc.value.code == 0

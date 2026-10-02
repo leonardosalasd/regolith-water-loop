@@ -129,3 +129,92 @@ def regolith_for_oxygen(oxygen_kg: float) -> tuple[float, float]:
     """Regolith mass [kg] whose perchlorate would release this much O2 if all of it were captured."""
     per_tonne = perchlorate(1000.0).oxygen_max_kg
     return oxygen_kg / per_tonne[1] * 1000, oxygen_kg / per_tonne[0] * 1000
+
+
+@dataclass(frozen=True)
+class Step:
+    label: str
+    formula: str
+    result: str
+    source: str
+
+
+def explain(crew: int = 6, base: str = "early", regolith_kg: float = 1000.0) -> list[Step]:
+    """The same numbers as size()/perchlorate(), as a formula-by-formula trail for --explain."""
+    result = size(crew, base)
+    chem = perchlorate(regolith_kg)
+    g = gravity_factor()
+    slow, fast = FILTRATION_RATE
+    lo, hi = PERCHLORATE_FRACTION
+
+    def rng(pair: tuple[float, float], digits: int = 4) -> str:
+        return f"{pair[0]:.{digits}f} - {pair[1]:.{digits}f}"
+
+    return [
+        Step(
+            "Greywater",
+            f"{crew} crew x {HYGIENE_WASTEWATER[base]} kg/CM-d",
+            f"{result.greywater_l_per_day:.1f} L/day",
+            "NASA BVAD REV2, Table 4-21",
+        ),
+        Step(
+            "Gravity factor",
+            f"{MARS_GRAVITY} m/s2 / {EARTH_GRAVITY} m/s2",
+            f"{g:.3f} (0.37 g)",
+            "NASA Glenn Research Center",
+        ),
+        Step(
+            "Filter area, Earth g",
+            f"flow / {slow}-{fast} m/h",
+            f"{rng(result.filter_area_m2)} m2",
+            "Emergency WASH, slow sand filtration rate",
+        ),
+        Step(
+            "Filter area, Mars g",
+            "Earth-g area / gravity factor",
+            f"{rng(result.filter_area_mars_m2)} m2",
+            "Darcy's law: flux scales with g at a fixed head",
+        ),
+        Step(
+            "Bench columns needed",
+            f"Mars-g area / column bore ({BENCH_BORE_M * 100:.1f} cm)",
+            rng(result.bench_columns_mars, 1),
+            "RWL-001 drawing",
+        ),
+        Step(
+            "Trash",
+            f"{crew} crew x {TRASH} kg/CM-d",
+            f"{result.trash_kg_per_day:.2f} kg/day",
+            "NASA BVAD REV2, Table 4-29",
+        ),
+        Step(
+            "Char",
+            f"trash x {PYROLYSABLE_FRACTION:.3f} (food+paper share) x {CHAR_YIELD} (char yield)",
+            f"{result.char_kg_per_day:.2f} kg/day",
+            "BVAD Table 4-28; Penn State EGEE 439",
+        ),
+        Step(
+            "Crew oxygen",
+            f"{crew} crew x {CREW_OXYGEN} kg/CM-d",
+            f"{result.crew_oxygen_kg_per_day:.2f} kg/day",
+            "NASA BVAD REV2, Table 3-31",
+        ),
+        Step(
+            "Perchlorate in regolith",
+            f"{regolith_kg:.0f} kg x {lo:.1%}-{hi:.1%}",
+            f"{rng(chem.perchlorate_kg, 1)} kg",
+            "Hecht et al. 2009; Davila et al. 2013",
+        ),
+        Step(
+            "Acetate for full reduction",
+            "mol(ClO4-) x M(acetate), 1:1 stoichiometry",
+            f"{rng(chem.acetate_full_kg, 1)} kg",
+            "ClO4- + CH3COO- + H+ -> Cl- + 2 CO2 + 2 H2O",
+        ),
+        Step(
+            "O2 if every molecule were captured",
+            "mol(ClO4-) x M(O2), upper bound only",
+            f"{rng(chem.oxygen_max_kg, 1)} kg",
+            "Coates & Achenbach 2004; Ettwig et al. 2012",
+        ),
+    ]
