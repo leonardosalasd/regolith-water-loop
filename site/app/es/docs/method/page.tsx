@@ -43,6 +43,17 @@ export default function Page() {
         </Callout>
       </Section>
 
+      <Section title="Instalación">
+        <p>
+          <Term>rwl</Term> está publicado en{" "}
+          <a href="https://pypi.org/project/rwl/" className="text-accent underline-offset-4 hover:underline">
+            PyPI
+          </a>
+          .
+        </p>
+        <Code>{`pipx install rwl`}</Code>
+      </Section>
+
       <Section title="Flujo de trabajo">
         <p>
           Tres comandos. El primero lee el contraste de cada fotografía, el

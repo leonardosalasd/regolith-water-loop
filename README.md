@@ -10,6 +10,9 @@ Three-stage water pre-treatment column: bioremediated regolith, pyrolysis biocha
 
 <br>
 
+<a href="https://pypi.org/project/rwl/">
+  <img src="https://img.shields.io/pypi/v/rwl?style=for-the-badge&color=F54927&label=pypi" alt="rwl on PyPI" height="34"/>
+</a>
 <a href="https://github.com/sponsors/leonardosalasd">
   <img src="https://img.shields.io/badge/Sponsor%20this%20project-%E2%9D%A4-F54927?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor Regolith Water Loop on GitHub Sponsors" height="34"/>
 </a>
@@ -49,6 +52,14 @@ Stage 2, the filtration column, is the stage built and tested on the bench; see 
 
 ---
 
+## Install
+
+```bash
+pipx install rwl   # or: pip install rwl
+```
+
+Published as [`rwl` on PyPI](https://pypi.org/project/rwl/). Run `rwl` with no arguments, or `rwl info`, for a summary of every command.
+
 ## Measuring turbidity
 
 Removal is measured from photographs rather than an electronic probe: a phone camera is available and free, a nephelometer is not. A printed target behind the sample loses contrast as suspended solids rise, and a white card in frame cancels exposure differences between shots.
@@ -56,7 +67,7 @@ Removal is measured from photographs rather than an electronic probe: a phone ca
 Results are relative to the influent, never reported in NTU.
 
 ```bash
-pip install -e .
+rwl target --out target-sheet.pdf   # print this at 100%, next to the sample
 
 rwl measure photos/*.jpg --setup setup.json --out readings.csv
 rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
@@ -69,10 +80,10 @@ Read [docs/method.md](docs/method.md) before shooting a session. The rig has to 
 ### Sizing
 
 ```bash
-rwl size --crew 6 --base early
+rwl size --crew 6 --base early --explain
 ```
 
-Greywater, filter area under Mars gravity, char output and perchlorate stoichiometry for a crew. Every constant is cited in [src/rwl/sizing.py](src/rwl/sizing.py).
+Greywater, filter area under Mars gravity, char output and perchlorate stoichiometry for a crew. `--explain` prints the formula and source behind every number; each constant is also cited directly in [src/rwl/sizing.py](src/rwl/sizing.py).
 
 ### Development
 

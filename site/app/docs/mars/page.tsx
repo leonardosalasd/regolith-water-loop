@@ -46,8 +46,15 @@ export default function Page() {
       </Section>
 
       <Section title="Sized for six crew">
-        <p>Reproducible with the package:</p>
-        <Code>{`rwl size --crew 6 --base early`}</Code>
+        <p>
+          Reproducible with{" "}
+          <a href="https://pypi.org/project/rwl/" className={link}>
+            rwl
+          </a>
+          :
+        </p>
+        <Code>{`pipx install rwl
+rwl size --crew 6 --base early --explain`}</Code>
         <Table
           head={["Quantity", "Early base", "Mature base"]}
           mono={[1, 2]}

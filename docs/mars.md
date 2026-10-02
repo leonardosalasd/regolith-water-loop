@@ -21,10 +21,11 @@ What the Martian environment forces on the design, the system sized for a crew o
 
 ## Sized for six crew
 
-Reproducible with the package:
+Reproducible with the package ([`rwl` on PyPI](https://pypi.org/project/rwl/)):
 
 ```bash
-rwl size --crew 6 --base early
+pipx install rwl
+rwl size --crew 6 --base early --explain
 ```
 
 | Quantity | Early base | Mature base | Basis |

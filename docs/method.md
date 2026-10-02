@@ -14,6 +14,12 @@ A vessel of water sits in front of a printed high-contrast target. Suspended sol
 
 A white card in the same frame cancels exposure and white balance differences between shots. Without it, a cloudier photo and a darker room look identical.
 
+## Install
+
+```bash
+pipx install rwl
+```
+
 ## Rig
 
 Fixed for every photograph in a session. If any of it moves, the series is void.

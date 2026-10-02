@@ -35,10 +35,14 @@ export default function MethodPage() {
 
       <Section title="Workflow">
         <p>
-          Three commands. The first reads contrast off each photograph, the
-          second fits the dilution series, the third compares influent to
-          effluent.
+          Three commands, from <Term>rwl</Term>, published on{" "}
+          <a href="https://pypi.org/project/rwl/" className="text-accent underline-offset-4 hover:underline">
+            PyPI
+          </a>
+          . The first reads contrast off each photograph, the second fits the
+          dilution series, the third compares influent to effluent.
         </p>
+        <Code>{`pipx install rwl`}</Code>
         <Code>{`rwl measure photos/*.jpg --setup setup.json --out readings.csv
 rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
 rwl report --readings readings.csv --calibration calibration.json \\
