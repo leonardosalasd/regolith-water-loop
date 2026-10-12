@@ -92,9 +92,10 @@ Five levels, 200 ml each, measured with a kitchen measuring jug and syringes.
 | `cal3` | 150 ml | 50 ml |
 | `cal4` | 200 ml | 0 ml |
 
-Photograph each in the same jar, washing and drying it between levels. Then:
+Photograph each in the same jar, washing and drying it between levels. Check the regions on the first frame, then measure:
 
 ```bash
+rwl roi photos/cal0.jpg --setup setup.json
 rwl measure photos/cal*.jpg --setup setup.json --out readings.csv
 rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
 ```
@@ -107,16 +108,33 @@ R² below 0.9 means the light drifted. Reshoot the series; do not continue.
 2. Close the valve. Pour 884 ml of stock into the column.
 3. Open the valve and start the timer.
 4. Collect the effluent in the graduated cylinder. Record the time to pass 500 ml — that is the flow rate.
-5. Fill the jar from the effluent, photograph as `effluent`.
-6. Process:
+5. Fill the jar from the effluent, photograph as `charge1`.
+6. Repeat steps 2–5 for `charge2` and `charge3`, stirring the stock each time.
+7. Process:
 
 ```bash
-rwl measure photos/influent.jpg photos/effluent.jpg --setup setup.json --out run.csv
+rwl measure photos/influent.jpg photos/charge*.jpg --setup setup.json --out run.csv
 rwl report --readings run.csv --calibration calibration.json \
-    --before influent --after effluent
+    --before influent --after charge1 charge2 charge3
 ```
 
-Run at least three charges. The first will read best and then removal drops as the bed loads; that curve is the useful result, not the single first number.
+The first charge will read best and then removal drops as the bed loads; that curve is the useful result, not the single first number. `report` prints it as one row per charge.
+
+## Hydraulic conductivity
+
+Step 4 is a falling-head permeability test: the column is its own standpipe. Measure once, with a tape, how far the hose outlet sits below the base of the bed, then run the first charge with the valve fully open:
+
+```bash
+rwl permeability --seconds 45 --outlet-drop 0.30
+```
+
+It prints the bed's hydraulic conductivity, the same bed at 0.37 g, and how long 500 ml should take at slow sand filtration rates. If the column runs faster than that, throttle the valve for the measured runs.
+
+For a full drainage curve instead of one time, float a cork with a skewer standing up out of the pipe, film it against a ruler, and read the level off the video every few seconds into a CSV of `seconds,level_m` (water above the bed):
+
+```bash
+rwl permeability --series level.csv --outlet-drop 0.30
+```
 
 ## What to record
 
@@ -125,7 +143,7 @@ Written down at the time, not reconstructed later.
 - Mass of each medium as placed, and the graded yield from the raw scoria
 - D10 and uniformity coefficient of the fine fraction
 - The greywater recipe actually used
-- Flow rate per charge
+- Flow rate per charge, and the outlet drop below the bed
 - Removal percentage per charge
 - Room temperature
 

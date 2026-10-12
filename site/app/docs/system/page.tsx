@@ -84,7 +84,7 @@ export default function SystemPage() {
           rows={[
             [
               "Waste heat",
-              "The retort runs near 500 °C. The reference strain grows at 37 °C, and the Martian surface falls to about −153 °C. Retort heat keeps the bioreactor warm.",
+              "The retort runs near 500 °C. The reference strain grows at 37 °C, and the Martian surface falls to about −153 °C. Retort heat is routed to the bioreactor jacket; the retort needs 5.0–7.6 MJ a day for six crew, and how much of it reaches the jacket is still open.",
             ],
             [
               "Electron donor",

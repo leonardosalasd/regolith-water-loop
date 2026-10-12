@@ -87,7 +87,7 @@ export default function Page() {
           rows={[
             [
               "Calor residual",
-              "La retorta trabaja cerca de 500 °C. La cepa de referencia crece a 37 °C y la superficie marciana baja hasta unos −153 °C. El calor de la retorta mantiene tibio el biorreactor.",
+              "La retorta trabaja cerca de 500 °C. La cepa de referencia crece a 37 °C y la superficie marciana baja hasta unos −153 °C. El calor de la retorta va a la chaqueta del biorreactor; la retorta pide 5.0–7.6 MJ al día para seis tripulantes, y cuánto de eso llega a la chaqueta sigue abierto.",
             ],
             [
               "Donador de electrones",

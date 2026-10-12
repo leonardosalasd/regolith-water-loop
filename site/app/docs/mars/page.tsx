@@ -55,6 +55,13 @@ export default function Page() {
         </p>
         <Code>{`pipx install rwl
 rwl size --crew 6 --base early --explain`}</Code>
+        <p>
+          Or move the crew and base live in the{" "}
+          <Link href="/docs/simulator/" className={link}>
+            sizing simulator
+          </Link>
+          .
+        </p>
         <Table
           head={["Quantity", "Early base", "Mature base"]}
           mono={[1, 2]}
@@ -66,20 +73,67 @@ rwl size --crew 6 --base early --explain`}</Code>
             ["Bench-size columns, Mars g", "2–8", "4–15"],
             ["Bed volume, Mars g", "4–15 L", "7–28 L"],
             ["Trash", "8.3 kg/day", "8.3 kg/day"],
-            ["Char, upper estimate", "1.0 kg/day", "1.0 kg/day"],
+            ["Char, dry basis", "0.82 kg/day", "0.82 kg/day"],
+            ["Retort heat", "5.0–7.6 MJ/day", "5.0–7.6 MJ/day"],
           ]}
         />
         <p>
           Greywater and trash rates come from NASA&apos;s Life Support Baseline
           Values document; filter rates are those of slow sand filtration,
           0.1–0.4 m/h; char assumes food and paper are 47.5 % of trash and slow
-          pyrolysis leaves 25 % of it as char.
+          pyrolysis leaves 25 % of its dry mass as char.
         </p>
         <p>
           The filter is small. A six-person base needs two to eight columns the
           size of the bench build, in parallel. That argues for modules:
           identical sealed cartridges swapped when spent, instead of one large bed
           dug out by hand.
+        </p>
+      </Section>
+
+      <Section title="Gravity: area or head">
+        <p>
+          Flow through a packed bed follows Darcy&apos;s law, and the bed&apos;s
+          hydraulic conductivity is proportional to g. At 0.37 g the same column
+          passes 37.7 % of its Earth flow. There are two ways back:
+        </p>
+        <Table
+          head={["", "Earth", "Mars, same flow"]}
+          mono={[1, 2]}
+          rows={[
+            ["More area, same head", "1 column", "2.65 columns"],
+            ["Same area, more head", "0.20 m of water over the bed", "1.22 m of water over the bed"],
+          ]}
+        />
+        <p>
+          With a free-draining outlet the driving gradient is (standing water +
+          bed) ÷ bed, so the whole of it has to grow 2.65×, not just the water on
+          top. A 1.2 m water column per cartridge is impractical inside a
+          habitat; parallel cartridges are not. That is why the design adds area.
+          The bench column&apos;s own conductivity, and the same bed at 0.37 g,
+          come out of a timed run with{" "}
+          <span className="font-mono text-accent">rwl permeability</span>.
+        </p>
+      </Section>
+
+      <Section title="Retort heat">
+        <Table
+          head={["Six crew, per day", "Amount", "Basis"]}
+          mono={[1]}
+          rows={[
+            ["Feed, food and paper", "3.96 kg", "47.5 % of 8.34 kg trash"],
+            ["Moisture in the feed", "0.69 kg", "Plate waste 70 %, paper 10.2 %, unopened food 0.2 %"],
+            ["Pyrolysing the dry feed", "2.6–5.2 MJ", "0.8–1.6 MJ/kg near 500 °C"],
+            ["Water to steam at 500 °C", "2.3 MJ", "3.40 MJ/kg from 20 °C at 1 atm"],
+            ["Total", "5.0–7.6 MJ", "57–88 W averaged over a day"],
+          ]}
+        />
+        <p>
+          Moisture is from BVAD Table 4-28, pyrolysis energy from Daugaard and
+          Brown, steam from NIST. The pyrolysis figures are for wood and crop
+          residues in a fast reactor, not mixed food waste in a slow retort; they
+          set the order of magnitude, not a design value, and wall losses are not
+          included. Either way it is tens of watts on average, run as a batch.
         </p>
       </Section>
 
@@ -104,6 +158,44 @@ rwl size --crew 6 --base early --explain`}</Code>
             1.7–4.2 tonnes of regolith treated daily. Stage 1 exists to detoxify.
           </p>
         </Callout>
+      </Section>
+
+      <Section title="Chloride">
+        <p>
+          Every perchlorate reduced leaves one chloride ion behind:{" "}
+          <Term>1.43–3.56 kg</Term> per tonne of regolith. Diluting that to the
+          250 mg/L taste limit for chloride would take 5.7–14.3 m³ of water per
+          tonne. Dilution is not an option on Mars, so the rinse is kept small and
+          the brine goes to a brine processor of the kind already demonstrated on
+          the ISS for urine brine.
+        </p>
+      </Section>
+
+      <Section title="What Mars supplies, what Earth supplies">
+        <p>
+          One bench-size cartridge, taking the RWL-001 media schedule and counting
+          every mineral layer as treated regolith:
+        </p>
+        <Code>{`rwl cartridge --crew 6`}</Code>
+        <Table
+          head={["Item", "Amount", "Comes from"]}
+          mono={[1]}
+          rows={[
+            ["Treated regolith", "1.73 kg", "Mars, Stage 1"],
+            ["Char", "0.16 kg", "Mars, Stage 3; a day of trash makes enough for 5–6 cartridges"],
+            ["Acetate to detoxify the regolith", "4.1–10.3 g", "Earth, until a waste-derived donor works"],
+            ["Cartridge shell", "1", "Earth, refilled on site"],
+            ["Chloride left to rinse", "2.5–6.2 g", "Brine processor"],
+          ]}
+        />
+        <p>
+          The acetate is the stoichiometric minimum; bacteria also spend some
+          donor on growth. For scale, the ISS water processor relies on
+          expendable multifiltration beds that need about 472 kg of resupply a
+          year. This design does not replace those beds and does not claim to
+          extend their life by any measured amount. Its own media, by mass, is
+          made on Mars.
+        </p>
       </Section>
 
       <Section title="The stages at mission scale">
@@ -152,9 +244,9 @@ rwl size --crew 6 --base early --explain`}</Code>
 
       <Section title="Open questions">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
-          <li>Retort energy, and whether its waste heat really covers the Stage 1 jacket</li>
+          <li>Whether the retort&apos;s rejected heat covers the Stage 1 jacket, which depends on a reactor not yet designed</li>
           <li>Whether the pyrolysis liquid can serve as electron donor</li>
-          <li>Chloride left in treated regolith: rinse volume and where the brine goes</li>
+          <li>The rinse volume that gets chloride out of the regolith pores, which is not measured</li>
           <li>Filtration with real Martian fines at 0.37 g, which is modelled, not measured</li>
         </ul>
       </Section>

@@ -65,7 +65,7 @@ export default function ResultsPage() {
       <Section title="Not done">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
           <li>Photometric measurement with the target sheet and a calibration series</li>
-          <li>Three charges with a measured flow rate</li>
+          <li>Three charges with a measured flow rate, which also gives the bed&apos;s hydraulic conductivity</li>
           <li>Greywater mixed to the written recipe</li>
         </ul>
       </Section>

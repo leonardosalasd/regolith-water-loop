@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader, Section, Sheet } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -18,6 +19,14 @@ export default function Page() {
         title="Planos"
         lede="Planos acotados para el armado en banco y después esquemas del sistema completo en Marte. Milímetros en todo, sin escala en pantalla."
       />
+
+      <p className="-mt-6 mb-10 text-sm text-muted">
+        RWL-001 y RWL-004 también están en el{" "}
+        <Link href="/es/docs/model/" className="text-accent underline-offset-4 hover:underline">
+          modelo 3D
+        </Link>
+        .
+      </p>
 
       <Section title="RWL-001 — Columna de filtración">
         <p>
@@ -60,7 +69,7 @@ export default function Page() {
         <Sheet
           src="/drawings/process-flow.svg"
           alt="Diagrama de flujo que une el biorreactor, los módulos de filtro, la retorta de pirólisis, el procesador principal de agua y la tripulación"
-          drawing="RWL-003 REV A"
+          drawing="RWL-003 REV B"
           label="ver en grande"
           caption="Las corrientes grises punteadas son propuestas, no demostradas. El oxígeno de la etapa 1 no se dibuja como producto porque las bacterias lo respiran."
         />

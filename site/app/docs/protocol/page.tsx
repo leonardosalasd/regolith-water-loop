@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Callout, PageHeader, Section, Steps, Table } from "@/components/ui";
+import { Callout, Code, PageHeader, Section, Steps, Table } from "@/components/ui";
 
 export const metadata: Metadata = { title: "Run protocol" };
 
@@ -163,19 +163,45 @@ export default function ProtocolPage() {
             },
             {
               title: "Photograph the effluent",
-              body: <p>Same jar, same fill level, same position.</p>,
+              body: (
+                <p>
+                  Same jar, same fill level, same position. Name it{" "}
+                  <code className="font-mono text-accent">charge1</code>, then{" "}
+                  <code className="font-mono text-accent">charge2</code> and so on.
+                </p>
+              ),
             },
             {
               title: "Repeat, at least three charges",
               body: (
                 <p>
                   The first charge reads best and removal drops as the bed loads.
-                  That curve is the useful result, not the single first number.
+                  That curve is the useful result, not the single first number.{" "}
+                  <code className="font-mono text-accent">
+                    rwl report --before influent --after charge1 charge2 charge3
+                  </code>{" "}
+                  prints it as one row per charge.
                 </p>
               ),
             },
           ]}
         />
+      </Section>
+
+      <Section title="Hydraulic conductivity">
+        <p>
+          Timing the first charge is a falling-head permeability test: the column
+          is its own standpipe. Measure once how far the hose outlet sits below
+          the base of the bed, run the charge with the valve fully open, then:
+        </p>
+        <Code>{`rwl permeability --seconds 45 --outlet-drop 0.30`}</Code>
+        <p>
+          It prints the bed&apos;s hydraulic conductivity, the same bed at 0.37 g,
+          and how long 500 ml should take at slow sand filtration rates. If the
+          column runs faster, throttle the valve for the measured runs. For a full
+          drainage curve, film a cork float with a skewer against a ruler and pass
+          the levels with <span className="font-mono text-accent">--series level.csv</span>.
+        </p>
       </Section>
 
       <Section title="What to write down at the time">

@@ -65,7 +65,7 @@ export default function Page() {
       <Section title="Lo que no se hizo">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
           <li>Medición fotométrica con la hoja de patrón y una serie de calibración</li>
-          <li>Tres cargas con caudal medido</li>
+          <li>Tres cargas con caudal medido, que además da la conductividad hidráulica del lecho</li>
           <li>Agua gris preparada con la receta escrita</li>
         </ul>
       </Section>

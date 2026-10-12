@@ -44,17 +44,23 @@ Every source below was opened and checked against the claim it supports. DOIs re
   *Methylene blue as an indicator of carbon adsorption*
 - **Penn State**. Penn State College of Earth and Mineral Sciences. EGEE 439, 4.1 Biomass Pyrolysis. [courses.ems.psu.edu](https://courses.ems.psu.edu/egee439/node/537)  
   *Slow pyrolysis near 500 °C: about 25 % char, 35 % liquid, 40 % gas*
+- **Daugaard 2003**. Daugaard, D. E., Brown, R. C. Enthalpy for pyrolysis for several types of biomass. *Energy & Fuels* 17 (4), 934–939. [doi:10.1021/ef020260x](https://doi.org/10.1021/ef020260x)  
+  *Energy to pyrolyse dry biomass near 500 °C: 0.8 ± 0.2 MJ/kg (oat hulls) to 1.6 ± 0.3 MJ/kg (pine)*
+- **NIST**. Lemmon, E. W., Bell, I. H., Huber, M. L., McLinden, M. O. Thermophysical Properties of Fluid Systems. NIST Chemistry WebBook, SRD 69. [webbook.nist.gov](https://webbook.nist.gov/chemistry/fluid/)  
+  *Water at 1 atm: 84.0 kJ/kg as liquid at 20 °C, 3488.7 kJ/kg as steam at 500 °C*
 - **Emergency WASH**. German Toilet Organization. Emergency WASH, T.9 Slow Sand Filtration. [emergency-wash.org](https://www.emergency-wash.org/water/en/technologies/technology/slow-sand-filtration)  
   *Slow sand filtration rate 0.1–0.4 m/h*
 
 ## Standards and mission data
 
 - **BVAD**. Ewert, M. K., Chen, T. T., Powell, C. D. (eds.) *Life Support Baseline Values and Assumptions Document*. NASA/TP-2015-218570/REV2, February 2022. [NTRS 20210024855](https://ntrs.nasa.gov/citations/20210024855)  
-  *Table 3-31 oxygen 0.895 kg/CM-d; Table 4-21 hygiene wastewater 5.53 (early base) and 10.17 (mature base) kg/CM-d; Table 4-28 trash composition; Table 4-29 trash 1.39 kg/CM-d*
+  *Table 3-31 oxygen 0.895 kg/CM-d; Table 4-21 hygiene wastewater 5.53 (early base) and 10.17 (mature base) kg/CM-d; Table 4-28 trash composition and moisture; Table 4-29 trash 1.39 kg/CM-d; section 4.3.3 ISS water processor expendables about 472 kg/year and the brine processor*
 - **NASA-STD-3001**. NASA. *NASA Spaceflight Human-System Standard, Volume 2: Human Factors, Habitability, and Environmental Health*. NASA-STD-3001 Vol. 2 Rev. E, May 2025. [NTRS 20250004555](https://ntrs.nasa.gov/citations/20250004555)  
   *Requirements V2 6004, 6026, 6046, 6050, 6051, 6052, 6053, 6153*
 - **NASA dust**. Lowe, K. Establishing Crew Exposure Limits of Martian Dust. NASA, 21 July 2026. [nasa.gov](https://www.nasa.gov/general/establishing-crew-exposure-limits-of-martian-dust/)  
   *Martian dust below 10 µm: 0.1 mg/m³, 24-hour time-weighted average, exposures up to 30 days*
+- **EPA**. US Environmental Protection Agency. Secondary Drinking Water Standards: Guidance for Nuisance Chemicals. [epa.gov](https://www.epa.gov/sdwa/secondary-drinking-water-standards-guidance-nuisance-chemicals)  
+  *Chloride 250 mg/L, salty taste*
 - **COSPAR**. COSPAR Panel on Planetary Protection. *COSPAR Policy on Planetary Protection*, Space Research Today, January 2026. [cosparhq.cnes.fr](https://cosparhq.cnes.fr/cospar-policy-on-planetary-protection/)  
   *Planetary protection framework for terrestrial organisms*
 

@@ -37,11 +37,36 @@ rwl size --crew 6 --base early --explain
 | Bench-size columns (Ø 75 mm), Mars | 2–8 | 4–15 | RWL-001 bore |
 | Bed volume, Mars | 4–15 L | 7–28 L | 420 mm bed, RWL-001 |
 | Trash | 8.3 kg/day | 8.3 kg/day | BVAD Table 4-29, 1.39 kg per crew per day |
-| Char, upper estimate | 1.0 kg/day | 1.0 kg/day | Food and paper 47.5 % of trash (Table 4-28) × 25 % char yield (Penn State) |
+| Char, dry basis | 0.82 kg/day | 0.82 kg/day | Food and paper 47.5 % of trash, less its moisture (Table 4-28), × 25 % char yield (Penn State) |
+| Retort heat | 5.0–7.6 MJ/day | 5.0–7.6 MJ/day | See below |
 
 The filter is small. A six-person base needs two to eight columns the size of the bench build, run in parallel. That is the case for modules: identical sealed cartridges that are swapped when spent, instead of one large bed that has to be dug out.
 
-The char figure is an upper estimate: the 25 % yield is on dry feed, and trash is weighed wet.
+## Gravity: area or head
+
+Flow through a packed bed follows Darcy's law, and the bed's hydraulic conductivity is proportional to g. At 0.37 g the same column passes 37.7 % of its Earth flow. There are two ways back:
+
+| | Earth | Mars, same flow |
+| --- | --- | --- |
+| More area, same head | 1 column | 2.65 columns |
+| Same area, more head | 0.20 m of water over the 0.42 m bed | 1.22 m of water over the bed |
+
+With a free-draining outlet the driving gradient is (standing water + bed) ÷ bed, so the whole of it has to grow by 2.65×, not just the water on top. A 1.2 m water column per cartridge is impractical inside a habitat; parallel cartridges are not. That is why the design adds area. `rwl cartridge` prints both. The scaling itself rests on Darcy's law; the bench column's own conductivity, and the same bed at 0.37 g, come out of a timed run with `rwl permeability`.
+
+## Retort heat
+
+The open question of what the pyrolysis retort costs, answered as a range:
+
+| | Six crew, per day | Basis |
+| --- | --- | --- |
+| Feed, food and paper | 3.96 kg | 47.5 % of 8.34 kg trash (BVAD Table 4-28) |
+| Moisture in the feed | 0.69 kg | Plate waste 70 %, paper 10.2 %, unopened food 0.2 % (Table 4-28) |
+| Dry feed | 3.27 kg | |
+| Pyrolysing the dry feed | 2.6–5.2 MJ | 0.8–1.6 MJ/kg near 500 °C (Daugaard 2003) |
+| Water to steam at 500 °C | 2.3 MJ | 3.40 MJ/kg from 20 °C at 1 atm (NIST) |
+| Total | 5.0–7.6 MJ | 57–88 W averaged over a day |
+
+The Daugaard figures are for wood and crop residues in a fast-pyrolysis reactor, not mixed food waste in a slow retort; they set the order of magnitude, not a design value. Heat losses from the retort wall are not included. The point stands at either end of the range: tens of watts on average, run as a batch.
 
 ## Oxygen is a side product
 
@@ -62,6 +87,24 @@ Chlorite dismutase releases one O₂ per perchlorate, but the same cells respire
 | O₂ if every molecule were captured | 1.3 kg | 3.2 kg |
 
 Six crew consume 5.37 kg of O₂ a day (BVAD Table 3-31). Even with perfect capture, covering that would mean treating 1.7–4.2 tonnes of regolith every day. Stage 1 exists to detoxify, and any oxygen recovered is a bonus.
+
+## Chloride
+
+Every perchlorate reduced leaves one chloride ion behind: 1.43–3.56 kg per tonne of regolith. Diluting that to the 250 mg/L taste limit for chloride (US EPA secondary standard) would take 5.7–14.3 m³ of water per tonne. Dilution is not an option on Mars, so the rinse is kept small and the brine goes to a brine processor of the kind already demonstrated on the ISS for urine brine (BVAD, section 4.3.3).
+
+## What Mars supplies, what Earth supplies
+
+One bench-size cartridge, taking the RWL-001 media schedule and counting every mineral layer as treated regolith:
+
+| Item | Amount | Comes from |
+| --- | --- | --- |
+| Treated regolith | 1.73 kg | Mars, Stage 1 |
+| Char | 0.16 kg | Mars, Stage 3; one day of trash makes enough for 5–6 cartridges |
+| Acetate to detoxify the regolith | 4.1–10.3 g | Earth, until a waste-derived donor works |
+| Cartridge shell | 1 | Earth, refilled on site |
+| Chloride left to rinse | 2.5–6.2 g | Goes to the brine processor |
+
+The acetate is the stoichiometric minimum; bacteria also spend some donor on growth, so the real figure is higher. For scale: the ISS Water Processor Assembly relies on expendable multifiltration beds that need about 472 kg of resupply a year (BVAD, section 4.3.3). This design does not replace those beds and does not claim to extend their life by any measured amount. Its own media, by mass, is made on Mars.
 
 ## The stages at mission scale
 
@@ -90,8 +133,8 @@ From NASA-STD-3001 Volume 2, Revision E.
 
 ## Open questions
 
-- **Pyrolysis energy.** The heat the retort needs, and whether its waste heat actually covers the Stage 1 jacket, has not been calculated.
+- **Retort waste heat.** The retort needs 5.0–7.6 MJ a day. Whether what it rejects covers the Stage 1 jacket depends on a reactor volume and insulation that are not designed yet.
 - **Waste-derived electron donor.** Whether the pyrolysis liquid can feed Stage 1 is untested. Until then the donor is a consumable.
 - **Char transport.** Char is made in Stage 3 and used in Stage 2. With cartridges this becomes a refill step, not a continuous flow.
-- **Chloride.** Reduced perchlorate leaves chloride in the regolith. How much rinsing that takes, and where the brine goes, is not sized.
+- **Chloride rinse.** The chloride mass is known; the rinse volume that gets it out of the regolith pores is not measured.
 - **Real regolith.** Scoria is a basaltic analogue. Filtration behaviour with Martian fines, and under 0.37 g, is modelled, not measured.

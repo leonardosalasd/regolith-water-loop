@@ -25,7 +25,7 @@ Three jars of muddy water were poured into the column after the standing water h
 ## Not done
 
 - Photometric measurement with the target sheet and a calibration series
-- Three charges with a measured flow rate
+- Three charges with a measured flow rate, which also gives the bed's hydraulic conductivity (`rwl permeability`)
 - Greywater mixed to the written recipe
 
 ## Next

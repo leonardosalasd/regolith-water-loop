@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Callout, Code, PageHeader, Section, Term } from "@/components/ui";
 
 export const metadata: Metadata = { title: "Method" };
@@ -40,13 +41,23 @@ export default function MethodPage() {
             PyPI
           </a>
           . The first reads contrast off each photograph, the second fits the
-          dilution series, the third compares influent to effluent.
+          dilution series, the third compares the influent to each charge and
+          flags any result outside the calibrated range.
         </p>
         <Code>{`pipx install rwl`}</Code>
-        <Code>{`rwl measure photos/*.jpg --setup setup.json --out readings.csv
+        <p>
+          Or skip the install: the same measurement runs in the browser, from
+          photographs or a live camera, on{" "}
+          <Link href="/docs/measure/" className="text-accent underline-offset-4 hover:underline">
+            Measure in the browser
+          </Link>
+          .
+        </p>
+        <Code>{`rwl measure photos/cal*.jpg --setup setup.json --out readings.csv
 rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
-rwl report --readings readings.csv --calibration calibration.json \\
-    --before influent --after effluent`}</Code>
+rwl measure photos/influent.jpg photos/charge*.jpg --setup setup.json --out run.csv
+rwl report --readings run.csv --calibration calibration.json \\
+    --before influent --after charge1 charge2 charge3`}</Code>
         <p>
           <Term>setup.json</Term> holds the two regions of interest, read once off
           any frame in the session and reused for all of it:
@@ -56,7 +67,10 @@ rwl report --readings readings.csv --calibration calibration.json \\
   "white":  [180, 160, 120, 120]
 }`}</Code>
         <p>
-          Both are <Term>[x, y, width, height]</Term> in pixels. The calibration
+          Both are <Term>[x, y, width, height]</Term> in pixels. Check them with{" "}
+          <Term>rwl roi photos/cal0.jpg --setup setup.json</Term>, which draws
+          both boxes on the photograph and warns if the white card is clipped or
+          the target box has no contrast. The calibration
           prints an R²; below 0.9 the light drifted during the series and the
           photographs have to be retaken.
         </p>

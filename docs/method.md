@@ -39,22 +39,31 @@ Record the target and white regions once as pixel coordinates:
 }
 ```
 
-Both are `[x, y, width, height]`. Read them off one photograph in any image editor and reuse the file for the whole session.
+Both are `[x, y, width, height]`. Read them off one photograph in any image editor and reuse the file for the whole session. Then check them:
+
+```bash
+rwl roi photos/cal0.jpg --setup setup.json --out roi-check.png
+```
+
+It draws both boxes on the photograph and warns if the target box has no contrast, the white box is not uniform, or the white card is clipped.
 
 ## Procedure
 
 **1. Build a dilution series.** Take the synthetic greywater as the stock at concentration 1.0 and dilute with clean water to 0.75, 0.5, 0.25 and 0.0. Photograph each. Five levels is the minimum that gives a usable fit.
 
-**2. Photograph the run.** One shot of the influent before it enters the column, one of the effluent that comes out.
+**2. Photograph the run.** One shot of the influent before it enters the column, one of the effluent from each charge.
 
 **3. Process.**
 
 ```bash
-rwl measure photos/*.png --setup setup.json --out readings.csv
+rwl measure photos/cal*.png --setup setup.json --out readings.csv
 rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
-rwl report --readings readings.csv --calibration calibration.json \
-    --before influent --after effluent
+rwl measure photos/influent.png photos/charge*.png --setup setup.json --out run.csv
+rwl report --readings run.csv --calibration calibration.json \
+    --before influent --after charge1 charge2 charge3
 ```
+
+`measure` warns when the white card is clipped. `report` prints one row per charge, so the removal curve as the bed loads is visible at once, and marks any value outside the calibrated range rather than extrapolating it.
 
 `levels.csv` maps the calibration photographs to their concentrations:
 

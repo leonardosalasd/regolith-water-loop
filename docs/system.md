@@ -57,7 +57,7 @@ Food waste and paper are heated to around 500 °C without oxygen. The material d
 
 Stage 3 supplies two things Stage 1 cannot operate without on Mars:
 
-- **Waste heat.** The retort runs near 500 °C. The reference strain is grown at 37 °C (Mehta-Kolte 2017), and the Martian surface falls to about −153 °C (NASA Science). Retort heat keeps the bioreactor warm.
+- **Waste heat.** The retort runs near 500 °C. The reference strain is grown at 37 °C (Mehta-Kolte 2017), and the Martian surface falls to about −153 °C (NASA Science). Retort heat is routed to the bioreactor jacket. The retort needs 5.0–7.6 MJ a day for six crew ([mars.md](mars.md#retort-heat)); how much of it reaches the jacket is still open.
 - **Electron donor.** The bacteria need an organic donor such as acetate or lactate to respire perchlorate (Mehta-Kolte 2017). Supplying it from the pyrolysis liquid is the target; until that is shown, the donor is a consumable.
 
 Remove Stage 3 and Stage 1 loses its heat and, eventually, its donor. Remove Stage 1 and the regolith stays toxic and cannot serve as filter medium.

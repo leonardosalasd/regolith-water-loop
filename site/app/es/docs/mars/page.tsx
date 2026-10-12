@@ -55,6 +55,13 @@ export default function Page() {
         </p>
         <Code>{`pipx install rwl
 rwl size --crew 6 --base early --explain`}</Code>
+        <p>
+          O mueve la tripulación y la base en vivo en el{" "}
+          <Link href="/es/docs/simulator/" className={link}>
+            simulador
+          </Link>
+          .
+        </p>
         <Table
           head={["Cantidad", "Base temprana", "Base madura"]}
           mono={[1, 2]}
@@ -66,20 +73,70 @@ rwl size --crew 6 --base early --explain`}</Code>
             ["Columnas tamaño banco, g Marte", "2–8", "4–15"],
             ["Volumen de lecho, g Marte", "4–15 L", "7–28 L"],
             ["Basura", "8.3 kg/día", "8.3 kg/día"],
-            ["Carbón, estimado alto", "1.0 kg/día", "1.0 kg/día"],
+            ["Carbón, base seca", "0.82 kg/día", "0.82 kg/día"],
+            ["Calor de la retorta", "5.0–7.6 MJ/día", "5.0–7.6 MJ/día"],
           ]}
         />
         <p>
           Las tasas de agua gris y basura vienen del documento de valores base de
           soporte vital de la NASA; las de filtración son las de filtración lenta
           en arena, 0.1–0.4 m/h; el carbón supone que comida y papel son el
-          47.5 % de la basura y que la pirólisis lenta deja el 25 % como carbón.
+          47.5 % de la basura y que la pirólisis lenta deja como carbón el 25 % de
+          su masa seca.
         </p>
         <p>
           El filtro es chico. Una base de seis personas necesita de dos a ocho
           columnas del tamaño de la de banco, en paralelo. Eso apunta a módulos:
           cartuchos sellados iguales que se cambian al gastarse, en vez de un
           lecho grande que hay que sacar a mano.
+        </p>
+      </Section>
+
+      <Section title="Gravedad: área o carga">
+        <p>
+          El flujo por un lecho empacado sigue la ley de Darcy, y la
+          conductividad hidráulica del lecho es proporcional a g. A 0.37 g la misma
+          columna pasa el 37.7 % de su flujo en la Tierra. Hay dos formas de
+          recuperarlo:
+        </p>
+        <Table
+          head={["", "Tierra", "Marte, mismo flujo"]}
+          mono={[1, 2]}
+          rows={[
+            ["Más área, misma carga", "1 columna", "2.65 columnas"],
+            ["Misma área, más carga", "0.20 m de agua sobre el lecho", "1.22 m de agua sobre el lecho"],
+          ]}
+        />
+        <p>
+          Con la salida drenando libre, el gradiente es (agua encima + lecho) ÷
+          lecho, así que todo eso tiene que crecer 2.65×, no solo el agua de
+          arriba. Una columna de agua de 1.2 m por cartucho no cabe en un hábitat;
+          cartuchos en paralelo sí. Por eso el diseño agrega área. La
+          conductividad de la propia columna de banco, y el mismo lecho a 0.37 g,
+          salen de una corrida cronometrada con{" "}
+          <span className="font-mono text-accent">rwl permeability</span>.
+        </p>
+      </Section>
+
+      <Section title="Calor de la retorta">
+        <Table
+          head={["Seis tripulantes, por día", "Cantidad", "Base"]}
+          mono={[1]}
+          rows={[
+            ["Alimentación, comida y papel", "3.96 kg", "47.5 % de 8.34 kg de basura"],
+            ["Humedad de la alimentación", "0.69 kg", "Restos de plato 70 %, papel 10.2 %, comida sin abrir 0.2 %"],
+            ["Pirolizar la parte seca", "2.6–5.2 MJ", "0.8–1.6 MJ/kg cerca de 500 °C"],
+            ["Agua a vapor a 500 °C", "2.3 MJ", "3.40 MJ/kg desde 20 °C a 1 atm"],
+            ["Total", "5.0–7.6 MJ", "57–88 W en promedio diario"],
+          ]}
+        />
+        <p>
+          La humedad sale de la Tabla 4-28 del BVAD, la energía de pirólisis de
+          Daugaard y Brown, el vapor de NIST. Esas cifras de pirólisis son de
+          madera y residuos agrícolas en un reactor rápido, no de basura de comida
+          en una retorta lenta: dan el orden de magnitud, no un valor de diseño, y
+          no incluyen pérdidas por la pared. Aun así son decenas de watts en
+          promedio, operando por lotes.
         </p>
       </Section>
 
@@ -105,6 +162,44 @@ rwl size --crew 6 --base early --explain`}</Code>
             destoxificar.
           </p>
         </Callout>
+      </Section>
+
+      <Section title="Cloruro">
+        <p>
+          Cada perclorato reducido deja un ion cloruro:{" "}
+          <Term>1.43–3.56 kg</Term> por tonelada de regolito. Diluirlo hasta el
+          límite de sabor de 250 mg/L tomaría 5.7–14.3 m³ de agua por tonelada.
+          En Marte no se puede diluir, así que el enjuague se mantiene chico y la
+          salmuera va a un procesador de salmuera como el que ya se demostró en la
+          ISS para la salmuera de orina.
+        </p>
+      </Section>
+
+      <Section title="Qué pone Marte y qué pone la Tierra">
+        <p>
+          Un cartucho tamaño banco, con el programa de medios de RWL-001 y
+          contando toda capa mineral como regolito tratado:
+        </p>
+        <Code>{`rwl cartridge --crew 6`}</Code>
+        <Table
+          head={["Concepto", "Cantidad", "Sale de"]}
+          mono={[1]}
+          rows={[
+            ["Regolito tratado", "1.73 kg", "Marte, etapa 1"],
+            ["Carbón", "0.16 kg", "Marte, etapa 3; un día de basura alcanza para 5–6 cartuchos"],
+            ["Acetato para destoxificar el regolito", "4.1–10.3 g", "Tierra, hasta que funcione un donador de los residuos"],
+            ["Carcasa del cartucho", "1", "Tierra, se rellena en sitio"],
+            ["Cloruro a enjuagar", "2.5–6.2 g", "Procesador de salmuera"],
+          ]}
+        />
+        <p>
+          El acetato es el mínimo estequiométrico; las bacterias también gastan
+          donador en crecer. Como escala, el procesador de agua de la ISS depende
+          de lechos de multifiltración desechables que piden unos 472 kg de
+          reabastecimiento al año. Este diseño no reemplaza esos lechos ni afirma
+          alargar su vida en ninguna cantidad medida. Sus propios medios, en masa,
+          se hacen en Marte.
+        </p>
       </Section>
 
       <Section title="Las etapas a escala de misión">
@@ -153,9 +248,9 @@ rwl size --crew 6 --base early --explain`}</Code>
 
       <Section title="Preguntas abiertas">
         <ul className="ml-5 list-disc space-y-2 marker:text-faint">
-          <li>La energía de la retorta, y si su calor residual de verdad cubre la chaqueta de la etapa 1</li>
+          <li>Si el calor que rechaza la retorta cubre la chaqueta de la etapa 1, lo que depende de un reactor todavía sin diseñar</li>
           <li>Si el líquido de la pirólisis puede servir como donador de electrones</li>
-          <li>El cloruro que queda en el regolito tratado: cuánta agua de enjuague y a dónde va la salmuera</li>
+          <li>El volumen de enjuague que saca el cloruro de los poros del regolito, que no está medido</li>
           <li>La filtración con finos marcianos reales a 0.37 g, que está modelada, no medida</li>
         </ul>
       </Section>

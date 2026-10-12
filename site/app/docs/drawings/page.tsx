@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader, Section, Sheet } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -18,6 +19,14 @@ export default function DrawingsPage() {
         title="Drawings"
         lede="Dimensioned drawings for the bench build, then schematics of the full system on Mars. Millimetres throughout, not to scale on screen."
       />
+
+      <p className="-mt-6 mb-10 text-sm text-muted">
+        RWL-001 and RWL-004 are also in the{" "}
+        <Link href="/docs/model/" className="text-accent underline-offset-4 hover:underline">
+          3D model
+        </Link>
+        .
+      </p>
 
       <Section title="RWL-001 — Filtration column">
         <p>
@@ -56,7 +65,7 @@ export default function DrawingsPage() {
         <Sheet
           src="/drawings/process-flow.svg"
           alt="Process flow diagram linking the bioreactor, filter modules, pyrolysis retort, main water processor and crew"
-          drawing="RWL-003 REV A"
+          drawing="RWL-003 REV B"
           caption="Grey dashed streams are proposed, not demonstrated. The oxygen from Stage 1 is not drawn as a product because the bacteria respire it."
         />
       </Section>

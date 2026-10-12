@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Callout, Code, PageHeader, Section, Term } from "@/components/ui";
 
 export const metadata: Metadata = {
@@ -52,18 +53,27 @@ export default function Page() {
           .
         </p>
         <Code>{`pipx install rwl`}</Code>
+        <p>
+          O sin instalar nada: la misma medición corre en el navegador, con
+          fotos o la cámara en vivo, en{" "}
+          <Link href="/es/docs/measure/" className="text-accent underline-offset-4 hover:underline">
+            Medir en el navegador
+          </Link>
+          .
+        </p>
       </Section>
 
       <Section title="Flujo de trabajo">
         <p>
           Tres comandos. El primero lee el contraste de cada fotografía, el
-          segundo ajusta la serie de diluciones, el tercero compara influente
-          contra efluente.
+          segundo ajusta la serie de diluciones, el tercero compara el influente
+          con cada carga y marca cualquier resultado fuera del rango calibrado.
         </p>
-        <Code>{`rwl measure fotos/*.jpg --setup setup.json --out readings.csv
+        <Code>{`rwl measure fotos/cal*.jpg --setup setup.json --out readings.csv
 rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
-rwl report --readings readings.csv --calibration calibration.json \\
-    --before influent --after effluent`}</Code>
+rwl measure fotos/influent.jpg fotos/charge*.jpg --setup setup.json --out run.csv
+rwl report --readings run.csv --calibration calibration.json \\
+    --before influent --after charge1 charge2 charge3`}</Code>
         <p>
           <Term>setup.json</Term> guarda las dos regiones de interés, leídas una
           sola vez de cualquier encuadre de la sesión y reutilizadas para toda
@@ -74,7 +84,10 @@ rwl report --readings readings.csv --calibration calibration.json \\
   "white":  [180, 160, 120, 120]
 }`}</Code>
         <p>
-          Las dos son <Term>[x, y, ancho, alto]</Term> en píxeles. La calibración
+          Las dos son <Term>[x, y, ancho, alto]</Term> en píxeles. Se revisan con{" "}
+          <Term>rwl roi fotos/cal0.jpg --setup setup.json</Term>, que dibuja las
+          dos cajas sobre la foto y avisa si la tarjeta blanca está saturada o si
+          la caja del objetivo no tiene contraste. La calibración
           imprime un R²; por debajo de 0.9 la luz se movió durante la serie y hay
           que volver a tomar las fotografías.
         </p>

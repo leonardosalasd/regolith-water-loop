@@ -66,6 +66,7 @@
 
     <text x="610" y="256" font-size="12" font-weight="bold">STAGE 3 &#183; PYROLYSIS</text>
     <text x="610" y="274" font-size="10" fill="#555555">closed retort &#183; ~500 &#176;C</text>
+    <text x="610" y="289" font-size="10" fill="#555555">5.0&#8211;7.6 MJ/day &#183; 57&#8211;88 W mean</text>
 
     <text x="500" y="135" font-size="10.5" font-weight="bold">DONOR STORE</text>
     <text x="500" y="150" font-size="9.5" fill="#555555">acetate or lactate</text>
@@ -98,11 +99,11 @@
     <rect x="152" y="158" width="46" height="10" fill="#ffffff"/>
     <text x="154" y="166" font-weight="bold">SEALED</text>
     <text x="308" y="262" font-weight="bold">TREATED REGOLITH</text>
-    <text x="308" y="275" fill="#555555">rinsed of chloride</text>
+    <text x="308" y="275" fill="#555555">rinsed of chloride &#183; 1.4&#8211;3.6 kg/t</text>
     <text x="778" y="210" font-weight="bold">FOOD + PAPER</text>
     <text x="778" y="223" fill="#555555">8.3 kg/day trash</text>
     <text x="462" y="306" font-weight="bold">CHAR</text>
-    <text x="462" y="318" fill="#555555">&#8804; 1 kg/day</text>
+    <text x="462" y="318" fill="#555555">0.8&#8211;1 kg/day</text>
     <text x="690" y="354" font-weight="bold" fill="#3a78b5">GREYWATER 33 L/day</text>
     <text x="308" y="403" font-weight="bold" fill="#3a78b5">PRE-TREATED</text>
     <text x="700" y="442" font-weight="bold" fill="#3a78b5">TO CREW, POTABLE</text>
@@ -116,9 +117,9 @@
   <text x="44" y="546" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">NOTES</text>
   <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a1a1a">
     <text x="44" y="568">1.  Everything inside the dashed line runs at habitat pressure.</text>
-    <text x="44" y="588">2.  Rates from: rwl size --crew 6. Sources in docs/references.md.</text>
+    <text x="44" y="588">2.  Rates from: rwl size --crew 6 and rwl cartridge. Sources in docs/references.md.</text>
     <text x="44" y="608">3.  O&#8322; from Stage 1 is respired by the bacteria and is not drawn as a product.</text>
-    <text x="44" y="628">4.  Not yet sized: chloride brine, spent cartridges, retort energy.</text>
+    <text x="44" y="628">4.  Not yet sized: chloride rinse volume, retort heat recovery into the Stage 1 jacket.</text>
     <text x="44" y="648">5.  Stage 2 output is pre-treated only. Potability is the main processor&#8217;s job.</text>
   </g>
 
@@ -133,8 +134,8 @@
     <text x="610" y="562" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
     <text x="610" y="593" font-size="12">System process flow</text>
     <text x="610" y="624" font-size="10.5">SCHEMATIC &#183; NOT TO SCALE</text>
-    <text x="800" y="624" font-size="10.5">DWG  RWL-003  REV A</text>
+    <text x="800" y="624" font-size="10.5">DWG  RWL-003  REV B</text>
     <text x="610" y="656" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
-    <text x="800" y="656" font-size="10.5">2026-09-13</text>
+    <text x="800" y="656" font-size="10.5">2026-10-01</text>
   </g>
 </svg>

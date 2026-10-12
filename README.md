@@ -68,12 +68,16 @@ Results are relative to the influent, never reported in NTU.
 
 ```bash
 rwl target --out target-sheet.pdf   # print this at 100%, next to the sample
+rwl roi photos/cal0.jpg --setup setup.json   # check the regions before measuring
 
-rwl measure photos/*.jpg --setup setup.json --out readings.csv
+rwl measure photos/cal*.jpg --setup setup.json --out readings.csv
 rwl calibrate --readings readings.csv --levels levels.csv --out calibration.json
-rwl report --readings readings.csv --calibration calibration.json \
-    --before influent --after effluent
+rwl measure photos/influent.jpg photos/charge*.jpg --setup setup.json --out run.csv
+rwl report --readings run.csv --calibration calibration.json \
+    --before influent --after charge1 charge2 charge3
 ```
+
+`report` flags any result outside the calibrated range instead of extrapolating it. The timed drain of a charge doubles as a falling-head test: `rwl permeability --seconds 45 --outlet-drop 0.30` gives the bed's hydraulic conductivity on Earth and at 0.37 g.
 
 Read [docs/method.md](docs/method.md) before shooting a session. The rig has to stay fixed or the series is void.
 
@@ -81,9 +85,10 @@ Read [docs/method.md](docs/method.md) before shooting a session. The rig has to 
 
 ```bash
 rwl size --crew 6 --base early --explain
+rwl cartridge --crew 6
 ```
 
-Greywater, filter area under Mars gravity, char output and perchlorate stoichiometry for a crew. `--explain` prints the formula and source behind every number; each constant is also cited directly in [src/rwl/sizing.py](src/rwl/sizing.py).
+`size` covers greywater, filter area under Mars gravity, retort heat, char output and perchlorate, chloride and oxygen stoichiometry for a crew. `cartridge` splits one filter cartridge into what Mars supplies and what Earth does. `--explain` prints the formula and source behind every number, `--json` the raw values; each constant is also cited directly in [src/rwl/sizing.py](src/rwl/sizing.py).
 
 ### Development
 
@@ -96,7 +101,11 @@ pytest
 
 ## Documentation site
 
-A static site under [`site/`](site/), English at the root and Spanish under `/es/`.
+A static site under [`site/`](site/), English at the root and Spanish under `/es/`. Besides the documentation it has three tools that run entirely in the browser:
+
+- [Sizing simulator](https://rwl.leonardosalas.dev/docs/simulator/): the `rwl size` model, live, from the same constants
+- [Measure in the browser](https://rwl.leonardosalas.dev/docs/measure/): the photographic method from photos or a live camera, with files interchangeable with the CLI
+- [3D model](https://rwl.leonardosalas.dev/docs/model/): the habitat layout of RWL-004 and the column of RWL-001
 
 ```bash
 pnpm install --dir site

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Callout, PageHeader, Section, Steps, Table } from "@/components/ui";
+import { Callout, Code, PageHeader, Section, Steps, Table } from "@/components/ui";
 
 export const metadata: Metadata = {
   title: "Protocolo",
@@ -182,7 +182,13 @@ export default function Page() {
             },
             {
               title: "Fotografía el efluente",
-              body: <p>Mismo frasco, mismo nivel de llenado, misma posición.</p>,
+              body: (
+                <p>
+                  Mismo frasco, mismo nivel de llenado, misma posición. Nómbralo{" "}
+                  <code className="font-mono text-accent">charge1</code>, luego{" "}
+                  <code className="font-mono text-accent">charge2</code> y así.
+                </p>
+              ),
             },
             {
               title: "Repite, al menos tres cargas",
@@ -190,12 +196,33 @@ export default function Page() {
                 <p>
                   La primera carga da el mejor resultado y la remoción baja
                   conforme el lecho se satura. Esa curva es el resultado útil, no
-                  el primer número suelto.
+                  el primer número suelto.{" "}
+                  <code className="font-mono text-accent">
+                    rwl report --before influent --after charge1 charge2 charge3
+                  </code>{" "}
+                  la imprime con una fila por carga.
                 </p>
               ),
             },
           ]}
         />
+      </Section>
+
+      <Section title="Conductividad hidráulica">
+        <p>
+          Cronometrar la primera carga es una prueba de permeabilidad de carga
+          variable: la columna es su propio tubo de carga. Mide una vez cuánto
+          queda la salida de la manguera por debajo de la base del lecho, corre la
+          carga con la válvula abierta del todo y luego:
+        </p>
+        <Code>{`rwl permeability --seconds 45 --outlet-drop 0.30`}</Code>
+        <p>
+          Imprime la conductividad hidráulica del lecho, el mismo lecho a 0.37 g y
+          cuánto deberían tardar 500 ml a tasas de filtración lenta. Si la columna
+          va más rápido, cierra un poco la válvula para las corridas medidas. Para
+          la curva completa de drenado, filma un corcho con un palito contra una
+          regla y pasa los niveles con <span className="font-mono text-accent">--series level.csv</span>.
+        </p>
       </Section>
 
       <Section title="Qué anotar en el momento">
