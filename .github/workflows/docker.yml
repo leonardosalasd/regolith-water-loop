@@ -3,9 +3,9 @@ name: docker
 on:
   push:
     branches: [main]
-    paths: ["Dockerfile", "site/Dockerfile", "compose.yaml", ".github/workflows/docker.yml"]
+    paths: ["Dockerfile", "site/Dockerfile", "compose.yaml", "pyproject.toml", ".github/workflows/docker.yml"]
   pull_request:
-    paths: ["Dockerfile", "site/Dockerfile", "compose.yaml"]
+    paths: ["Dockerfile", "site/Dockerfile", "compose.yaml", "pyproject.toml"]
 
 concurrency:
   group: docker-${{ github.ref }}
