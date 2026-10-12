@@ -19,6 +19,11 @@ const copy = {
     repoBody: "Analysis code, drawings and build documentation. MIT and CC BY 4.0.",
     contact: "Get in touch",
     other: "Español",
+    tools: [
+      ["simulator", "Sizing simulator"],
+      ["measure", "Measure in the browser"],
+      ["model", "3D model"],
+    ],
     safety:
       "This is a pre-treatment stage. It does not remove bacteria, viruses or parasites, and it does not make water safe to drink.",
   },
@@ -30,6 +35,11 @@ const copy = {
     repoBody: "Código de análisis, planos y documentación de armado. MIT y CC BY 4.0.",
     contact: "Contacto",
     other: "English",
+    tools: [
+      ["simulator", "Simulador"],
+      ["measure", "Medir en el navegador"],
+      ["model", "Modelo 3D"],
+    ],
     safety:
       "Esto es una etapa de pretratamiento. No elimina bacterias, virus ni parásitos, y no vuelve el agua apta para beber.",
   },
@@ -113,6 +123,18 @@ export function Landing({ locale }: { locale: Locale }) {
           body={t.repoBody}
         />
       </div>
+
+      <nav className="mt-px grid gap-px bg-line sm:grid-cols-3">
+        {t.tools.map(([slug, name]) => (
+          <Link
+            key={slug}
+            href={`${docsBase(locale)}/${slug}/`}
+            className="bg-surface px-5 py-3.5 font-mono text-[12px] text-muted transition-colors hover:bg-raised hover:text-accent"
+          >
+            {name} →
+          </Link>
+        ))}
+      </nav>
 
       <p className="mt-8 border-l-2 border-l-accent bg-accent-wash py-3 pl-5 pr-4 text-[14px] leading-relaxed text-ink/85">
         {t.safety}

@@ -1,0 +1,57 @@
+{
+  "hygieneWastewater": {
+    "early": 5.53,
+    "mature": 10.17
+  },
+  "trash": 1.39,
+  "pyrolysable": {
+    "plate waste": [
+      0.098,
+      0.7
+    ],
+    "uneaten food": [
+      0.247,
+      0.002
+    ],
+    "mixed paper": [
+      0.13,
+      0.102
+    ]
+  },
+  "pyrolysisEnergy": [
+    0.8,
+    1.6
+  ],
+  "waterToSteam": 3.4047,
+  "crewOxygen": 0.895,
+  "charYield": 0.25,
+  "filtrationRate": [
+    0.1,
+    0.4
+  ],
+  "marsGravity": 3.7,
+  "earthGravity": 9.81,
+  "perchlorateFraction": [
+    0.004,
+    0.01
+  ],
+  "chlorideLimit": 250.0,
+  "benchBore": 0.075,
+  "bedDepth": 0.42,
+  "chargeDepth": 0.2,
+  "benchMedia": {
+    "support scoria": 0.2,
+    "charcoal": 0.16,
+    "fine sand": 1.33,
+    "coarse scoria": 0.2
+  },
+  "charMedia": [
+    "charcoal"
+  ],
+  "molarMass": {
+    "ClO4": 99.45,
+    "O2": 32.0,
+    "acetate": 59.04,
+    "Cl": 35.45
+  }
+}

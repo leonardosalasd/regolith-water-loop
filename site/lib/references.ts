@@ -178,6 +178,27 @@ export const references: ReferenceGroup[] = [
         },
       },
       {
+        key: "Daugaard 2003",
+        citation:
+          "Daugaard, D. E., Brown, R. C. Enthalpy for pyrolysis for several types of biomass. Energy & Fuels 17 (4), 934–939.",
+        ...doi("10.1021/ef020260x"),
+        use: {
+          en: "Energy to pyrolyse dry biomass near 500 °C: 0.8–1.6 MJ/kg",
+          es: "Energía para pirolizar biomasa seca cerca de 500 °C: 0.8–1.6 MJ/kg",
+        },
+      },
+      {
+        key: "NIST",
+        citation:
+          "Lemmon, E. W., Bell, I. H., Huber, M. L., McLinden, M. O. Thermophysical Properties of Fluid Systems. NIST Chemistry WebBook, SRD 69.",
+        href: "https://webbook.nist.gov/chemistry/fluid/",
+        link: "webbook.nist.gov",
+        use: {
+          en: "Water at 1 atm: 84.0 kJ/kg as liquid at 20 °C, 3488.7 kJ/kg as steam at 500 °C",
+          es: "Agua a 1 atm: 84.0 kJ/kg líquida a 20 °C, 3488.7 kJ/kg como vapor a 500 °C",
+        },
+      },
+      {
         key: "Emergency WASH",
         citation: "German Toilet Organization. Emergency WASH, T.9 Slow Sand Filtration.",
         href: "https://www.emergency-wash.org/water/en/technologies/technology/slow-sand-filtration",
@@ -196,8 +217,8 @@ export const references: ReferenceGroup[] = [
         href: "https://ntrs.nasa.gov/citations/20210024855",
         link: "NTRS 20210024855",
         use: {
-          en: "Oxygen 0.895 kg/CM-d (Table 3-31); hygiene wastewater 5.53 and 10.17 kg/CM-d (Table 4-21); trash 1.39 kg/CM-d (Tables 4-28, 4-29)",
-          es: "Oxígeno 0.895 kg/tripulante-día (Tabla 3-31); agua gris de higiene 5.53 y 10.17 (Tabla 4-21); basura 1.39 (Tablas 4-28, 4-29)",
+          en: "Oxygen 0.895 kg/CM-d (Table 3-31); hygiene wastewater 5.53 and 10.17 kg/CM-d (Table 4-21); trash 1.39 kg/CM-d and its moisture (Tables 4-28, 4-29); ISS water processor expendables about 472 kg/year (section 4.3.3)",
+          es: "Oxígeno 0.895 kg/tripulante-día (Tabla 3-31); agua gris de higiene 5.53 y 10.17 (Tabla 4-21); basura 1.39 y su humedad (Tablas 4-28, 4-29); consumibles del procesador de agua de la ISS, unos 472 kg/año (sección 4.3.3)",
         },
       },
       {
@@ -220,6 +241,13 @@ export const references: ReferenceGroup[] = [
           en: "Martian dust below 10 µm: 0.1 mg/m³, 24-hour average, exposures up to 30 days",
           es: "Polvo marciano menor a 10 µm: 0.1 mg/m³, promedio de 24 h, exposiciones de hasta 30 días",
         },
+      },
+      {
+        key: "EPA",
+        citation: "US Environmental Protection Agency. Secondary Drinking Water Standards: Guidance for Nuisance Chemicals.",
+        href: "https://www.epa.gov/sdwa/secondary-drinking-water-standards-guidance-nuisance-chemicals",
+        link: "epa.gov",
+        use: { en: "Chloride 250 mg/L, salty taste", es: "Cloruro 250 mg/L, sabor salado" },
       },
       {
         key: "COSPAR",

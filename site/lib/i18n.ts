@@ -37,6 +37,14 @@ const groups: Record<Locale, NavGroup[]> = {
         { slug: "results", label: "Results" },
       ],
     },
+    {
+      title: "Tools",
+      items: [
+        { slug: "simulator", label: "Sizing simulator" },
+        { slug: "measure", label: "Measure in the browser" },
+        { slug: "model", label: "3D model" },
+      ],
+    },
   ],
   es: [
     {
@@ -62,6 +70,14 @@ const groups: Record<Locale, NavGroup[]> = {
         { slug: "method", label: "Método" },
         { slug: "protocol", label: "Protocolo" },
         { slug: "results", label: "Resultados" },
+      ],
+    },
+    {
+      title: "Herramientas",
+      items: [
+        { slug: "simulator", label: "Simulador" },
+        { slug: "measure", label: "Medir en el navegador" },
+        { slug: "model", label: "Modelo 3D" },
       ],
     },
   ],
