@@ -9,7 +9,7 @@ from dataclasses import asdict, dataclass
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageOps
 
 ROI = tuple[int, int, int, int]
 
@@ -37,19 +37,27 @@ class Calibration:
     slope: float
     intercept: float
     r_squared: float
+    lowest: float | None = None
+    highest: float | None = None
 
     def concentration(self, contrast: float) -> float:
         if self.slope == 0:
             raise ValueError("degenerate calibration: slope is zero")
         return (math.log(max(contrast, _FLOOR)) - self.intercept) / self.slope
 
+    def in_range(self, concentration: float) -> bool:
+        if self.lowest is None or self.highest is None:
+            return True
+        return self.lowest <= concentration <= self.highest
+
     def as_dict(self) -> dict[str, float]:
         return asdict(self)
 
 
 def load_gray(path: str | Path) -> np.ndarray:
+    """Grayscale in [0, 1], upright as an image viewer shows it, so regions read off any viewer line up."""
     with Image.open(path) as image:
-        return np.asarray(image.convert("L"), dtype=np.float64) / 255.0
+        return np.asarray(ImageOps.exif_transpose(image).convert("L"), dtype=np.float64) / 255.0
 
 
 def crop(image: np.ndarray, roi: ROI) -> np.ndarray:
@@ -67,6 +75,11 @@ def contrast(patch: np.ndarray) -> float:
     dark, light = np.percentile(patch, [5, 95])
     total = light + dark
     return 0.0 if total <= 0 else float((light - dark) / total)
+
+
+def clipped(patch: np.ndarray, level: float = 254 / 255) -> float:
+    """Share of pixels at or above the sensor ceiling. Clipped highlights flatten the contrast."""
+    return float(np.mean(patch >= level))
 
 
 def measure(path: str | Path, sample: str, target: ROI, white: ROI) -> Reading:
@@ -96,7 +109,7 @@ def fit(readings: Sequence[Reading], concentrations: Sequence[float]) -> Calibra
     spread = float(np.sum((y - y.mean()) ** 2))
     r_squared = 1.0 if spread == 0 else 1.0 - float(np.sum(residual**2)) / spread
 
-    return Calibration(float(slope), float(intercept), r_squared)
+    return Calibration(float(slope), float(intercept), r_squared, float(x.min()), float(x.max()))
 
 
 def reduction(before: Reading, after: Reading, calibration: Calibration) -> float:

@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 import pytest
 
 from rwl import sizing
@@ -89,3 +92,61 @@ def test_cli_info_command_matches_bare(capsys):
     assert main(["info"]) == 0
     out = capsys.readouterr().out
     assert "rwl <command> -h" in out
+
+
+def test_retort_energy_from_dry_feed_and_moisture():
+    rt = sizing.size(6, "early").retort
+    assert rt.feed_kg == pytest.approx(6 * 1.39 * 0.475)
+    assert rt.water_kg == pytest.approx(6 * 1.39 * (0.098 * 0.70 + 0.247 * 0.002 + 0.130 * 0.102))
+    low = rt.dry_kg * 0.8 + rt.water_kg * sizing.WATER_TO_STEAM
+    assert rt.energy_mj[0] == pytest.approx(low)
+    assert rt.mean_power_w[0] == pytest.approx(low * 1e6 / 86400)
+    assert rt.char_dry_kg < sizing.size(6, "early").char_kg_per_day
+
+
+def test_chloride_is_one_per_perchlorate():
+    chem = sizing.perchlorate(1000)
+    assert chem.chloride_kg[0] == pytest.approx(4000 / 99.45 * 35.45 / 1000)
+    assert chem.rinse_to_limit_m3[0] == pytest.approx(chem.chloride_kg[0] * 1e6 / 250 / 1000)
+
+
+def test_mars_head_restores_earth_flux():
+    head = sizing.mars_head()
+    earth_gradient = (sizing.CHARGE_DEPTH_M + sizing.BED_DEPTH_M) / sizing.BED_DEPTH_M
+    mars_gradient = (head + sizing.BED_DEPTH_M) / sizing.BED_DEPTH_M
+    assert mars_gradient * sizing.MARS_GRAVITY == pytest.approx(earth_gradient * sizing.EARTH_GRAVITY)
+
+
+def test_cartridge_mass_balance():
+    part = sizing.cartridge(6, "early")
+    assert part.regolith_kg == pytest.approx(1.73)
+    assert part.char_kg == pytest.approx(0.16)
+    assert part.perchlorate_g == pytest.approx((6.92, 17.3))
+    assert part.per_day_of_char[0] < part.per_day_of_char[1]
+
+
+def test_cli_cartridge_and_json(capsys):
+    assert main(["cartridge"]) == 0
+    assert "Earth" in capsys.readouterr().out
+    assert main(["size", "--json"]) == 0
+    payload = json.loads(capsys.readouterr().out)
+    assert payload["sizing"]["retort"]["mean_power_w"][0] > 0
+
+
+def test_site_constants_match_the_model():
+    path = Path(__file__).resolve().parents[1] / "site" / "lib" / "sizing-constants.json"
+    if not path.exists():
+        pytest.skip("site not present")
+    assert json.loads(path.read_text()) == json.loads(json.dumps(sizing.constants()))
+
+
+@pytest.mark.parametrize("suffix", [".html", ".svg", ".txt"])
+def test_cli_size_saves_tables(tmp_path, suffix, capsys):
+    out = tmp_path / f"sizing{suffix}"
+    assert main(["size", "--explain", "--save", str(out)]) == 0
+    assert "Darcy" in out.read_text()
+
+
+def test_cli_save_rejects_other_formats(tmp_path):
+    with pytest.raises(SystemExit):
+        main(["cartridge", "--save", str(tmp_path / "x.pdf")])
