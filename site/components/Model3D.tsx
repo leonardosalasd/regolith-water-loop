@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { CSS2DObject, CSS2DRenderer } from "three/examples/jsm/renderers/CSS2DRenderer.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import type { Locale } from "@/lib/i18n";
 import { constants as c, gravityFactor } from "@/lib/sizing";
 
@@ -17,15 +18,16 @@ const text = {
     mars: "Mars, 0.37 g",
     hint: "Drag to orbit, right-drag or two fingers to pan.",
     habitatNote:
-      "Plan of RWL-004 extruded. Zones, walls, units and every flow follow the drawing; heights are illustrative and zone sizes are not derived.",
+      "RWL-004 in 3D. Zones, units and every flow follow the drawing; equipment shapes, heights and zone sizes are illustrative, not derived.",
     columnNote:
       "RWL-001 at true proportions. Brown grains stand for suspended solids, held in the bed; blue for dissolved colour, which passes, as in the first runs. The motion is schematic: only the Earth to Mars speed ratio, 0.377 from Darcy's law, is physical.",
+    credit: "3D model © Leonardo Salas, CC BY-NC-ND 4.0.",
     legend: { solids: "Solids", water: "Water", gas: "Gas", heat: "Heat" },
     units: {
       airlock: "Airlock",
       glovebox: "Handling glovebox",
       stage1: "Stage 1 · bioreactor",
-      fill: "Cartridge fill",
+      fill: "Cartridge fill, automated",
       retort: "Stage 3 · pyrolysis retort",
       rack: "Stage 2 · filter cartridges",
       processor: "Main water processor",
@@ -44,15 +46,16 @@ const text = {
     mars: "Marte, 0.37 g",
     hint: "Arrastra para girar; clic derecho o dos dedos para desplazar.",
     habitatNote:
-      "Planta de RWL-004 extruida. Zonas, muros, equipos y cada flujo siguen el plano; las alturas son ilustrativas y los tamaños de zona no están derivados.",
+      "RWL-004 en 3D. Zonas, equipos y cada flujo siguen el plano; las formas de los equipos, las alturas y los tamaños de zona son ilustrativos, no derivados.",
     columnNote:
       "RWL-001 en proporciones reales. Los granos cafés son sólidos suspendidos, que el lecho retiene; los azules, color disuelto, que pasa, como en las primeras corridas. El movimiento es esquemático: solo la relación de velocidad Tierra a Marte, 0.377 por la ley de Darcy, es física.",
+    credit: "Modelo 3D © Leonardo Salas, CC BY-NC-ND 4.0.",
     legend: { solids: "Sólidos", water: "Agua", gas: "Gas", heat: "Calor" },
     units: {
       airlock: "Esclusa",
       glovebox: "Caja de guantes",
       stage1: "Etapa 1 · biorreactor",
-      fill: "Llenado de cartuchos",
+      fill: "Llenado automático de cartuchos",
       retort: "Etapa 3 · retorta de pirólisis",
       rack: "Etapa 2 · cartuchos de filtro",
       processor: "Procesador principal de agua",
@@ -68,33 +71,43 @@ const text = {
 
 const FLOW = { solids: "#d9c9a3", water: "#4f9be0", gas: "#9b938e", heat: "#e08a3a" } as const;
 
-function label(textContent: string, accent = false) {
+function label(textContent: string, accent = false, side = false) {
   const el = document.createElement("div");
   el.textContent = textContent;
   el.style.cssText = `font: 500 11px/1.2 var(--font-plex-mono, ui-monospace), monospace; color: ${
     accent ? "#f54927" : "#ede9e6"
   }; background: rgba(12,11,11,0.78); padding: 2px 6px; border: 1px solid #2a2626; border-radius: 2px; white-space: nowrap; pointer-events: none;`;
-  return new CSS2DObject(el);
+  const object = new CSS2DObject(el);
+  if (side) object.center.set(0, 0.5);
+  return object;
 }
 
 const plan = (x: number, y: number, h = 0) => new THREE.Vector3((x - 525) / 100, h, (y - 305) / 100);
 
 type Mover = { update: (t: number, speed: number) => void };
 
-function flowPath(points: [number, number][], colour: string, group: THREE.Group, count: number, dashed = false): Mover {
+function along(
+  points: THREE.Vector3[],
+  colour: string,
+  group: THREE.Group,
+  count: number,
+  { dashed = false, drawn = true, size = 0.035 } = {},
+): Mover {
   const path = new THREE.CurvePath<THREE.Vector3>();
   for (let i = 1; i < points.length; i++) {
-    path.add(new THREE.LineCurve3(plan(...points[i - 1], 0.06), plan(...points[i], 0.06)));
+    path.add(new THREE.LineCurve3(points[i - 1], points[i]));
   }
-  const line = new THREE.Line(
-    new THREE.BufferGeometry().setFromPoints(path.getSpacedPoints(40)),
-    dashed
-      ? new THREE.LineDashedMaterial({ color: colour, dashSize: 0.05, gapSize: 0.05 })
-      : new THREE.LineBasicMaterial({ color: colour, transparent: true, opacity: 0.5 }),
-  );
-  if (dashed) line.computeLineDistances();
-  group.add(line);
-  const geometry = new THREE.SphereGeometry(0.035, 10, 8);
+  if (drawn) {
+    const line = new THREE.Line(
+      new THREE.BufferGeometry().setFromPoints(path.getSpacedPoints(40)),
+      dashed
+        ? new THREE.LineDashedMaterial({ color: colour, dashSize: 0.05, gapSize: 0.05 })
+        : new THREE.LineBasicMaterial({ color: colour, transparent: true, opacity: 0.5 }),
+    );
+    if (dashed) line.computeLineDistances();
+    group.add(line);
+  }
+  const geometry = new THREE.SphereGeometry(size, 10, 8);
   const material = new THREE.MeshBasicMaterial({ color: colour });
   const dots = Array.from({ length: count }, () => {
     const dot = new THREE.Mesh(geometry, material);
@@ -112,6 +125,16 @@ function flowPath(points: [number, number][], colour: string, group: THREE.Group
   };
 }
 
+function flowPath(points: [number, number][], colour: string, group: THREE.Group, count: number, dashed = false): Mover {
+  return along(
+    points.map((p) => plan(...p, 0.06)),
+    colour,
+    group,
+    count,
+    { dashed },
+  );
+}
+
 function box(x0: number, y0: number, x1: number, y1: number, h: number, colour: string, emissive = "#000000") {
   const mesh = new THREE.Mesh(
     new THREE.BoxGeometry((x1 - x0) / 100, h, (y1 - y0) / 100),
@@ -121,7 +144,73 @@ function box(x0: number, y0: number, x1: number, y1: number, h: number, colour: 
   return mesh;
 }
 
-function buildHabitat(scene: THREE.Scene, t: (typeof text)[Locale]): Mover[] {
+const LABELS: Record<string, { unit: keyof (typeof text)["en"]["units"]; accent?: boolean }> = {
+  stage1: { unit: "stage1", accent: true },
+  stage3: { unit: "retort", accent: true },
+  rack: { unit: "rack", accent: true },
+  fill: { unit: "fill" },
+  processor: { unit: "processor" },
+  galley: { unit: "galley" },
+  life: { unit: "life" },
+  hygiene: { unit: "hygiene" },
+  airlock: { unit: "airlock" },
+  glovebox: { unit: "glovebox" },
+  dirty: { unit: "dirty" },
+  bulkhead: { unit: "bulkhead" },
+};
+
+// Fits the Blender habitat to the width of the plan model, with its floor at y = 0. Labels sit on its
+// label_* empties and the flows run along the paths stored on its "flows" and "heat" empties.
+function loadHabitat(g: THREE.Group, t: (typeof text)[Locale], movers: Mover[], alive: () => boolean, onModel: () => void) {
+  const procedural = [...g.children];
+  new GLTFLoader()
+    .loadAsync(MODELS.habitat)
+    .then((gltf) => {
+      if (!alive()) return;
+      const model = gltf.scene;
+      model.updateMatrixWorld(true);
+      const floor = new THREE.Box3();
+      model.traverse((o) => {
+        if (o.name.startsWith("floor-")) floor.expandByObject(o);
+      });
+      if (floor.isEmpty()) return;
+      const scale = 7.5 / floor.getSize(new THREE.Vector3()).x;
+      const centre = floor.getCenter(new THREE.Vector3());
+      model.scale.setScalar(scale);
+      model.position.set(-centre.x * scale, -floor.min.y * scale, -centre.z * scale);
+      g.add(model);
+      model.updateMatrixWorld(true);
+      procedural.forEach((o) => (o.visible = false));
+
+      model.traverse((o) => {
+        const spec = LABELS[o.name.replace(/^label_/, "")];
+        if (!o.name.startsWith("label_") || !spec) return;
+        const l = label(t.units[spec.unit], spec.accent);
+        l.position.copy(o.getWorldPosition(new THREE.Vector3()));
+        g.add(l);
+      });
+
+      const lift = new THREE.Vector3(0, 0.05, 0);
+      const world = (points: number[][]) =>
+        points.map(([x, y, z]) => new THREE.Vector3(x, z, -y).applyMatrix4(model.matrixWorld).add(lift));
+      const stored = (name: string) => JSON.parse(String(model.getObjectByName(name)?.userData.paths ?? "null"));
+      const flows: Record<"solids" | "water" | "gas", number[][][]> = stored("flows") ?? {};
+      const heat: number[][][] = stored("heat") ?? [];
+      const next: Mover[] = [];
+      const run = (points: THREE.Vector3[], colour: string) => {
+        let length = 0;
+        for (let i = 1; i < points.length; i++) length += points[i].distanceTo(points[i - 1]);
+        next.push(along(points, colour, g, Math.max(2, Math.round(length / 0.3)), { drawn: false, size: 0.05 }));
+      };
+      (Object.keys(flows) as (keyof typeof flows)[]).forEach((kind) => flows[kind].forEach((p) => run(world(p), FLOW[kind])));
+      heat.forEach((p) => run(world(p), FLOW.heat));
+      movers.splice(0, movers.length, ...next);
+      onModel();
+    })
+    .catch(() => {});
+}
+
+function buildHabitat(scene: THREE.Scene, t: (typeof text)[Locale], alive: () => boolean, onModel: () => void): Mover[] {
   const g = new THREE.Group();
   scene.add(g);
 
@@ -237,11 +326,20 @@ function buildHabitat(scene: THREE.Scene, t: (typeof text)[Locale]): Mover[] {
       bulkhead.emissiveIntensity = 0.15 + 0.15 * Math.sin(time * 2);
     },
   };
-  return [...movers, glow];
+  const all = [...movers, glow];
+  loadHabitat(g, t, all, alive, onModel);
+  return all;
 }
 
 const CUT_START = Math.PI / 2;
 const CUT_LENGTH = Math.PI * 1.5;
+
+// The Blender model is in metres, Z up, cut open towards +X; the scene works in units of 100 mm.
+const MODELS = { column: "/models/rwl-001.glb", particles: "/models/particles.glb", habitat: "/models/habitat.glb" };
+const MODEL_SCALE = 10;
+const CUT_FACING = Math.atan2(9.6, 8.2);
+const VALVE_CENTRE_M = -0.103;
+const HOSE_END_M = -0.08;
 
 function sectioned(radius: number, height: number, material: THREE.MeshStandardMaterial) {
   const group = new THREE.Group();
@@ -256,15 +354,23 @@ function sectioned(radius: number, height: number, material: THREE.MeshStandardM
   return group;
 }
 
-function buildColumn(scene: THREE.Scene, t: (typeof text)[Locale]): { movers: Mover[]; target: THREE.Vector3 } {
+function buildColumn(
+  scene: THREE.Scene,
+  t: (typeof text)[Locale],
+  alive: () => boolean,
+  onModel: () => void,
+): { movers: Mover[]; target: THREE.Vector3 } {
   const g = new THREE.Group();
   scene.add(g);
+  const drawn: THREE.Object3D[] = [];
   const mm = (v: number) => v / 100;
   const r = mm(c.benchBore * 1000) / 2;
   const cap = mm(20);
 
   const shares = [50, 120, 200, 50];
   const colours = ["#8a8077", "#2b2523", "#d9c9a3", "#6b4a3a"];
+  const beside = (height: number) =>
+    new THREE.Vector3(Math.sin(CUT_FACING), 0, -Math.cos(CUT_FACING)).multiplyScalar(r + 0.25).setY(height);
   const tops: number[] = [];
   let y = cap;
   shares.forEach((share, i) => {
@@ -276,14 +382,16 @@ function buildColumn(scene: THREE.Scene, t: (typeof text)[Locale]): { movers: Mo
     );
     layer.position.y = y + h / 2;
     g.add(layer);
+    drawn.push(layer);
     const disc = new THREE.Mesh(
       new THREE.CylinderGeometry(r * 0.98, r * 0.98, 0.012, 48),
       new THREE.MeshStandardMaterial({ color: "#9b938e", wireframe: true }),
     );
     disc.position.y = y;
     g.add(disc);
-    const l = label(t.layers[i]);
-    l.position.set(r + 0.9, y + h / 2, 0);
+    drawn.push(disc);
+    const l = label(t.layers[i], false, true);
+    l.position.copy(beside(y + h / 2));
     g.add(l);
     y += h;
     tops.push(y);
@@ -297,8 +405,9 @@ function buildColumn(scene: THREE.Scene, t: (typeof text)[Locale]): { movers: Mo
   );
   water.position.y = bedTop + charge / 2;
   g.add(water);
-  const chargeLabel = label(t.layers[4], true);
-  chargeLabel.position.set(r + 0.9, bedTop + charge / 2, 0);
+  drawn.push(water);
+  const chargeLabel = label(t.layers[4], true, true);
+  chargeLabel.position.copy(beside(bedTop + charge / 2));
   g.add(chargeLabel);
 
   const pipeTop = cap + mm(750);
@@ -323,8 +432,9 @@ function buildColumn(scene: THREE.Scene, t: (typeof text)[Locale]): { movers: Mo
   const valve = new THREE.Mesh(new THREE.BoxGeometry(0.22, 0.16, 0.16), new THREE.MeshStandardMaterial({ color: "#3a78b5" }));
   valve.position.y = -0.7;
   g.add(valve);
-  const valveLabel = label(t.layers[5]);
-  valveLabel.position.set(r + 0.9, -0.7, 0);
+  drawn.push(pipe, capMesh, hose, valve);
+  const valveLabel = label(t.layers[5], false, true);
+  valveLabel.position.copy(beside(-0.7));
   g.add(valveLabel);
 
   const grainGeo = new THREE.SphereGeometry(0.035, 8, 6);
@@ -334,16 +444,59 @@ function buildColumn(scene: THREE.Scene, t: (typeof text)[Locale]): { movers: Mo
   const sandTop = tops[2];
   const particles = Array.from({ length: 70 }, (_, i) => {
     const isSolid = i % 2 === 0;
-    const mesh = new THREE.Mesh(grainGeo, isSolid ? solid : dye);
+    const mesh: THREE.Mesh<THREE.BufferGeometry, THREE.Material> = new THREE.Mesh(grainGeo, isSolid ? solid : dye);
     const along = r * (0.12 + 0.76 * ((i * 0.618) % 1));
     if (i % 4 < 2) mesh.position.set(along, 0, 0.03);
     else mesh.position.set(0.03, 0, along);
     g.add(mesh);
     const stop = isSolid ? sandTop + mm(50) * ((i * 0.37) % 1) : -0.9;
-    return { mesh, isSolid, phase: i / 70, stop };
+    return { mesh, isSolid, phase: i / 70, stop, angle: CUT_FACING + (((i * 0.618) % 1) - 0.5) * 1.4 };
   });
 
-  const span = top - -0.9;
+  let outlet = -0.9;
+  let span = top - outlet;
+  let onAxisBelow = -Infinity;
+
+  const loader = new GLTFLoader();
+  Promise.all([loader.loadAsync(MODELS.column), loader.loadAsync(MODELS.particles)])
+    .then(([column, grains]) => {
+      if (!alive()) return;
+      column.scene.scale.setScalar(MODEL_SCALE);
+      column.scene.rotation.y = -CUT_FACING;
+      column.scene.position.y = cap;
+      g.add(column.scene);
+      drawn.forEach((o) => (o.visible = false));
+      valveLabel.position.y = cap + VALVE_CENTRE_M * MODEL_SCALE;
+
+      const shape = (name: string, size: number) => {
+        const source = grains.scene.getObjectByName(name);
+        if (!(source instanceof THREE.Mesh)) return null;
+        const geometry = source.geometry.clone();
+        geometry.computeBoundingBox();
+        const box = geometry.boundingBox as THREE.Box3;
+        geometry.translate(...box.getCenter(new THREE.Vector3()).negate().toArray());
+        geometry.scale(...Array(3).fill(size / Math.max(...box.getSize(new THREE.Vector3()).toArray())) as [number, number, number]);
+        return { geometry, material: source.material as THREE.Material };
+      };
+      const drop = shape("drop", 0.09);
+      const grain = shape("grain", 0.07);
+      const ring = r * 1.06;
+      const soil = new THREE.MeshStandardMaterial({ color: "#a0703f", roughness: 1 });
+      particles.forEach((p) => {
+        const look = p.isSolid ? grain : drop;
+        if (look) {
+          p.mesh.geometry = look.geometry;
+          p.mesh.material = p.isSolid ? soil : look.material;
+        }
+        p.mesh.position.set(ring * Math.cos(p.angle), 0, ring * Math.sin(p.angle));
+      });
+      outlet = cap + HOSE_END_M * MODEL_SCALE;
+      span = top - outlet;
+      onAxisBelow = cap;
+      onModel();
+    })
+    .catch(() => {});
+
   const movers: Mover[] = [
     {
       update(time, speed) {
@@ -356,6 +509,11 @@ function buildColumn(scene: THREE.Scene, t: (typeof text)[Locale]): { movers: Mo
           }
           if (p.isSolid && height < p.stop) height = p.stop;
           p.mesh.position.y = height;
+          if (height < onAxisBelow) p.mesh.position.set(0, height, 0);
+          else if (onAxisBelow > -Infinity) {
+            const ring = r * 1.06;
+            p.mesh.position.set(ring * Math.cos(p.angle), height, ring * Math.sin(p.angle));
+          }
         });
       },
     },
@@ -368,6 +526,7 @@ export function Model3D({ locale }: { locale: Locale }) {
   const mount = useRef<HTMLDivElement>(null);
   const [view, setView] = useState<View>("habitat");
   const [mars, setMars] = useState(true);
+  const [loaded, setLoaded] = useState<View | null>(null);
   const speed = useRef(gravityFactor);
   const zoom = useRef<(factor: number) => void>(() => {});
 
@@ -408,15 +567,26 @@ export function Model3D({ locale }: { locale: Locale }) {
       camera.position.copy(controls.target).add(offset.setLength(distance));
     };
 
+    let live = true;
     let movers: Mover[];
     if (view === "habitat") {
-      movers = buildHabitat(scene, t);
-      camera.position.set(0.3, 6.9, 7.1);
+      movers = buildHabitat(
+        scene,
+        t,
+        () => live,
+        () => setLoaded("habitat"),
+      );
+      camera.position.set(0.3, 8.3, 8.6);
       controls.target.set(0, 0, 0.2);
       controls.minDistance = 3;
       controls.maxDistance = 14;
     } else {
-      const built = buildColumn(scene, t);
+      const built = buildColumn(
+        scene,
+        t,
+        () => live,
+        () => setLoaded("column"),
+      );
       movers = built.movers;
       camera.position.set(8.2, 6.8, 9.6);
       controls.target.copy(built.target);
@@ -451,6 +621,7 @@ export function Model3D({ locale }: { locale: Locale }) {
     resize.observe(host);
 
     return () => {
+      live = false;
       cancelAnimationFrame(frame);
       resize.disconnect();
       controls.dispose();
@@ -458,7 +629,10 @@ export function Model3D({ locale }: { locale: Locale }) {
         if (obj instanceof THREE.Mesh || obj instanceof THREE.Line) {
           obj.geometry.dispose();
           const mats = Array.isArray(obj.material) ? obj.material : [obj.material];
-          mats.forEach((m) => m.dispose());
+          mats.forEach((m) => {
+            Object.values(m).forEach((v) => v instanceof THREE.Texture && v.dispose());
+            m.dispose();
+          });
         }
       });
       renderer.dispose();
@@ -537,6 +711,7 @@ export function Model3D({ locale }: { locale: Locale }) {
         <span className="normal-case tracking-normal">{t.hint}</span>
       </div>
       <p className="mt-3 text-sm text-muted">{view === "habitat" ? t.habitatNote : t.columnNote}</p>
+      {loaded === view ? <p className="mt-1 text-xs text-faint">{t.credit}</p> : null}
     </div>
   );
 }

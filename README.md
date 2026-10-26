@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./public/logo.svg" width="100" alt="Regolith Water Loop Logo">
+<img src="https://raw.githubusercontent.com/leonardosalasd/regolith-water-loop/main/public/logo.svg" width="100" alt="Regolith Water Loop Logo">
 
 # **Regolith Water Loop**
 
@@ -37,18 +37,18 @@ This repository holds the design, the bench build, and the code that measures wh
 
 | | |
 | --- | --- |
-| [docs/system.md](docs/system.md) | The three stages and how they depend on each other |
-| [docs/mars.md](docs/mars.md) | Mars conditions, sizing for six crew and habitat requirements |
-| [docs/method.md](docs/method.md) | How turbidity is measured from photographs |
-| [docs/protocol.md](docs/protocol.md) | Greywater recipe, grading, calibration and run procedure |
-| [docs/build.md](docs/build.md) | Build log with photographs and measured volumes |
-| [docs/results.md](docs/results.md) | First runs and what they show |
-| [docs/print/target-sheet.pdf](docs/print/target-sheet.pdf) | Printable checker target and white card for the rig |
-| [docs/drawings/](docs/drawings/) | Bench drawings RWL-001 and RWL-002, system schematics RWL-003 and RWL-004 |
-| [docs/references.md](docs/references.md) | Every source, checked against the claim it supports |
-| [GLOSSARY.md](GLOSSARY.md) | Terms used throughout |
+| [docs/system.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/system.md) | The three stages and how they depend on each other |
+| [docs/mars.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/mars.md) | Mars conditions, sizing for six crew and habitat requirements |
+| [docs/method.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/method.md) | How turbidity is measured from photographs |
+| [docs/protocol.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/protocol.md) | Greywater recipe, grading, calibration and run procedure |
+| [docs/build.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/build.md) | Build log with photographs and measured volumes |
+| [docs/results.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/results.md) | First runs and what they show |
+| [docs/print/target-sheet.pdf](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/print/target-sheet.pdf) | Printable checker target and white card for the rig |
+| [docs/drawings/](https://github.com/leonardosalasd/regolith-water-loop/tree/main/docs/drawings/) | Bench drawings RWL-001 and RWL-002, system schematics RWL-003 and RWL-004 |
+| [docs/references.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/references.md) | Every source, checked against the claim it supports |
+| [GLOSSARY.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/GLOSSARY.md) | Terms used throughout |
 
-Stage 2, the filtration column, is the stage built and tested on the bench; see [docs/results.md](docs/results.md). Stages 1 and 3 are supported by published work. Perchlorate salts are strong oxidisers and are not handled in this project.
+Stage 2, the filtration column, is the stage built and tested on the bench; see [docs/results.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/results.md). Stages 1 and 3 are supported by published work. Perchlorate salts are strong oxidisers and are not handled in this project.
 
 ---
 
@@ -79,7 +79,7 @@ rwl report --readings run.csv --calibration calibration.json \
 
 `report` flags any result outside the calibrated range instead of extrapolating it. The timed drain of a charge doubles as a falling-head test: `rwl permeability --seconds 45 --outlet-drop 0.30` gives the bed's hydraulic conductivity on Earth and at 0.37 g.
 
-Read [docs/method.md](docs/method.md) before shooting a session. The rig has to stay fixed or the series is void.
+Read [docs/method.md](https://github.com/leonardosalasd/regolith-water-loop/blob/main/docs/method.md) before shooting a session. The rig has to stay fixed or the series is void.
 
 ### Sizing
 
@@ -88,7 +88,7 @@ rwl size --crew 6 --base early --explain
 rwl cartridge --crew 6
 ```
 
-`size` covers greywater, filter area under Mars gravity, retort heat, char output and perchlorate, chloride and oxygen stoichiometry for a crew. `cartridge` splits one filter cartridge into what Mars supplies and what Earth does. `--explain` prints the formula and source behind every number, `--json` the raw values; each constant is also cited directly in [src/rwl/sizing.py](src/rwl/sizing.py).
+`size` covers greywater, filter area under Mars gravity, retort heat, char output and perchlorate, chloride and oxygen stoichiometry for a crew. `cartridge` splits one filter cartridge into what Mars supplies and what Earth does. `--explain` prints the formula and source behind every number, `--json` the raw values; each constant is also cited directly in [src/rwl/sizing.py](https://github.com/leonardosalasd/regolith-water-loop/blob/main/src/rwl/sizing.py).
 
 ### Development
 
@@ -101,7 +101,7 @@ pytest
 
 ## Documentation site
 
-A static site under [`site/`](site/), English at the root and Spanish under `/es/`. Besides the documentation it has three tools that run entirely in the browser:
+A static site under [`site/`](https://github.com/leonardosalasd/regolith-water-loop/tree/main/site/), English at the root and Spanish under `/es/`. Besides the documentation it has three tools that run entirely in the browser:
 
 - [Sizing simulator](https://rwl.leonardosalas.dev/docs/simulator/): the `rwl size` model, live, from the same constants
 - [Measure in the browser](https://rwl.leonardosalas.dev/docs/measure/): the photographic method from photos or a live camera, with files interchangeable with the CLI
@@ -118,7 +118,7 @@ pnpm --dir site build # static export into site/out/
 ## Building the PDF
 
 The whole technical document is assembled from these Markdown files and the SVG drawings with [doc-engine-cli](https://github.com/leonardosalasd/doc-engine-cli).
-[`doc-engine.md`](doc-engine.md) is the manifest.
+[`doc-engine.md`](https://github.com/leonardosalasd/regolith-water-loop/blob/main/doc-engine.md) is the manifest.
 
 ```bash
 pipx install doc-engine-cli
@@ -143,7 +143,7 @@ Share the link directly or scan the code:
 
 <div align="center">
 
-<img src="./public/qr/qr2_bg_black.png" width="260" alt="QR code linking to the project">
+<img src="https://raw.githubusercontent.com/leonardosalasd/regolith-water-loop/main/public/qr/qr2_bg_black.png" width="260" alt="QR code linking to the project">
 
 </div>
 
@@ -160,5 +160,6 @@ funds the parts, the materials and the time that go into documenting it properly
 
 Licensing is split by what you are using:
 
-* **Source code** — [MIT](./LICENSE). Use, modify and build on it freely.
-* **Documentation, guides and media** — [CC BY 4.0](./LICENSE-DOCS). Share and adapt with credit.
+* **Source code** — [MIT](https://github.com/leonardosalasd/regolith-water-loop/blob/main/LICENSE). Use, modify and build on it freely.
+* **Documentation, guides and media** — [CC BY 4.0](https://github.com/leonardosalasd/regolith-water-loop/blob/main/LICENSE-DOCS). Share and adapt with credit.
+* **3D models** in [`site/public/models/`](https://github.com/leonardosalasd/regolith-water-loop/tree/main/site/public/models/) — [CC BY-NC-ND 4.0](https://github.com/leonardosalasd/regolith-water-loop/blob/main/site/public/models/LICENSE.md). Share unchanged with credit; no modifications, no commercial use. Textures excluded, see the notice.
