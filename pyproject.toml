@@ -7,10 +7,19 @@ requires-python = ">=3.10"
 license = { file = "LICENSE" }
 authors = [{ name = "Leonardo Salas", email = "leonardo.salas01@outlook.com" }]
 dependencies = ["numpy>=1.24", "pillow>=10.0", "rich>=13.0"]
+keywords = ["turbidity", "water treatment", "filtration", "biochar", "regolith", "open hardware"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Scientific/Engineering",
+  "Environment :: Console",
+]
 
 [project.urls]
 Homepage = "https://rwl.leonardosalas.dev"
 Repository = "https://github.com/leonardosalasd/regolith-water-loop"
+Documentation = "https://rwl.leonardosalas.dev/docs/"
 
 [project.scripts]
 rwl = "rwl.cli:main"
