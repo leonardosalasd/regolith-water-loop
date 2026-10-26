@@ -1,28 +1,33 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import { Archivo, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import { authorName, repoUrl, siteUrl } from "@/lib/i18n";
 import "./globals.css";
 
-const display = Archivo({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
+// Self-hosted (SIL OFL, licences in app/fonts) so the build never depends on fetching Google Fonts.
+const display = localFont({
+  src: "./fonts/archivo.woff2",
+  weight: "500 700",
   variable: "--font-archivo",
   display: "swap",
 });
 
-const body = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
+const body = localFont({
+  src: "./fonts/ibm-plex-sans.woff2",
+  weight: "400 600",
   variable: "--font-plex-sans",
   display: "swap",
 });
 
-const mono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
+const mono = localFont({
+  src: [
+    { path: "./fonts/ibm-plex-mono-400.woff2", weight: "400" },
+    { path: "./fonts/ibm-plex-mono-500.woff2", weight: "500" },
+  ],
   variable: "--font-plex-mono",
   display: "swap",
+  fallback: ["ui-monospace", "monospace"],
+  adjustFontFallback: false,
 });
 
 const description =
