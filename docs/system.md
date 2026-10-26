@@ -18,7 +18,7 @@ Mission-scale sizing and habitat requirements are in [mars.md](mars.md). Sources
 
 ## Three stages
 
-Ordered by physical position, top to bottom.
+Numbered as in RWL-003 and RWL-004.
 
 ### Stage 1 — Bioremediation
 
@@ -62,15 +62,15 @@ Stage 3 supplies two things Stage 1 cannot operate without on Mars:
 
 Remove Stage 3 and Stage 1 loses its heat and, eventually, its donor. Remove Stage 1 and the regolith stays toxic and cannot serve as filter medium.
 
-## Open design question
+## Layout
 
-With the stages stacked as above, gravity helps twice and hinders once:
+Stacked vertically, gravity would help twice and hinder once:
 
 - Treated regolith falls from Stage 1 into Stage 2 ✓
 - Water percolates down through Stage 2 ✓
 - Biochar has to travel up from Stage 3 into Stage 2 ✗
 
-Options under consideration: move the furnace alongside rather than below; treat biochar as a periodic manual recharge rather than a continuous flow; or invert the stack and accept a heat transfer path instead of convection.
+RWL-004 does not stack them. The retort sits alongside the bioreactor and shares a sealed bulkhead with it, so heat reaches the jacket by conduction instead of convection, and char reaches Stage 2 as a refill step when cartridges are filled. How much retort heat crosses that bulkhead is still open ([mars.md](mars.md#open-questions)).
 
 ## Bench analogues
 

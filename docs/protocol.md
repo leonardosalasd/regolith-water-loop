@@ -16,7 +16,7 @@ Stock, 5 litres. Enough for a calibration series and three column charges.
 | Component | Quantity | Purpose |
 | --- | --- | --- |
 | Tap water | 5 L | — |
-| Fine soil, sieved through the #100 mesh | 15 g | suspended solids |
+| Fine soil, through the finest sieve to hand | 15 g | suspended solids |
 | Neutral liquid soap | 5 ml | surfactant load |
 | Blue food colouring | 10 drops | adsorption tracer |
 
@@ -28,8 +28,8 @@ Write down whatever you end up with. The absolute values do not matter, repeatab
 
 ## Before the first run
 
-1. Grade the scoria. Keep a fine and a coarse fraction, weigh both, record the
-   yield from the raw mass. See [grading](#grading-the-scoria) below.
+1. Grade the scoria. Keep a fine and a coarse fraction, measure the volume of
+   both, record the yield from the raw scoria. See [grading](#grading-the-scoria) below.
 2. Prepare the charcoal and leave it to soak overnight. See
    [preparing the charcoal](#preparing-the-charcoal) below.
 3. Load the column bottom up per RWL-001. Level each layer, insect mesh disc between layers.
@@ -105,9 +105,9 @@ R² below 0.9 means the light drifted. Reshoot the series; do not continue.
 ## The run
 
 1. Stir the stock. Fill the jar, photograph it as `influent`.
-2. Close the valve. Pour 884 ml of stock into the column.
+2. Close the valve. Pour 750 ml of stock into the column, the 200 mm charge of RWL-001.
 3. Open the valve and start the timer.
-4. Collect the effluent in the graduated cylinder. Record the time to pass 500 ml — that is the flow rate.
+4. Collect the effluent in the measuring jug. Record the time to pass 500 ml — that is the flow rate.
 5. Fill the jar from the effluent, photograph as `charge1`.
 6. Repeat steps 2–5 for `charge2` and `charge3`, stirring the stock each time.
 7. Process:
@@ -140,8 +140,8 @@ rwl permeability --series level.csv --outlet-drop 0.30
 
 Written down at the time, not reconstructed later.
 
-- Mass of each medium as placed, and the graded yield from the raw scoria
-- D10 and uniformity coefficient of the fine fraction
+- Depth and volume of each medium as placed, and the graded yield from the raw scoria
+- The grading method and its measured aperture or settling times
 - The greywater recipe actually used
 - Flow rate per charge, and the outlet drop below the bed
 - Removal percentage per charge

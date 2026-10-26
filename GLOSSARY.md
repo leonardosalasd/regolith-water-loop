@@ -20,7 +20,7 @@ Words and their meanings to help you understand the documentation more easily!
 | **Biochar** | A stable, carbon-rich charcoal produced through the pyrolysis process. | Biochar is the second layer of the filter column. |
 | **Greywater** | Used water from washing and hygiene, without toilet waste. | Six crew produce 33.2 L of hygiene greywater a day at an early base. |
 | **Pre-treatment** | A stage that lightens the load on the main treatment, without making water potable. | The column removes suspended solids before the main water processor. |
-| **Cartridge** | A sealed, swappable filter module the size of the bench column. | A six-person base runs two to eight cartridges in parallel. |
+| **Cartridge** | A sealed, swappable filter module the size of the bench column. | A six-person base runs three to ten cartridges in parallel. |
 | **Darcy's law** | Flow through a porous bed is proportional to its hydraulic conductivity and the hydraulic gradient. | Conductivity scales with gravity, so at 0.37 g a bed passes 37.7 % of its Earth flow. |
 | **Hydraulic head** | The height of water driving flow through the bed. | Matching Earth flow on Mars by head alone needs 1.22 m of water instead of 0.20 m. |
 | **Turbidity** | Cloudiness of water caused by suspended particles. | Turbidity is measured here relative to the influent, never in NTU. |

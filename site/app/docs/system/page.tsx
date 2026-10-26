@@ -58,7 +58,7 @@ export default function SystemPage() {
             ["Coarse regolith", "50 mm", "distributes flow, prevents channelling"],
             ["Fine regolith", "200 mm", "retains suspended solids"],
             ["Biochar", "120 mm", "adsorbs metals and dissolved organics"],
-            ["Support gravel", "50 mm", "drainage"],
+            ["Support regolith", "50 mm", "drainage"],
           ]}
         />
         <p>
@@ -98,8 +98,8 @@ export default function SystemPage() {
         </p>
       </Section>
 
-      <Section id="open-question" title="Open design question">
-        <p>With the stages stacked, gravity helps twice and hinders once:</p>
+      <Section id="layout" title="Layout">
+        <p>Stacked vertically, gravity would help twice and hinder once:</p>
         <ul className="ml-5 list-disc space-y-1.5 marker:text-faint">
           <li>Treated regolith falls from Stage 1 into Stage 2</li>
           <li>Water percolates down through Stage 2</li>
@@ -108,10 +108,11 @@ export default function SystemPage() {
           </li>
         </ul>
         <p>
-          Options under consideration: move the furnace alongside rather than
-          below; treat biochar as a periodic manual recharge rather than a
-          continuous flow; or invert the stack and accept a conductive heat path
-          instead of convection. Unresolved, and documented as unresolved.
+          RWL-004 does not stack them. The retort sits alongside the bioreactor
+          and shares a sealed bulkhead with it, so heat reaches the jacket by
+          conduction instead of convection, and char reaches Stage 2 as a refill
+          step when cartridges are filled. How much retort heat crosses that
+          bulkhead is still open.
         </p>
       </Section>
 

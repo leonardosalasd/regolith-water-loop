@@ -46,8 +46,8 @@ export default function Page() {
           regolito y dejan cloruro inerte. Un horno sin oxígeno convierte los
           residuos de la tripulación en biochar. El regolito ya limpio y ese
           biochar se acomodan por capas en una columna, y las aguas grises
-          percolan hacia abajo, llegando a la ósmosis inversa mucho más limpias
-          de lo que salieron.
+          percolan hacia abajo, llegando a la ósmosis inversa con menos sólidos
+          suspendidos.
         </p>
         <p>
           Lo que amarra todo: el horno trabaja cerca de 500 °C y las bacterias se

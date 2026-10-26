@@ -10,7 +10,7 @@ pool supply shop. No laboratory equipment is required.
 | PVC pipe, 3 in | 750 mm | hardware store |
 | PVC end cap, 3 in | 1 | hardware store |
 | Volcanic scoria (lava rock), raw | 3 kg | garden centre |
-| Fine silica sand, aquarium grade | ~1.3 kg | aquarium or pet shop |
+| Fine silica sand, aquarium grade | ~1.1 kg | aquarium or pet shop |
 | Lump charcoal, not briquettes | ~0.65 L crushed | any grocery store |
 | Transparent hose, ½ in | 1 m | hardware store |
 | Plastic ball valve, ½ in | 1 | hardware store |

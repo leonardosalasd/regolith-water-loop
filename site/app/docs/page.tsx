@@ -44,7 +44,7 @@ export default function Home() {
           regolith and leave inert chloride. An oxygen-free furnace chars the
           crew&apos;s waste into biochar. The cleaned regolith and that biochar are
           layered into a column, and greywater percolates down through it,
-          reaching the reverse osmosis unit far cleaner than it left.
+          reaching the reverse osmosis unit with less suspended load.
         </p>
         <p>
           What ties it together: the furnace runs near 500 °C, and the bacteria

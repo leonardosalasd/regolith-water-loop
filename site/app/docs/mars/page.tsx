@@ -70,7 +70,7 @@ rwl size --crew 6 --base early --explain`}</Code>
             ["Continuous flow", "1.38 L/h", "2.54 L/h"],
             ["Filter area, Earth g", "0.0035–0.014 m²", "0.0064–0.025 m²"],
             ["Filter area, Mars g", "0.009–0.037 m²", "0.017–0.067 m²"],
-            ["Bench-size columns, Mars g", "2–8", "4–15"],
+            ["Bench-size columns, Mars g", "2.5–9.8", "4.5–18.0"],
             ["Bed volume, Mars g", "4–15 L", "7–28 L"],
             ["Trash", "8.3 kg/day", "8.3 kg/day"],
             ["Char, dry basis", "0.82 kg/day", "0.82 kg/day"],
@@ -84,8 +84,9 @@ rwl size --crew 6 --base early --explain`}</Code>
           pyrolysis leaves 25 % of its dry mass as char.
         </p>
         <p>
-          The filter is small. A six-person base needs two to eight columns the
-          size of the bench build, in parallel. That argues for modules:
+          The filter is small. A six-person base needs the area of 2.5 to 9.8
+          columns the size of the bench build, so three to ten of them in
+          parallel. That argues for modules:
           identical sealed cartridges swapped when spent, instead of one large bed
           dug out by hand.
         </p>
@@ -181,11 +182,11 @@ rwl size --crew 6 --base early --explain`}</Code>
           head={["Item", "Amount", "Comes from"]}
           mono={[1]}
           rows={[
-            ["Treated regolith", "1.73 kg", "Mars, Stage 1"],
-            ["Char", "0.16 kg", "Mars, Stage 3; a day of trash makes enough for 5–6 cartridges"],
-            ["Acetate to detoxify the regolith", "4.1–10.3 g", "Earth, until a waste-derived donor works"],
+            ["Treated regolith", "1.46 kg", "Mars, Stage 1"],
+            ["Char", "0.14 kg", "Mars, Stage 3; a day of trash makes enough for 6–7 cartridges"],
+            ["Acetate to detoxify the regolith", "3.5–8.7 g", "Earth, until a waste-derived donor works"],
             ["Cartridge shell", "1", "Earth, refilled on site"],
-            ["Chloride left to rinse", "2.5–6.2 g", "Brine processor"],
+            ["Chloride left to rinse", "2.1–5.2 g", "Brine processor"],
           ]}
         />
         <p>
@@ -208,7 +209,8 @@ rwl size --crew 6 --base early --explain`}</Code>
         </p>
         <p>
           <strong>Stage 2, filter modules.</strong> Sealed cartridges with the
-          RWL-001 layering, in parallel under gravity. Effluent goes to the main
+          RWL-001 layering, filled by an automated station in the dirty zone,
+          in parallel under gravity. Effluent goes to the main
           water processor, never straight to the crew.
         </p>
         <p>
@@ -248,6 +250,8 @@ rwl size --crew 6 --base early --explain`}</Code>
           <li>Whether the pyrolysis liquid can serve as electron donor</li>
           <li>The rinse volume that gets chloride out of the regolith pores, which is not measured</li>
           <li>Filtration with real Martian fines at 0.37 g, which is modelled, not measured</li>
+          <li>How regolith and char move between units: sealed containers or a screw conveyor, not designed</li>
+          <li>How crew reach the dirty zone for hands-on work without breaking containment</li>
         </ul>
       </Section>
     </>

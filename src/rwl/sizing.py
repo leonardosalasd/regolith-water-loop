@@ -31,11 +31,12 @@ PERCHLORATE_FRACTION = (0.004, 0.01)
 # US EPA secondary drinking water standard for chloride [mg/L]
 CHLORIDE_LIMIT = 250.0
 
-# RWL-001: bench column bore, bed depth, standing charge above the bed, and media schedule [kg]
-BENCH_BORE_M = 0.075
+# RWL-001: bench column bore (75 mm outside, 3 mm wall), bed depth, standing charge above the bed,
+# and media schedule [kg], indicative from the layer volumes
+BENCH_BORE_M = 0.069
 BED_DEPTH_M = 0.42
 CHARGE_DEPTH_M = 0.20
-BENCH_MEDIA = {"support scoria": 0.200, "charcoal": 0.160, "fine sand": 1.330, "coarse scoria": 0.200}
+BENCH_MEDIA = {"support scoria": 0.169, "charcoal": 0.135, "fine sand": 1.126, "coarse scoria": 0.169}
 CHAR_MEDIA = ("charcoal",)
 
 MOLAR_MASS = {"ClO4": 99.45, "O2": 32.00, "acetate": 59.04, "Cl": 35.45}

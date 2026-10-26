@@ -2,7 +2,7 @@
 
 # Turbidity measurement
 
-The column is evaluated by how much suspended load it removes. This project measures that from photographs instead of an electronic probe: a phone camera is available, calibrated, and costs nothing, while a nephelometer is not.
+The column is evaluated by how much suspended load it removes. This project measures that from photographs instead of an electronic probe: a phone camera is available and costs nothing, while a nephelometer is not.
 
 The reading is **relative**, not NTU. Every result is expressed as a percentage of the influent, which is the number that matters for a pre-treatment stage.
 
@@ -19,6 +19,8 @@ A white card in the same frame cancels exposure and white balance differences be
 ```bash
 pipx install rwl
 ```
+
+Or skip the install: the same measurement runs in the browser, from photographs or a live camera, at [rwl.leonardosalas.dev/docs/measure](https://rwl.leonardosalas.dev/docs/measure/).
 
 ## Rig
 

@@ -8,7 +8,7 @@ export default function MaterialsPage() {
     <>
       <PageHeader
         title="Materials"
-        lede="Everything here was chosen to be buyable in an ordinary Mexican hardware store, aquarium shop or garden centre. No laboratory equipment is required."
+        lede="Everything here was chosen to be buyable in an ordinary hardware store, aquarium shop or garden centre. No laboratory equipment is required."
       />
 
       <Section title="Column">
@@ -18,11 +18,11 @@ export default function MaterialsPage() {
           rows={[
             ["PVC pipe, 3 in", "750 mm", "hardware store"],
             ["Volcanic scoria (lava rock), raw", "3 kg", "garden centre"],
-            ["Fine silica sand, aquarium grade", "~1.3 kg", "aquarium or pet shop"],
+            ["Fine silica sand, aquarium grade", "~1.1 kg", "aquarium or pet shop"],
             ["Lump charcoal, not briquettes", "~0.65 L crushed", "any grocery store"],
             ["PVC end cap, 3 in", "1", "hardware store"],
             ["Transparent hose, ½ in", "1 m", "hardware store"],
-            ["Plastic stopcock, ½ in", "1", "hardware store"],
+            ["Plastic ball valve, ½ in", "1", "hardware store"],
             ["Plastic insect mesh", "30 × 30 cm", "hardware store"],
             ["Two-part epoxy", "1", "hardware store"],
           ]}

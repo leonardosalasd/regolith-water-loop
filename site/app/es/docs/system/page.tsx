@@ -58,7 +58,7 @@ export default function Page() {
             ["Regolito grueso", "50 mm", "reparte el flujo, evita canalización"],
             ["Regolito fino", "200 mm", "retiene sólidos en suspensión"],
             ["Biochar", "120 mm", "adsorbe metales y orgánicos disueltos"],
-            ["Grava de soporte", "50 mm", "drenaje"],
+            ["Regolito de soporte", "50 mm", "drenaje"],
           ]}
         />
         <p>
@@ -102,8 +102,8 @@ export default function Page() {
         </p>
       </Section>
 
-      <Section id="pregunta-abierta" title="Pregunta de diseño abierta">
-        <p>Con las etapas apiladas, la gravedad ayuda dos veces y estorba una:</p>
+      <Section id="distribucion" title="Distribución">
+        <p>Apiladas en vertical, la gravedad ayudaría dos veces y estorbaría una:</p>
         <ul className="ml-5 list-disc space-y-1.5 marker:text-faint">
           <li>El regolito tratado cae de la etapa 1 a la etapa 2</li>
           <li>El agua percola hacia abajo por la etapa 2</li>
@@ -112,10 +112,11 @@ export default function Page() {
           </li>
         </ul>
         <p>
-          Opciones en consideración: mover el horno a un costado en vez de abajo;
-          tratar el biochar como recarga manual periódica en vez de flujo
-          continuo; o invertir la pila y aceptar una ruta de calor por conducción
-          en lugar de convección. Sin resolver, y documentado como sin resolver.
+          RWL-004 no las apila. La retorta va a un costado del biorreactor y
+          comparte con él un mamparo sellado, así que el calor llega a la chaqueta
+          por conducción y no por convección, y el carbón llega a la etapa 2 como
+          recarga al llenar los cartuchos. Cuánto calor de la retorta cruza ese
+          mamparo sigue abierto.
         </p>
       </Section>
 

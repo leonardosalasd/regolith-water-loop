@@ -70,7 +70,7 @@ rwl size --crew 6 --base early --explain`}</Code>
             ["Flujo continuo", "1.38 L/h", "2.54 L/h"],
             ["Área de filtro, g Tierra", "0.0035–0.014 m²", "0.0064–0.025 m²"],
             ["Área de filtro, g Marte", "0.009–0.037 m²", "0.017–0.067 m²"],
-            ["Columnas tamaño banco, g Marte", "2–8", "4–15"],
+            ["Columnas tamaño banco, g Marte", "2.5–9.8", "4.5–18.0"],
             ["Volumen de lecho, g Marte", "4–15 L", "7–28 L"],
             ["Basura", "8.3 kg/día", "8.3 kg/día"],
             ["Carbón, base seca", "0.82 kg/día", "0.82 kg/día"],
@@ -85,8 +85,9 @@ rwl size --crew 6 --base early --explain`}</Code>
           su masa seca.
         </p>
         <p>
-          El filtro es chico. Una base de seis personas necesita de dos a ocho
-          columnas del tamaño de la de banco, en paralelo. Eso apunta a módulos:
+          El filtro es chico. Una base de seis personas necesita el área de 2.5 a
+          9.8 columnas del tamaño de la de banco, o sea de tres a diez en
+          paralelo. Eso apunta a módulos:
           cartuchos sellados iguales que se cambian al gastarse, en vez de un
           lecho grande que hay que sacar a mano.
         </p>
@@ -185,11 +186,11 @@ rwl size --crew 6 --base early --explain`}</Code>
           head={["Concepto", "Cantidad", "Sale de"]}
           mono={[1]}
           rows={[
-            ["Regolito tratado", "1.73 kg", "Marte, etapa 1"],
-            ["Carbón", "0.16 kg", "Marte, etapa 3; un día de basura alcanza para 5–6 cartuchos"],
-            ["Acetato para destoxificar el regolito", "4.1–10.3 g", "Tierra, hasta que funcione un donador de los residuos"],
+            ["Regolito tratado", "1.46 kg", "Marte, etapa 1"],
+            ["Carbón", "0.14 kg", "Marte, etapa 3; un día de basura alcanza para 6–7 cartuchos"],
+            ["Acetato para destoxificar el regolito", "3.5–8.7 g", "Tierra, hasta que funcione un donador de los residuos"],
             ["Carcasa del cartucho", "1", "Tierra, se rellena en sitio"],
-            ["Cloruro a enjuagar", "2.5–6.2 g", "Procesador de salmuera"],
+            ["Cloruro a enjuagar", "2.1–5.2 g", "Procesador de salmuera"],
           ]}
         />
         <p>
@@ -212,7 +213,8 @@ rwl size --crew 6 --base early --explain`}</Code>
         </p>
         <p>
           <strong>Etapa 2, módulos de filtro.</strong> Cartuchos sellados con las
-          capas de RWL-001, en paralelo y por gravedad. El efluente va al
+          capas de RWL-001, llenados por una estación automática en la zona
+          sucia, en paralelo y por gravedad. El efluente va al
           procesador principal de agua, nunca directo a la tripulación.
         </p>
         <p>
@@ -252,6 +254,8 @@ rwl size --crew 6 --base early --explain`}</Code>
           <li>Si el líquido de la pirólisis puede servir como donador de electrones</li>
           <li>El volumen de enjuague que saca el cloruro de los poros del regolito, que no está medido</li>
           <li>La filtración con finos marcianos reales a 0.37 g, que está modelada, no medida</li>
+          <li>Cómo se mueven el regolito y el carbón entre equipos: contenedores sellados o un transportador de tornillo, sin diseñar</li>
+          <li>Cómo entra la tripulación a la zona sucia para trabajo manual sin romper la contención</li>
         </ul>
       </Section>
     </>

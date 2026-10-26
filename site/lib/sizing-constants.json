@@ -36,14 +36,14 @@
     0.01
   ],
   "chlorideLimit": 250.0,
-  "benchBore": 0.075,
+  "benchBore": 0.069,
   "bedDepth": 0.42,
   "chargeDepth": 0.2,
   "benchMedia": {
-    "support scoria": 0.2,
-    "charcoal": 0.16,
-    "fine sand": 1.33,
-    "coarse scoria": 0.2
+    "support scoria": 0.169,
+    "charcoal": 0.135,
+    "fine sand": 1.126,
+    "coarse scoria": 0.169
   },
   "charMedia": [
     "charcoal"

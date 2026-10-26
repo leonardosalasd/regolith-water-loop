@@ -34,13 +34,13 @@ rwl size --crew 6 --base early --explain
 | Continuous flow | 1.38 L/h | 2.54 L/h | |
 | Filter area, Earth gravity | 0.0035–0.014 m² | 0.0064–0.025 m² | 0.1–0.4 m/h, Emergency WASH |
 | Filter area, Mars gravity, same head | 0.009–0.037 m² | 0.017–0.067 m² | Area ÷ 0.377 |
-| Bench-size columns (Ø 75 mm), Mars | 2–8 | 4–15 | RWL-001 bore |
+| Bench-size columns (69 mm bore), Mars | 2.5–9.8 | 4.5–18.0 | RWL-001 bore |
 | Bed volume, Mars | 4–15 L | 7–28 L | 420 mm bed, RWL-001 |
 | Trash | 8.3 kg/day | 8.3 kg/day | BVAD Table 4-29, 1.39 kg per crew per day |
 | Char, dry basis | 0.82 kg/day | 0.82 kg/day | Food and paper 47.5 % of trash, less its moisture (Table 4-28), × 25 % char yield (Penn State) |
 | Retort heat | 5.0–7.6 MJ/day | 5.0–7.6 MJ/day | See below |
 
-The filter is small. A six-person base needs two to eight columns the size of the bench build, run in parallel. That is the case for modules: identical sealed cartridges that are swapped when spent, instead of one large bed that has to be dug out.
+The filter is small. A six-person base needs the area of 2.5 to 9.8 columns the size of the bench build, so three to ten of them run in parallel. That is the case for modules: identical sealed cartridges that are swapped when spent, instead of one large bed that has to be dug out.
 
 ## Gravity: area or head
 
@@ -98,11 +98,11 @@ One bench-size cartridge, taking the RWL-001 media schedule and counting every m
 
 | Item | Amount | Comes from |
 | --- | --- | --- |
-| Treated regolith | 1.73 kg | Mars, Stage 1 |
-| Char | 0.16 kg | Mars, Stage 3; one day of trash makes enough for 5–6 cartridges |
-| Acetate to detoxify the regolith | 4.1–10.3 g | Earth, until a waste-derived donor works |
+| Treated regolith | 1.46 kg | Mars, Stage 1 |
+| Char | 0.14 kg | Mars, Stage 3; one day of trash makes enough for 6–7 cartridges |
+| Acetate to detoxify the regolith | 3.5–8.7 g | Earth, until a waste-derived donor works |
 | Cartridge shell | 1 | Earth, refilled on site |
-| Chloride left to rinse | 2.5–6.2 g | Goes to the brine processor |
+| Chloride left to rinse | 2.1–5.2 g | Goes to the brine processor |
 
 The acetate is the stoichiometric minimum; bacteria also spend some donor on growth, so the real figure is higher. For scale: the ISS Water Processor Assembly relies on expendable multifiltration beds that need about 472 kg of resupply a year (BVAD, section 4.3.3). This design does not replace those beds and does not claim to extend their life by any measured amount. Its own media, by mass, is made on Mars.
 
@@ -110,7 +110,7 @@ The acetate is the stoichiometric minimum; bacteria also spend some donor on gro
 
 **Stage 1 — bioreactor.** A closed, heated, anaerobic vessel. Regolith is treated in batches. The perchlorate-reducing strains *Azospira suillum* PS (Mehta-Kolte 2017) and *Dechloromonas aromatica* RCB (Salinero 2009) use the pathway through perchlorate reductase and chlorite dismutase (Coates 2004). The electron donor is supplied as acetate or lactate until a waste-derived donor is shown to work. Treated regolith is rinsed of chloride before it leaves.
 
-**Stage 2 — filter modules.** Sealed cartridges of the RWL-001 layering, filled with treated regolith and char, run in parallel under gravity. Effluent goes to the habitat's main water processor, not to the crew. The bench build demonstrates this stage.
+**Stage 2 — filter modules.** Sealed cartridges of the RWL-001 layering, filled with treated regolith and char by an automated station in the dirty zone, run in parallel under gravity. Effluent goes to the habitat's main water processor, not to the crew. The bench build demonstrates this stage.
 
 **Stage 3 — pyrolysis.** A closed retort for food and paper waste. Char goes to Stage 2 as sorbent (Ahmad 2014). Off-gas is scrubbed before it reaches cabin air. Retort heat keeps the Stage 1 jacket warm.
 
@@ -138,3 +138,5 @@ From NASA-STD-3001 Volume 2, Revision E.
 - **Char transport.** Char is made in Stage 3 and used in Stage 2. With cartridges this becomes a refill step, not a continuous flow.
 - **Chloride rinse.** The chloride mass is known; the rinse volume that gets it out of the regolith pores is not measured.
 - **Real regolith.** Scoria is a basaltic analogue. Filtration behaviour with Martian fines, and under 0.37 g, is modelled, not measured.
+- **Moving solids.** Regolith and char cannot flow sideways between units by gravity. Sealed containers or a screw conveyor would carry them; neither is designed.
+- **Access to the dirty zone.** The glovebox and the fill station need occasional hands-on work, and how crew reach the dirty zone without breaking containment is not designed.

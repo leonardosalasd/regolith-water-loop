@@ -37,7 +37,7 @@ export default function DrawingsPage() {
         <Sheet
           src="/drawings/column-section.svg"
           alt="Vertical section of the filtration column showing four media layers with dimensions"
-          drawing="RWL-001 REV E"
+          drawing="RWL-001 REV F"
           caption="Fill by depth, not by mass. Layer depths are the specification; masses depend on the bore of the pipe actually used."
         />
       </Section>
@@ -65,7 +65,7 @@ export default function DrawingsPage() {
         <Sheet
           src="/drawings/process-flow.svg"
           alt="Process flow diagram linking the bioreactor, filter modules, pyrolysis retort, main water processor and crew"
-          drawing="RWL-003 REV B"
+          drawing="RWL-003 REV C"
           caption="Grey dashed streams are proposed, not demonstrated. The oxygen from Stage 1 is not drawn as a product because the bacteria respire it."
         />
       </Section>
@@ -78,7 +78,7 @@ export default function DrawingsPage() {
         <Sheet
           src="/drawings/habitat-integration.svg"
           alt="Plan schematic of a habitat module split into dirty, service, wet and crew zones"
-          drawing="RWL-004 REV A"
+          drawing="RWL-004 REV B"
           caption="The retort and the bioreactor share the bulkhead so the retort's heat reaches the reactor jacket. Zone sizes are not derived."
         />
       </Section>

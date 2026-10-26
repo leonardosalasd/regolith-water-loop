@@ -69,7 +69,7 @@ export default function Page() {
       <Section title="Separadores de capa">
         <p>
           Cinco discos cortados de malla mosquitera de plástico: uno debajo de la
-          capa de soporte y uno entre cada par de capas.
+          capa de soporte, uno entre cada par de capas y uno encima del lecho.
         </p>
         <Photo
           src="/build/03-mesh-discs.webp"
@@ -144,7 +144,7 @@ export default function Page() {
         <p>
           La capa 3 usa en su lugar arena sílica fina para acuario. El cuarzo no se
           deshace en finos como el carbonato y no cambia la química del agua. Una
-          bolsa de 3 kg cubre los ≈ 1.3 kg que pide la capa y deja para volver a
+          bolsa de 3 kg cubre los ≈ 1.1 kg que pide la capa y deja para volver a
           cargarla.
         </p>
         <p>Se enjuagó en un bote hasta que el agua salió clara.</p>

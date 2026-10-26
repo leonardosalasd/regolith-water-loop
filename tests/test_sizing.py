@@ -119,9 +119,9 @@ def test_mars_head_restores_earth_flux():
 
 def test_cartridge_mass_balance():
     part = sizing.cartridge(6, "early")
-    assert part.regolith_kg == pytest.approx(1.73)
-    assert part.char_kg == pytest.approx(0.16)
-    assert part.perchlorate_g == pytest.approx((6.92, 17.3))
+    assert part.regolith_kg == pytest.approx(1.464)
+    assert part.char_kg == pytest.approx(0.135)
+    assert part.perchlorate_g == pytest.approx((5.856, 14.64))
     assert part.per_day_of_char[0] < part.per_day_of_char[1]
 
 

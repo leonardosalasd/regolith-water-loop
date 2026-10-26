@@ -26,11 +26,11 @@ export default function Page() {
           rows={[
             ["Tubo de PVC, 3 pulg", "750 mm", "ferretería"],
             ["Escoria volcánica en bruto", "3 kg", "vivero"],
-            ["Arena sílica fina para acuario", "~1.3 kg", "tienda de acuarios o mascotas"],
+            ["Arena sílica fina para acuario", "~1.1 kg", "tienda de acuarios o mascotas"],
             ["Carbón vegetal en trozos, no briquetas", "~0.65 L machacado", "cualquier tienda"],
             ["Tapa de PVC, 3 pulg", "1", "ferretería"],
             ["Manguera transparente, ½ pulg", "1 m", "ferretería"],
-            ["Llave de paso de plástico, ½ pulg", "1", "ferretería"],
+            ["Válvula de esfera de plástico, ½ pulg", "1", "ferretería"],
             ["Malla mosquitera de plástico", "30 × 30 cm", "ferretería"],
             ["Epóxico de dos componentes", "1", "ferretería"],
           ]}

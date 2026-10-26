@@ -170,7 +170,7 @@ export default function Page() {
             },
             {
               title: "Carga la columna",
-              body: <p>Cierra la válvula y vierte 884 ml del patrón por arriba.</p>,
+              body: <p>Cierra la válvula y vierte 750 ml del patrón por arriba.</p>,
             },
             {
               title: "Abre la válvula y arranca el cronómetro",

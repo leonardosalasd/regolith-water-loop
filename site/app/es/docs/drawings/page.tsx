@@ -37,7 +37,7 @@ export default function Page() {
         <Sheet
           src="/drawings/column-section.svg"
           alt="Corte vertical de la columna de filtración con cuatro capas y cotas"
-          drawing="RWL-001 REV E"
+          drawing="RWL-001 REV F"
           label="ver en grande"
           caption="Llena por espesor, no por masa. Los espesores son la especificación; las masas dependen del diámetro del tubo que realmente se use."
         />
@@ -69,7 +69,7 @@ export default function Page() {
         <Sheet
           src="/drawings/process-flow.svg"
           alt="Diagrama de flujo que une el biorreactor, los módulos de filtro, la retorta de pirólisis, el procesador principal de agua y la tripulación"
-          drawing="RWL-003 REV B"
+          drawing="RWL-003 REV C"
           label="ver en grande"
           caption="Las corrientes grises punteadas son propuestas, no demostradas. El oxígeno de la etapa 1 no se dibuja como producto porque las bacterias lo respiran."
         />
@@ -84,7 +84,7 @@ export default function Page() {
         <Sheet
           src="/drawings/habitat-integration.svg"
           alt="Esquema en planta de un módulo del hábitat dividido en zona sucia, de servicio, húmeda y de tripulación"
-          drawing="RWL-004 REV A"
+          drawing="RWL-004 REV B"
           label="ver en grande"
           caption="La retorta y el biorreactor comparten el mamparo para que el calor de la retorta llegue a la chaqueta del reactor. Los tamaños de zona no están calculados."
         />

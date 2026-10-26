@@ -59,7 +59,7 @@
 
     <text x="300" y="326" font-size="12" font-weight="bold">STAGE 2 &#183; FILTER MODULES</text>
     <text x="300" y="344" font-size="10" fill="#555555">parallel cartridges, gravity</text>
-    <text x="300" y="359" font-size="10" fill="#555555">2&#8211;8 &#215; &#216;75 mm</text>
+    <text x="300" y="359" font-size="10" fill="#555555">3&#8211;10 &#215; &#216;69 mm bore</text>
 
     <text x="300" y="443" font-size="11" font-weight="bold">MAIN WATER PROCESSOR</text>
     <text x="300" y="459" font-size="10" fill="#555555">e.g. reverse osmosis</text>
@@ -134,8 +134,8 @@
     <text x="610" y="562" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
     <text x="610" y="593" font-size="12">System process flow</text>
     <text x="610" y="624" font-size="10.5">SCHEMATIC &#183; NOT TO SCALE</text>
-    <text x="800" y="624" font-size="10.5">DWG  RWL-003  REV B</text>
+    <text x="800" y="624" font-size="10.5">DWG  RWL-003  REV C</text>
     <text x="610" y="656" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
-    <text x="800" y="656" font-size="10.5">2026-10-01</text>
+    <text x="800" y="656" font-size="10.5">2026-10-25</text>
   </g>
 </svg>

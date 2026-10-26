@@ -65,8 +65,8 @@ export default function Page() {
 
       <Section title="Layer separators">
         <p>
-          Five discs cut from plastic insect mesh: one under the support layer
-          and one between each pair of layers above it.
+          Five discs cut from plastic insect mesh: one under the support layer,
+          one between each pair of layers, and one on top of the bed.
         </p>
         <Photo
           src="/build/03-mesh-discs.webp"
@@ -140,7 +140,7 @@ export default function Page() {
         <p>
           Layer 3 uses aquarium-grade fine silica sand instead. Quartz does not
           break down into fines the way carbonate does, and it leaves water
-          chemistry unchanged. A 3 kg bag covers the ≈ 1.3 kg the layer needs and
+          chemistry unchanged. A 3 kg bag covers the ≈ 1.1 kg the layer needs and
           leaves enough to reload it.
         </p>
         <p>Rinsed in a tub until the water ran clear.</p>

@@ -133,7 +133,7 @@
   <text x="44" y="566" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1a1a1a" letter-spacing="1">NOTES</text>
   <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1a1a1a">
     <text x="44" y="588">1.  Dirty zone kept below cabin pressure, so any leak carries dust in, not out.</text>
-    <text x="44" y="606">2.  Cartridges are filled and sealed in the dirty zone and never opened in the cabin.</text>
+    <text x="44" y="606">2.  An automated station fills and seals cartridges in the dirty zone; never opened in the cabin.</text>
     <text x="44" y="624">3.  Retort and bioreactor share the bulkhead; retort heat reaches the jacket through it.</text>
     <text x="44" y="642">4.  Dust monitor at the glovebox. Martian dust limit 0.1 mg/m&#179;, 24-hour average.</text>
     <text x="44" y="660">5.  CO&#8322; from Stage 1 is ducted to life support (not drawn). Zone sizes are not derived.</text>
@@ -150,8 +150,8 @@
     <text x="610" y="562" font-size="13" font-weight="bold" letter-spacing="1">REGOLITH WATER LOOP</text>
     <text x="610" y="593" font-size="12">Habitat integration &#8212; plan</text>
     <text x="610" y="624" font-size="10.5">SCHEMATIC &#183; NOT TO SCALE</text>
-    <text x="800" y="624" font-size="10.5">DWG  RWL-004  REV A</text>
+    <text x="800" y="624" font-size="10.5">DWG  RWL-004  REV B</text>
     <text x="610" y="656" font-size="10.5">DRAWN BY LEONARDO SALAS</text>
-    <text x="800" y="656" font-size="10.5">2026-09-13</text>
+    <text x="800" y="656" font-size="10.5">2026-10-25</text>
   </g>
 </svg>

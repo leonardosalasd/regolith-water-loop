@@ -151,7 +151,7 @@ export default function ProtocolPage() {
             },
             {
               title: "Charge the column",
-              body: <p>Close the valve and pour 884 ml of stock in at the top.</p>,
+              body: <p>Close the valve and pour 750 ml of stock in at the top.</p>,
             },
             {
               title: "Open the valve and start the timer",
