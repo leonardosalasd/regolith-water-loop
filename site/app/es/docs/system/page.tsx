@@ -63,7 +63,7 @@ export default function Page() {
         />
         <p>
           El efluente llega al procesador principal de agua con menos carga, así que la
-          máquina trabaja menos y sus membranas duran más. Esta es la etapa que
+          máquina tiene menos carga: esa es la meta. El efecto sobre el procesador o sus membranas no se ha medido. Esta es la etapa que
           se construyó y se probó en banco.
         </p>
       </Section>
@@ -79,15 +79,14 @@ export default function Page() {
 
       <Section id="acoplamientos" title="Qué lo vuelve un solo sistema">
         <p>
-          La etapa 3 le da dos cosas a la etapa 1 sin las cuales no puede operar
-          en Marte.
+          La etapa 3 busca darle dos cosas que la etapa 1 necesita.
         </p>
         <Table
           head={["Acoplamiento", "Por qué hace falta"]}
           rows={[
             [
               "Calor residual",
-              "La retorta trabaja cerca de 500 °C. La cepa de referencia crece a 37 °C y la superficie marciana baja hasta unos −153 °C. El calor de la retorta va a la chaqueta del biorreactor; la retorta pide 5.0–7.6 MJ al día para seis tripulantes, y cuánto de eso llega a la chaqueta sigue abierto.",
+              "La retorta trabaja cerca de 500 °C. La cepa de referencia crece a 37 °C, por encima de la temperatura de cabina. El calor de la retorta va a la chaqueta del biorreactor; la retorta pide 5.0–7.6 MJ al día para seis tripulantes, y cuánto de eso llega a la chaqueta sigue abierto.",
             ],
             [
               "Donador de electrones",
@@ -96,7 +95,7 @@ export default function Page() {
           ]}
         />
         <p>
-          Quita la etapa 3 y la etapa 1 pierde su calor y, con el tiempo, su donador. Quita la
+          Sin la etapa 3, el calor de la etapa 1 tiene que salir de la energía del hábitat y su donador, de reabastecimiento. Quita la
           etapa 1 y el regolito sigue tóxico y no puede servir de medio
           filtrante.
         </p>

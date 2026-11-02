@@ -18,7 +18,7 @@ Stock, 5 litres. Enough for a calibration series and three column charges.
 | Tap water | 5 L | — |
 | Fine soil, through the finest sieve to hand | 15 g | suspended solids |
 | Neutral liquid soap | 5 ml | surfactant load |
-| Blue food colouring | 10 drops | adsorption tracer |
+| Blue food colouring | 10 drops | visual tracer |
 
 Mix, then stir again immediately before drawing every sample. Solids settle in minutes and a settled stock reads as clean water.
 

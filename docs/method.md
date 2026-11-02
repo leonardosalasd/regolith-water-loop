@@ -12,7 +12,7 @@ The reading is **relative**, not NTU. Every result is expressed as a percentage 
 
 A vessel of water sits in front of a printed high-contrast target. Suspended solids scatter light, so the target seen through the sample loses contrast as turbidity rises. Contrast falls roughly exponentially with concentration, so the calibration is fitted linearly in log-contrast.
 
-A white card in the same frame cancels exposure and white balance differences between shots. Without it, a cloudier photo and a darker room look identical.
+Michelson contrast is a ratio, so a uniform change in exposure leaves it unchanged. The white card in the same frame does not enter the removal figure. It checks that highlights are not clipped, which would flatten the contrast, and gives a second reading, transmittance: the target's mean brightness over the white card's.
 
 ## Install
 

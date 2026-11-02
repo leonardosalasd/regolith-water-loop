@@ -31,7 +31,7 @@ export default function Page() {
             ["Agua de la llave", "5 L", "—"],
             ["Tierra fina, cribada", "15 g", "sólidos en suspensión"],
             ["Jabón neutro líquido", "5 ml", "carga de surfactante"],
-            ["Colorante vegetal azul", "10 gotas", "trazador de adsorción"],
+            ["Colorante vegetal azul", "10 gotas", "trazador visual"],
           ]}
         />
         <p>

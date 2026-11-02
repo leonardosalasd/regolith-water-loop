@@ -5,7 +5,7 @@ volumes were measured with 200 ml jars.
 
 ## Column body
 
-PVC pipe, 3 in nominal, cut to 750 mm. The pipe is opaque, so each layer is
+PVC pipe, 3 in nominal, cut to 750 mm. A tape around the pipe reads 23.7 cm, about 75 mm outside; with a 3 mm wall the bore works out to about 69 mm. A ruler across the mouth was not reliable, so the bore is derived, not read directly. The pipe is opaque, so each layer is
 photographed from above as it goes in rather than through the wall.
 
 With the cap on, the depth from the cap floor to the rim is 770 mm. Layer
@@ -56,7 +56,7 @@ layer: coarse at the bottom, fine on top.
 
 ## Scoria
 
-Sorted with the insect mesh and by hand into two fractions.
+Sorted with the insect mesh and by hand into two fractions. The grain sizes in RWL-001 are targets: the mesh aperture was not measured.
 
 ![Finer fraction on the left, coarser on the right](build/06-scoria-fractions.jpg)
 

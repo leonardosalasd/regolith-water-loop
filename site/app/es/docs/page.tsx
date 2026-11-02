@@ -51,8 +51,7 @@ export default function Page() {
         </p>
         <p>
           Lo que amarra todo: el horno trabaja cerca de 500 °C y las bacterias se
-          cultivan a 37 °C en un planeta cuya superficie baja hasta unos −153 °C.
-          El horno las calienta. La meta es que también las alimente: las
+          cultivan a 37 °C, por encima de la temperatura de cabina. El horno debe calentarlas, y la meta es que también las alimente: las
           bacterias reductoras de perclorato necesitan un donador orgánico, como
           acetato, y los mismos residuos podrían darlo.
         </p>
@@ -94,8 +93,7 @@ export default function Page() {
       <Section title="Por qué importa en la Tierra">
         <p>
           La misma columna, hecha de roca volcánica local y carbón de residuo
-          agrícola, funciona como pretratamiento pasivo descentralizado para el
-          agua almacenada en casa. En muchos lugares el agua entubada no llega
+          agrícola, está pensada como pretratamiento pasivo descentralizado para el agua almacenada en casa. No se ha probado con agua de casa. En muchos lugares el agua entubada no llega
           limpia y los hogares la almacenan antes de usarla. No es una analogía
           hecha después: es el mismo hardware.
         </p>

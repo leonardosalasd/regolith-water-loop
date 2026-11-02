@@ -41,12 +41,12 @@ export default function MaterialsPage() {
           head={["Item", "Quantity", "Note"]}
           mono={[1]}
           rows={[
-            ["Identical glass jars", "6", "straight-sided, clear, no embossing"],
+            ["Glass jar", "1", "straight-sided, clear, no embossing; 5 more identical ones only for the gradient photograph"],
             ["Syringes, no needle", "3 × 20 ml", "for the dilution series"],
             ["Kitchen measuring jug", "1 L", "replaces a graduated cylinder"],
             ["Blue food colouring", "1", "strong, not pale"],
             ["Neutral liquid soap", "1", "surfactant load"],
-            ["White card", "80 × 80 mm", "exposure reference"],
+            ["White card", "80 × 80 mm", "clipping check"],
             ["Printed checker target", "100 × 100 mm", "contrast target"],
             ["Constant lamp", "1", "any fixed light source"],
           ]}
@@ -63,21 +63,13 @@ export default function MaterialsPage() {
             Download target sheet (PDF)
           </a>
         </p>
-        <Callout tone="note" title="Why the jars must be identical">
+        <Callout tone="note" title="Why always the same jar">
           <p>
-            Every sample is photographed through glass. Different thickness or
-            curvature changes what the camera sees, and the series stops
-            comparing anything. Six matching jam jars work as well as six bought
-            ones.
+            Every sample is photographed through glass. A different thickness or curvature changes what the camera sees, and the series stops comparing anything. A clean jam jar works as well as a bought one.
           </p>
         </Callout>
         <p>
-          Blue is not an arbitrary choice. Methylene blue uptake is a useful
-          indicator of the adsorption capacity of activated carbon, so a blue
-          tracer mirrors a real assay — and blue reads as
-          dark grey once the photograph is converted, which is what the contrast
-          measurement needs. Yellow reads almost white and is nearly invisible to
-          the method.
+          The blue is a visual tracer: it shows at a glance whether dissolved colour passes. Methylene blue uptake is a useful indicator of the adsorption capacity of activated carbon, but food colouring is not methylene blue, and this is not that assay.
         </p>
       </Section>
 
@@ -100,8 +92,7 @@ export default function MaterialsPage() {
           <p>
             Perchlorate salts are strong oxidisers. They are not used, not
             bought, and not required. Stage 1 is supported by published work;
-            what the bench demonstrates is filtration and adsorption, measured
-            with synthetic greywater mixed to a written recipe.
+            what the bench tests is filtration, with synthetic greywater mixed to a written recipe. Adsorption has not been shown: the first runs passed the dye.
           </p>
         </Callout>
       </Section>

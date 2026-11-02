@@ -21,7 +21,7 @@ export default function Page() {
 
       <Section title="Column body">
         <p>
-          PVC pipe, 3 in nominal, cut to 750 mm. The pipe is opaque, so each layer
+          PVC pipe, 3 in nominal, cut to 750 mm. A tape around the pipe reads 23.7 cm, about 75 mm outside; with a 3 mm wall the bore works out to about 69 mm. A ruler across the mouth was not reliable, so the bore is derived, not read directly. The pipe is opaque, so each layer
           is photographed from above as it goes in rather than through the wall.
         </p>
         <p>
@@ -112,7 +112,7 @@ export default function Page() {
       </Section>
 
       <Section title="Scoria">
-        <p>Sorted with the insect mesh and by hand into two fractions.</p>
+        <p>Sorted with the insect mesh and by hand into two fractions. The grain sizes in RWL-001 are targets: the mesh aperture was not measured.</p>
         <Photo
           src="/build/06-scoria-fractions.webp"
           alt="Two containers of red volcanic scoria, one finer than the other"

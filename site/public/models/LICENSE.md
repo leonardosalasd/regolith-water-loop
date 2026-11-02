@@ -10,8 +10,7 @@ them unchanged and with credit, for non-commercial use. Please don't modify them
 build on them or use them commercially.
 
 This applies only to the models. The rest of the repository keeps its own licences,
-and the designs they show, drawings RWL-001 and RWL-004, stay under CC BY 4.0, so anyone can build
-their own model from it.
+and the designs they show, drawings RWL-001 and RWL-004, stay under CC BY 4.0, so anyone can build their own models from them.
 
 ## Textures
 

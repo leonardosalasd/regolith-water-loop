@@ -63,7 +63,7 @@ export default function SystemPage() {
         />
         <p>
           The effluent reaches the main water processor with reduced load, so
-          it works less and its membranes last longer. This is the stage built
+          that is the aim. Any effect on the processor or its membranes has not been measured. This is the stage built
           and tested on the bench.
         </p>
       </Section>
@@ -78,13 +78,13 @@ export default function SystemPage() {
       </Section>
 
       <Section id="couplings" title="What makes it one system">
-        <p>Stage 3 supplies two things Stage 1 cannot operate without on Mars.</p>
+        <p>Stage 3 is meant to supply two things Stage 1 needs.</p>
         <Table
           head={["Coupling", "Why it is needed"]}
           rows={[
             [
               "Waste heat",
-              "The retort runs near 500 °C. The reference strain grows at 37 °C, and the Martian surface falls to about −153 °C. Retort heat is routed to the bioreactor jacket; the retort needs 5.0–7.6 MJ a day for six crew, and how much of it reaches the jacket is still open.",
+              "The retort runs near 500 °C. The reference strain grows at 37 °C, above cabin temperature. Retort heat is routed to the bioreactor jacket; the retort needs 5.0–7.6 MJ a day for six crew, and how much of it reaches the jacket is still open.",
             ],
             [
               "Electron donor",
@@ -93,7 +93,7 @@ export default function SystemPage() {
           ]}
         />
         <p>
-          Remove Stage 3 and Stage 1 loses its heat and, eventually, its donor. Remove Stage 1 and the
+          Without Stage 3, Stage 1&apos;s heat has to come from habitat power and its donor from resupply. Remove Stage 1 and the
           regolith stays toxic and cannot serve as filter medium.
         </p>
       </Section>

@@ -21,7 +21,7 @@ export default function Page() {
 
       <Section title="Cuerpo de la columna">
         <p>
-          Tubo de PVC de 3 pulgadas nominales, cortado a 750 mm. Es opaco, así que
+          Tubo de PVC de 3 pulgadas nominales, cortado a 750 mm. Una cinta alrededor del tubo marca 23.7 cm, unos 75 mm por fuera; con pared de 3 mm, el diámetro interior sale de unos 69 mm. La regla atravesando la boca no fue confiable, así que el diámetro interior es calculado, no leído directamente. Es opaco, así que
           cada capa se fotografía desde arriba conforme se carga, no a través de la
           pared.
         </p>
@@ -116,7 +116,7 @@ export default function Page() {
       </Section>
 
       <Section title="Escoria">
-        <p>Separada con la malla mosquitera y a mano en dos fracciones.</p>
+        <p>Separada con la malla mosquitera y a mano en dos fracciones. Los tamaños de grano de RWL-001 son metas: la abertura de la malla no se midió.</p>
         <Photo
           src="/build/06-scoria-fractions.webp"
           alt="Dos recipientes con escoria volcánica roja, una más fina que la otra"

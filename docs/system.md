@@ -45,7 +45,7 @@ Treated regolith and biochar are layered in a column. Greywater is applied at th
 | Biochar | adsorbs metals and dissolved organic load |
 | Support regolith | drainage |
 
-The effluent reaches reverse osmosis with reduced load, so the machine works less and its membranes last longer.
+The aim is for the effluent to reach reverse osmosis with less suspended load. Any effect on the processor or its membranes has not been measured.
 
 This is the stage built and tested on the bench. See [results.md](results.md).
 
@@ -55,12 +55,12 @@ Food waste and paper are heated to around 500 °C without oxygen. The material d
 
 ## What makes it one system
 
-Stage 3 supplies two things Stage 1 cannot operate without on Mars:
+Stage 3 is meant to supply two things Stage 1 needs:
 
-- **Waste heat.** The retort runs near 500 °C. The reference strain is grown at 37 °C (Mehta-Kolte 2017), and the Martian surface falls to about −153 °C (NASA Science). Retort heat is routed to the bioreactor jacket. The retort needs 5.0–7.6 MJ a day for six crew ([mars.md](mars.md#retort-heat)); how much of it reaches the jacket is still open.
+- **Waste heat.** The retort runs near 500 °C. The reference strain is grown at 37 °C (Mehta-Kolte 2017), above cabin temperature. Retort heat is routed to the bioreactor jacket. The retort needs 5.0–7.6 MJ a day for six crew ([mars.md](mars.md#retort-heat)); how much of it reaches the jacket is still open.
 - **Electron donor.** The bacteria need an organic donor such as acetate or lactate to respire perchlorate (Mehta-Kolte 2017). Supplying it from the pyrolysis liquid is the target; until that is shown, the donor is a consumable.
 
-Remove Stage 3 and Stage 1 loses its heat and, eventually, its donor. Remove Stage 1 and the regolith stays toxic and cannot serve as filter medium.
+Without Stage 3, Stage 1's heat has to come from habitat power and its donor from resupply. Remove Stage 1 and the regolith stays toxic and cannot serve as filter medium.
 
 ## Layout
 
@@ -96,6 +96,6 @@ Introducing terrestrial bacteria to Mars is a planetary protection question unde
 
 ## Return to Earth
 
-The same column, built from local volcanic rock, sand and charcoal, works as decentralised passive pre-treatment for household water storage. In many places piped water does not arrive clean and households store it before use. This is not an analogy drawn after the fact — it is the same hardware.
+The same column, built from local volcanic rock, sand and charcoal, is meant as decentralised passive pre-treatment for household water storage. It has not been tested with household water. In many places piped water does not arrive clean and households store it before use. This is not an analogy drawn after the fact — it is the same hardware.
 
 Relevant Sustainable Development Goals: 6 (clean water and sanitation), 12 (responsible consumption and production), 9 (industry, innovation and infrastructure).

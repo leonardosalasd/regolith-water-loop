@@ -29,7 +29,7 @@ Hot-melt glue does not hold on wet PVC. Seal the outlet with two-part epoxy.
 
 | Item | Quantity | Note |
 | --- | --- | --- |
-| Identical glass jars | 6 | straight-sided, clear, no embossing |
+| Glass jar | 1 | straight-sided, clear, no embossing; 5 more identical ones only for the gradient photograph |
 | Syringes, no needle | 3 × 20 ml | for the dilution series |
 | Kitchen measuring jug | 1 L | replaces a graduated cylinder |
 | Blue food colouring | 1 | strong, not pale |
@@ -37,15 +37,9 @@ Hot-melt glue does not hold on wet PVC. Seal the outlet with two-part epoxy.
 | Target sheet | 1 A4 print | [print/target-sheet.pdf](print/target-sheet.pdf) |
 | Constant lamp | 1 | any fixed light source |
 
-Every sample is photographed through glass, so the jars must be identical.
-Different thickness or curvature changes what the camera sees and the series
-stops comparing anything.
+Every sample is photographed through the same jar. A different thickness or curvature changes what the camera sees and the series stops comparing anything.
 
-Blue is not an arbitrary choice. Methylene blue uptake is a useful indicator of
-the adsorption capacity of activated carbon (Raposo 2009, see
-[references.md](references.md)), so a blue tracer mirrors a real assay. Blue also reads as dark grey once a photograph is
-converted, which is what the contrast measurement needs; yellow reads almost
-white.
+The blue is a visual tracer: it shows at a glance whether dissolved colour passes. Methylene blue uptake is a useful indicator of the adsorption capacity of activated carbon (Raposo 2009, see [references.md](references.md)), but food colouring is not methylene blue, and this is not that assay.
 
 ## Deliberately not required
 
@@ -62,6 +56,5 @@ white.
 
 > [!CAUTION]
 > Perchlorate salts are strong oxidisers. They are not used, not bought and not
-> required. Stage 1 is supported by published work; what the bench demonstrates
-> is filtration and adsorption, measured with synthetic greywater mixed to a
-> written recipe.
+> required. Stage 1 is supported by published work; what the bench tests is filtration, with synthetic greywater mixed to a written
+> recipe. Adsorption has not been shown: the first runs passed the dye.

@@ -20,7 +20,7 @@ export default function ProtocolPage() {
             ["Tap water", "5 L", "—"],
             ["Fine soil, sieved", "15 g", "suspended solids"],
             ["Neutral liquid soap", "5 ml", "surfactant load"],
-            ["Blue food colouring", "10 drops", "adsorption tracer"],
+            ["Blue food colouring", "10 drops", "visual tracer"],
           ]}
         />
         <p>

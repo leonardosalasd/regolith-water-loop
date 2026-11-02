@@ -28,7 +28,7 @@ export default function Page() {
           rows={[
             ["Agua líquida", "No es estable a la presión y temperatura de superficie", "Toda etapa con agua opera dentro del hábitat presurizado"],
             ["Gravedad", "3.7 m/s², 0.37 g", "El flujo por un lecho escala con g a la misma carga: 2.65× el área de filtro, o más carga hidráulica"],
-            ["Temperatura", "De unos 20 °C hasta −153 °C", "Biorreactor calentado y aislado; la cepa de referencia se cultiva a 37 °C"],
+            ["Temperatura", "De unos 20 °C hasta −153 °C", "El hábitat la mantiene afuera; la cepa de referencia se cultiva a 37 °C, por encima de la temperatura de cabina, así que el biorreactor sigue necesitando chaqueta caliente"],
             ["Perclorato", "0.4–0.6 % en Phoenix; 0.5–1 % en suelos en general; también en el cráter Gale", "El regolito crudo nunca es medio filtrante; primero pasa por la etapa 1"],
             ["Regolito", "Basáltico", "Escoria volcánica basáltica como análogo en banco"],
             ["Polvo", "0.1 mg/m³, promedio de 24 h, menor a 10 µm", "El manejo de regolito va sellado respecto al aire de cabina y al agua"],
@@ -112,8 +112,7 @@ rwl size --crew 6 --base early --explain`}</Code>
           Con la salida drenando libre, el gradiente es (agua encima + lecho) ÷
           lecho, así que todo eso tiene que crecer 2.65×, no solo el agua de
           arriba. Una columna de agua de 1.2 m por cartucho no cabe en un hábitat;
-          cartuchos en paralelo sí. Por eso el diseño agrega área. La
-          conductividad de la propia columna de banco, y el mismo lecho a 0.37 g,
+          cartuchos en paralelo sí. Por eso el diseño agrega área. Este es el caso conservador: las tasas de filtración lenta las fija el tratamiento, no la hidráulica, así que un lecho con margen podría abrir su válvula en Marte en vez de agregar área, y la base temprana necesitaría de 1 a 4 columnas. Si ese margen existe, y cuánto dura conforme el lecho se tapa, no está medido, así que el dimensionamiento conserva las 2.65×. La conductividad de la propia columna de banco, y el mismo lecho a 0.37 g,
           salen de una corrida cronometrada con{" "}
           <span className="font-mono text-accent">rwl permeability</span>.
         </p>
@@ -254,7 +253,7 @@ rwl size --crew 6 --base early --explain`}</Code>
           <li>Si el líquido de la pirólisis puede servir como donador de electrones</li>
           <li>El volumen de enjuague que saca el cloruro de los poros del regolito, que no está medido</li>
           <li>La filtración con finos marcianos reales a 0.37 g, que está modelada, no medida</li>
-          <li>Cómo se mueven el regolito y el carbón entre equipos: contenedores sellados o un transportador de tornillo, sin diseñar</li>
+          <li>Cómo se mueve el material entre equipos: solo la percolación va por gravedad, así que el regolito y el carbón necesitan contenedores sellados o un transportador de tornillo y el agua gris una bomba chica, todo sin diseñar</li>
           <li>Cómo entra la tripulación a la zona sucia para trabajo manual sin romper la contención</li>
         </ul>
       </Section>

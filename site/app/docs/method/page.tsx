@@ -20,9 +20,7 @@ export default function MethodPage() {
           calibration is fitted linearly in log-contrast.
         </p>
         <p>
-          A white card in the same frame cancels exposure and white balance
-          differences between shots. Without it a cloudier photograph and a
-          darker room look identical to the code.
+          Contrast is a ratio, so a uniform change in exposure leaves it unchanged. The white card in the same frame does not enter the removal figure. It checks that highlights are not clipped, which would flatten the contrast, and gives a second reading, transmittance: the target&apos;s mean brightness over the white card&apos;s.
         </p>
         <Callout tone="warn" title="Relative, not NTU">
           <p>

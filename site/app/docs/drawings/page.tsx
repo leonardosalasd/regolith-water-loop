@@ -52,7 +52,7 @@ export default function DrawingsPage() {
           src="/drawings/photometric-rig.svg"
           alt="Plan view of the photographic rig with camera, sample jar, target card and white reference card"
           drawing="RWL-002 REV A"
-          caption="The white card cancels exposure differences between shots. Without it, a cloudier sample and a darker room are indistinguishable."
+          caption="The white card checks for clipped highlights and gives a transmittance reading. The removal figure comes from the target's contrast."
         />
       </Section>
 

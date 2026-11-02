@@ -55,7 +55,7 @@ export default function Page() {
           alt="Vista en planta del montaje con cámara, frasco de muestra, tarjeta patrón y tarjeta blanca"
           drawing="RWL-002 REV A"
           label="ver en grande"
-          caption="La tarjeta blanca cancela las diferencias de exposición entre tomas. Sin ella, una muestra más turbia y un cuarto más oscuro son indistinguibles."
+          caption="La tarjeta blanca revisa que las luces no estén saturadas y da una lectura de transmitancia. La cifra de remoción sale del contraste del objetivo."
         />
       </Section>
 

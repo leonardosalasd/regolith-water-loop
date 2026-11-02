@@ -29,9 +29,7 @@ export default function Page() {
           linealmente en logaritmo del contraste.
         </p>
         <p>
-          Una tarjeta blanca en el mismo encuadre cancela las diferencias de
-          exposición y balance de blancos entre tomas. Sin ella, una fotografía
-          más turbia y un cuarto más oscuro se ven idénticos para el código.
+          El contraste es un cociente, así que un cambio uniforme de exposición no lo altera. La tarjeta blanca en el mismo encuadre no entra en la cifra de remoción. Sirve para revisar que las luces no estén saturadas, lo que aplanaría el contraste, y da una segunda lectura, la transmitancia: el brillo medio del objetivo entre el de la tarjeta blanca.
         </p>
         <Callout tone="warn" title="Relativo, no NTU">
           <p>

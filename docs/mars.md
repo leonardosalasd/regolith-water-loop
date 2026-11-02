@@ -12,7 +12,7 @@ What the Martian environment forces on the design, the system sized for a crew o
 | --- | --- | --- | --- |
 | Liquid water | Not stable at present surface pressure and temperature | Haberle 2000 | Every wet stage runs inside the pressurised habitat. Nothing is exposed to the outside atmosphere. |
 | Gravity | 3.7 m/s², 0.37 g | NASA Glenn | Flow through a packed bed scales with g at a fixed head. Filters need 2.65× the area or a taller head. |
-| Surface temperature | From about 20 °C down to about −153 °C | NASA Science | The bioreactor needs an insulated, heated jacket. Its reference strain is grown at 37 °C (Mehta-Kolte 2017). |
+| Surface temperature | From about 20 °C down to about −153 °C | NASA Science | Kept out by the habitat, not by the reactor. Its reference strain is grown at 37 °C (Mehta-Kolte 2017), above cabin temperature, so it still needs a heated jacket. |
 | Perchlorate | 0.4–0.6 % by mass at Phoenix; 0.5–1 % in Martian soils generally; also detected at Gale Crater | Hecht 2009, Davila 2013, Glavin 2013 | Raw regolith is not used as filter medium. It passes through Stage 1 first. |
 | Regolith type | Basaltic | Cannon 2019 | Basaltic volcanic scoria is the bench analogue. |
 | Dust | Martian dust below 10 µm limited to 0.1 mg/m³, 24-hour average | NASA dust | Regolith handling is sealed from cabin air and from the water path. |
@@ -30,7 +30,7 @@ rwl size --crew 6 --base early --explain
 
 | Quantity | Early base | Mature base | Basis |
 | --- | --- | --- | --- |
-| Hygiene greywater | 33.2 L/day | 61.0 L/day | BVAD Table 4-21, 5.53 and 10.17 kg per crew per day |
+| Hygiene greywater | 33.2 L/day | 61.0 L/day | BVAD Table 4-21, 5.53 and 10.17+ kg per crew per day (food preparation still TBD there) |
 | Continuous flow | 1.38 L/h | 2.54 L/h | |
 | Filter area, Earth gravity | 0.0035–0.014 m² | 0.0064–0.025 m² | 0.1–0.4 m/h, Emergency WASH |
 | Filter area, Mars gravity, same head | 0.009–0.037 m² | 0.017–0.067 m² | Area ÷ 0.377 |
@@ -51,7 +51,7 @@ Flow through a packed bed follows Darcy's law, and the bed's hydraulic conductiv
 | More area, same head | 1 column | 2.65 columns |
 | Same area, more head | 0.20 m of water over the 0.42 m bed | 1.22 m of water over the bed |
 
-With a free-draining outlet the driving gradient is (standing water + bed) ÷ bed, so the whole of it has to grow by 2.65×, not just the water on top. A 1.2 m water column per cartridge is impractical inside a habitat; parallel cartridges are not. That is why the design adds area. `rwl cartridge` prints both. The scaling itself rests on Darcy's law; the bench column's own conductivity, and the same bed at 0.37 g, come out of a timed run with `rwl permeability`.
+With a free-draining outlet the driving gradient is (standing water + bed) ÷ bed, so the whole of it has to grow by 2.65×, not just the water on top. A 1.2 m water column per cartridge is impractical inside a habitat; parallel cartridges are not. That is why the design adds area. `rwl cartridge` prints both. This is the conservative case: it assumes the bed has no hydraulic margin. Slow sand rates are set by treatment, not by hydraulics, so a bed that runs faster than 0.4 m/h on Earth is throttled, and on Mars it could open its valve instead of adding area. With that margin the early base would need 1 to 4 columns. Whether the margin exists, and how long it lasts as the bed clogs, depends on a conductivity not yet measured, so the sizing keeps the 2.65×. The scaling itself rests on Darcy's law; the bench column's own conductivity, and the same bed at 0.37 g, come out of a timed run with `rwl permeability`.
 
 ## Retort heat
 
@@ -138,5 +138,5 @@ From NASA-STD-3001 Volume 2, Revision E.
 - **Char transport.** Char is made in Stage 3 and used in Stage 2. With cartridges this becomes a refill step, not a continuous flow.
 - **Chloride rinse.** The chloride mass is known; the rinse volume that gets it out of the regolith pores is not measured.
 - **Real regolith.** Scoria is a basaltic analogue. Filtration behaviour with Martian fines, and under 0.37 g, is modelled, not measured.
-- **Moving solids.** Regolith and char cannot flow sideways between units by gravity. Sealed containers or a screw conveyor would carry them; neither is designed.
+- **Moving material.** Only the percolation through a cartridge runs on gravity. Regolith and char cannot flow sideways between units, so sealed containers or a screw conveyor would carry them, and greywater needs a small pump to reach the top of the rack. None of this is designed.
 - **Access to the dirty zone.** The glovebox and the fill station need occasional hands-on work, and how crew reach the dirty zone without breaking containment is not designed.

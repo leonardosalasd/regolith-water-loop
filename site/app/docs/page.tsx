@@ -48,8 +48,7 @@ export default function Home() {
         </p>
         <p>
           What ties it together: the furnace runs near 500 °C, and the bacteria
-          are grown at 37 °C on a planet whose surface falls to about −153 °C.
-          The furnace heats them. The goal is for it to feed them too, since
+          are grown at 37 °C, above cabin temperature. The furnace is meant to heat them, and the goal is for it to feed them too, since
           perchlorate-reducing bacteria need an organic donor such as acetate,
           and the same waste could supply it.
         </p>
@@ -91,8 +90,7 @@ export default function Home() {
       <Section title="Why it matters on Earth">
         <p>
           The same column, built from local volcanic rock and agricultural
-          residue char, works as decentralised passive pre-treatment for
-          household water storage. In many places piped water does not arrive
+          residue char, is meant as decentralised passive pre-treatment for household water storage. It has not been tested with household water. In many places piped water does not arrive
           clean and households store it before use. That is not an analogy drawn
           after the fact — it is the same hardware.
         </p>

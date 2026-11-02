@@ -4,7 +4,7 @@ import { Landing } from "@/components/Landing";
 export const metadata: Metadata = {
   title: "Regolith Water Loop — columna de pretratamiento de agua",
   description:
-    "Hardware abierto: una columna de pretratamiento de agua en tres etapas que convierte regolito volcánico y biochar de pirólisis en un filtro por gravedad, construida y probada en banco.",
+    "Hardware abierto: una columna de pretratamiento de agua en tres etapas que convierte regolito volcánico y biochar de pirólisis en un filtro por gravedad. Su etapa de filtración está construida y probada en banco.",
   alternates: { canonical: "/es/" },
 };
 

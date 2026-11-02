@@ -49,12 +49,12 @@ export default function Page() {
           head={["Artículo", "Cantidad", "Nota"]}
           mono={[1]}
           rows={[
-            ["Frascos de vidrio idénticos", "6", "de pared recta, lisos, sin relieve"],
+            ["Frasco de vidrio", "1", "de pared recta, liso, sin relieve; 5 más idénticos solo para la foto del degradado"],
             ["Jeringas sin aguja", "3 × 20 ml", "para la serie de diluciones"],
             ["Vaso medidor de cocina", "1 L", "sustituye a la probeta"],
             ["Colorante vegetal azul", "1", "fuerte, no claro"],
             ["Jabón neutro líquido", "1", "carga de surfactante"],
-            ["Cartulina blanca", "80 × 80 mm", "referencia de exposición"],
+            ["Cartulina blanca", "80 × 80 mm", "revisión de saturación"],
             ["Patrón de ajedrez impreso", "100 × 100 mm", "objetivo de contraste"],
             ["Lámpara constante", "1", "cualquier fuente de luz fija"],
           ]}
@@ -71,21 +71,13 @@ export default function Page() {
             Descargar hoja de objetivos (PDF)
           </a>
         </p>
-        <Callout tone="note" title="Por qué los frascos deben ser idénticos">
+        <Callout tone="note" title="Por qué siempre el mismo frasco">
           <p>
-            Toda muestra se fotografía a través del vidrio. Un grosor o una
-            curvatura distintos cambian lo que ve la cámara, y la serie deja de
-            comparar nada. Seis frascos de mermelada iguales sirven tanto como
-            seis comprados.
+            Toda muestra se fotografía a través del vidrio. Un grosor o una curvatura distintos cambian lo que ve la cámara, y la serie deja de comparar nada. Un frasco de mermelada limpio sirve tanto como uno comprado.
           </p>
         </Callout>
         <p>
-          El azul no es una elección arbitraria. La adsorción de azul de metileno
-          es un indicador útil de la capacidad de adsorción del carbón activado,
-          así que un trazador azul imita un ensayo real — y el azul
-          queda gris oscuro al convertir la fotografía, que es lo que necesita la
-          medición de contraste. El amarillo queda casi blanco y es prácticamente
-          invisible para el método.
+          El azul es un trazador visual: muestra de un vistazo si el color disuelto pasa. La adsorción de azul de metileno es un indicador útil de la capacidad de adsorción del carbón activado, pero el colorante vegetal no es azul de metileno y esto no es ese ensayo.
         </p>
       </Section>
 
@@ -108,8 +100,7 @@ export default function Page() {
           <p>
             Las sales de perclorato son oxidantes fuertes. No se usan, no se
             compran y no hacen falta. La etapa 1 se respalda con literatura
-            publicada; lo que el banco demuestra es filtración y adsorción,
-            medidas con agua gris sintética preparada con una receta escrita.
+            publicada; lo que el banco prueba es filtración, con agua gris sintética preparada con una receta escrita. La adsorción no está demostrada: en las primeras corridas el colorante pasó.
           </p>
         </Callout>
       </Section>

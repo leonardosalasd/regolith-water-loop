@@ -28,7 +28,7 @@ export default function Page() {
           rows={[
             ["Liquid water", "Not stable at surface pressure and temperature", "Every wet stage runs inside the pressurised habitat"],
             ["Gravity", "3.7 m/s², 0.37 g", "Flow through a bed scales with g at a fixed head: 2.65× the filter area, or a taller head"],
-            ["Temperature", "About 20 °C down to −153 °C", "Heated, insulated bioreactor; the reference strain is grown at 37 °C"],
+            ["Temperature", "About 20 °C down to −153 °C", "Kept out by the habitat; the reference strain is grown at 37 °C, above cabin temperature, so the bioreactor still needs a heated jacket"],
             ["Perchlorate", "0.4–0.6 % at Phoenix; 0.5–1 % in soils generally; also at Gale Crater", "Raw regolith is never filter medium; it passes Stage 1 first"],
             ["Regolith", "Basaltic", "Basaltic volcanic scoria as the bench analogue"],
             ["Dust", "0.1 mg/m³, 24-hour average, below 10 µm", "Regolith handling sealed from cabin air and the water path"],
@@ -110,8 +110,7 @@ rwl size --crew 6 --base early --explain`}</Code>
           With a free-draining outlet the driving gradient is (standing water +
           bed) ÷ bed, so the whole of it has to grow 2.65×, not just the water on
           top. A 1.2 m water column per cartridge is impractical inside a
-          habitat; parallel cartridges are not. That is why the design adds area.
-          The bench column&apos;s own conductivity, and the same bed at 0.37 g,
+          habitat; parallel cartridges are not. That is why the design adds area. This is the conservative case: slow sand rates are set by treatment, not by hydraulics, so a bed with margin could open its valve on Mars instead of adding area, and the early base would need 1 to 4 columns. Whether that margin exists, and how long it lasts as the bed clogs, is not measured, so the sizing keeps the 2.65×. The bench column&apos;s own conductivity, and the same bed at 0.37 g,
           come out of a timed run with{" "}
           <span className="font-mono text-accent">rwl permeability</span>.
         </p>
@@ -250,7 +249,7 @@ rwl size --crew 6 --base early --explain`}</Code>
           <li>Whether the pyrolysis liquid can serve as electron donor</li>
           <li>The rinse volume that gets chloride out of the regolith pores, which is not measured</li>
           <li>Filtration with real Martian fines at 0.37 g, which is modelled, not measured</li>
-          <li>How regolith and char move between units: sealed containers or a screw conveyor, not designed</li>
+          <li>Moving material between units: only the percolation runs on gravity, so regolith and char need sealed containers or a screw conveyor and greywater a small pump, none of it designed</li>
           <li>How crew reach the dirty zone for hands-on work without breaking containment</li>
         </ul>
       </Section>

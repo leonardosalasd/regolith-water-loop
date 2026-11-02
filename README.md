@@ -4,7 +4,7 @@
 
 # **Regolith Water Loop**
 
-Three-stage water pre-treatment column: bioremediated regolith, pyrolysis biochar, and a gravity feed. Bench-built and tested.
+Three-stage water pre-treatment column: bioremediated regolith, pyrolysis biochar, and a gravity feed. The filtration stage is built and tested on a bench.
 
 [**Leonardo Salas**](mailto:leonardo.salas01@outlook.com) · [rwl.leonardosalas.dev](https://rwl.leonardosalas.dev)
 
@@ -62,7 +62,7 @@ Published as [`rwl` on PyPI](https://pypi.org/project/rwl/). Run `rwl` with no a
 
 ## Measuring turbidity
 
-Removal is measured from photographs rather than an electronic probe: a phone camera is available and free, a nephelometer is not. A printed target behind the sample loses contrast as suspended solids rise, and a white card in frame cancels exposure differences between shots.
+Removal is measured from photographs rather than an electronic probe: a phone camera is available and free, a nephelometer is not. A printed target behind the sample loses contrast as suspended solids rise, and a white card in frame flags clipped highlights.
 
 Results are relative to the influent, never reported in NTU.
 
